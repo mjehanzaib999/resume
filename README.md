@@ -1,12 +1,15 @@
 # Resume and portfolio site
 
+- **Resume:** https://mjehanzaib-ai-resume.up.railway.app
+- **Portfolio:** https://mjehanzaib-ai-portfolio.up.railway.app
+
 Two static pages, served by nginx, deployed on Railway as two services from this
 one repository.
 
-| Service | `ROOT_DOC` | What `/` shows |
-|---|---|---|
-| `resume` | `resume.html` | the resume |
-| `portfolio` | `portfolio.html` | the portfolio |
+| Service | `ROOT_DOC` | What `/` shows | Live |
+|---|---|---|---|
+| `resume` | `resume.html` | the resume | https://mjehanzaib-ai-resume.up.railway.app |
+| `portfolio` | `portfolio.html` | the portfolio | https://mjehanzaib-ai-portfolio.up.railway.app |
 
 Both pages are also reachable on either service at `/resume.html` and
 `/portfolio.html`, and the PDFs at `/Muhammad_Jehanzaib_Resume.pdf` and
