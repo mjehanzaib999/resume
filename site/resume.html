@@ -32,15 +32,22 @@
   .feat { margin-bottom: 9px; page-break-inside: avoid; }
   .feat .t { font-weight: 700; color: #0f172a; }
   .feat .stack { font-style: italic; color: #4b5563; font-size: 9.4pt; }
+  /* On screen only: a way to the portfolio and the PDF. Never printed. */
+  .bar { display: flex; justify-content: center; gap: 18px; padding: 9px 12px; margin: 0 0 14px; background: #eef2ff; border-radius: 6px; font-size: 10pt; text-align: center; }
+  .bar a { font-weight: 600; }
+  @media print { .bar { display: none; } }
+  @media screen { body { max-width: 820px; margin: 24px auto; padding: 0 20px; } }
 </style>
 </head>
 <body>
+
+<div class="bar"><a href="https://portfolio-production-5a7b.up.railway.app">View full portfolio →</a><a href="/Muhammad_Jehanzaib_Resume.pdf" download>Download PDF</a></div>
 
 <div class="head">
   <h1>MUHAMMAD JEHANZAIB</h1>
   <div class="role">Senior AI Engineer &amp; Solutions Architect</div>
   <div class="tag">Shipping production-grade AI systems across agentic automation, applied LLMs, computer vision, and medical AI.</div>
-  <div class="contact">mjehanzaib99@gmail.com <span>|</span> <a href="https://linkedin.com/in/muhammad-jehanzaib-4036b5195">linkedin.com/in/muhammad-jehanzaib-4036b5195</a> <span>|</span> <a href="https://github.com/mjehanzaib999">github.com/mjehanzaib999</a> <span>|</span> Portfolio available on request</div>
+  <div class="contact">mjehanzaib99@gmail.com <span>|</span> <a href="https://linkedin.com/in/muhammad-jehanzaib-4036b5195">linkedin.com/in/muhammad-jehanzaib-4036b5195</a> <span>|</span> <a href="https://github.com/mjehanzaib999">github.com/mjehanzaib999</a> <span>|</span> Portfolio: <a href="https://portfolio-production-5a7b.up.railway.app">portfolio-production-5a7b.up.railway.app</a></div>
 </div>
 
 <h2>Summary</h2>
