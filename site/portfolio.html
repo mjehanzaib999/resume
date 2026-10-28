@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Muhammad Jehanzaib — AI Portfolio</title>
+<style>
+  @page { size: A4; margin: 12mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Inter, Arial, sans-serif; color: #1f2937; font-size: 10.2pt; line-height: 1.45; margin: 0; }
+  a { color: #1d4ed8; text-decoration: none; }
+  .hero { background: #0f172a; color: #fff; padding: 26px 30px; border-radius: 6px; margin-bottom: 18px; }
+  .hero h1 { margin: 0; font-size: 26pt; font-weight: 800; }
+  .hero .role { color: #93c5fd; font-size: 13pt; font-weight: 600; margin-top: 4px; }
+  .hero p { margin: 10px 0 0; color: #e5e7eb; }
+  .hero .contact { margin-top: 8px; color: #d1d5db; }
+  .hero .contact a { color: #93c5fd; }
+  .hero .legend { margin-top: 10px; color: #d1d5db; font-size: 9.4pt; }
+  .badge { display: inline-block; font-size: 7.5pt; font-weight: 700; letter-spacing: .5px; padding: 1px 6px; border-radius: 3px; vertical-align: middle; margin-left: 4px; }
+  .live { background: #dcfce7; color: #166534; }
+  .demo { background: #dbeafe; color: #1e40af; }
+  .flagship { background: #fef3c7; color: #92400e; }
+  .toc { background: #f3f4f6; border-left: 4px solid #1d4ed8; padding: 12px 18px; margin-bottom: 18px; }
+  .toc h2 { margin: 0 0 8px; font-size: 13pt; }
+  .toc table { width: 100%; border-collapse: collapse; }
+  .toc td { padding: 4px 0; border-bottom: 1px solid #e5e7eb; }
+  .toc td.n { color: #1d4ed8; font-weight: 700; width: 34px; }
+  .toc td.c { text-align: right; color: #6b7280; }
+  .sec { background: #f3f4f6; border-left: 4px solid #1d4ed8; padding: 8px 16px; margin: 18px 0 10px; display: flex; justify-content: space-between; align-items: baseline; page-break-after: avoid; }
+  .sec h2 { margin: 0; font-size: 13pt; }
+  .sec span { color: #6b7280; font-size: 9.4pt; }
+  .proj { padding: 8px 0 10px; border-bottom: 1px solid #e5e7eb; page-break-inside: avoid; }
+  .proj { text-align: justify; }
+  .proj .t { font-weight: 700; font-size: 11pt; color: #0f172a; margin-bottom: 3px; text-align: left; }
+  .proj .stack, .proj .links { text-align: left; }
+  .proj .stack { font-style: italic; color: #4b5563; font-size: 9.2pt; margin-top: 4px; }
+  .proj .links { margin-top: 4px; font-size: 9.6pt; }
+  .proj .links a { margin-right: 6px; }
+  .foot { display: flex; justify-content: space-between; color: #6b7280; font-size: 9pt; border-top: 1px solid #e5e7eb; padding-top: 10px; margin-top: 18px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Muhammad Jehanzaib</h1>
+  <div class="role">Senior ML / Full-Stack AI Engineer &amp; AI Architect</div>
+  <p>Production AI projects across FinTech &amp; TaxTech, PropTech, E-Commerce, HealthTech, Logistics, Sales, Telecom, EdTech, and AI Infrastructure — each with the problem, approach, outcome, and stack. Grounded in agentic LLMs, RAG, computer vision, and MLOps.</p>
+  <div class="contact">mjehanzaib99@gmail.com · <a href="https://linkedin.com/in/muhammad-jehanzaib-4036b5195">linkedin.com/in/muhammad-jehanzaib-4036b5195</a> · <a href="https://github.com/mjehanzaib999">github.com/mjehanzaib999</a></div>
+  <div class="legend"><span class="badge live">LIVE</span> deployed &amp; clickable &nbsp;·&nbsp; <span class="badge demo">DEMO</span> video walkthrough &nbsp;·&nbsp; <span class="badge flagship">FLAGSHIP</span> lead production work</div>
+</div>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <table>
+    <tr><td class="n">01</td><td>FinTech / TaxTech</td><td class="c">4 projects</td></tr>
+    <tr><td class="n">02</td><td>PropTech / Real Estate</td><td class="c">4 projects</td></tr>
+    <tr><td class="n">03</td><td>E-Commerce &amp; Retail Intelligence</td><td class="c">4 projects</td></tr>
+    <tr><td class="n">04</td><td>Logistics &amp; Operations</td><td class="c">1 project</td></tr>
+    <tr><td class="n">05</td><td>HealthTech &amp; Elderly Care</td><td class="c">12 projects</td></tr>
+    <tr><td class="n">06</td><td>AI Sales &amp; Outreach</td><td class="c">2 projects</td></tr>
+    <tr><td class="n">07</td><td>Conversational AI / Telecom</td><td class="c">1 project</td></tr>
+    <tr><td class="n">08</td><td>EdTech / LMS</td><td class="c">1 project</td></tr>
+    <tr><td class="n">09</td><td>Content / SEO</td><td class="c">1 project</td></tr>
+    <tr><td class="n">10</td><td>AI Infrastructure / Open Source</td><td class="c">1 project</td></tr>
+  </table>
+</div>
+
+<!-- 01 -->
+<div class="sec"><h2>01 · FinTech / TaxTech</h2><span>4 projects</span></div>
+
+<div class="proj">
+  <div class="t">Contract Analysis Engine — IRC §41 R&amp;D Tax Credit <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></div>
+  <div>Agentic platform that determines whether research performed under a client's contracts qualifies for IRC §41 R&amp;D credits — automating the §41(d)(4)(H) "funded research" analysis that normally takes hours of manual legal review per contract. A <b>multi-agentic LangGraph pipeline</b> (document triage, rights-gate, contingency/financial-risk, jurisdiction &amp; state-conformity, web search, adversarial self-review, IRS counter-argument simulation) yields a qualified / not-qualified determination with confidence scoring, evidence citations, and per-prong contract references. Bulk upload with native + vision-OCR text extraction, deterministic file bundling, full batch orchestration with cancellation, and an agentic chat that feeds a correction-driven re-run — grounded by a case-law &amp; state-conformity knowledge base. Built at Ventive for a U.S. tax-advisory firm.</div>
+  <div class="stack">Claude Opus (via OpenRouter) · LangGraph · FastAPI · Celery + Redis · PostgreSQL (SQLAlchemy 2.0 async) · React 19 + TypeScript + Vite (TanStack, Zustand) · Gemini Vision OCR</div>
+  <div class="links">Watch demos: <a href="https://www.youtube.com/watch?v=_9UoeXc9Ffc">1</a> | <a href="https://www.youtube.com/watch?v=Fe46Ztav1Cw">2</a> | <a href="https://www.youtube.com/watch?v=AqVfHLxIQaY">3</a> | <a href="https://www.youtube.com/watch?v=xfeyjV_GRw8">4</a> | <a href="https://share.descript.com/view/hN6BO7puRfK">Descript</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">Tax Form Extraction &amp; Reconciliation Engine <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></div>
+  <div>Form-aware extraction pipeline for payroll/wage documents (W-2, W-3, census) that routes each page chunk to a dedicated per-form handler, then verifies with <b>dual-model consensus</b> (Gemini 2.5 Flash + Grok 4.1 Fast) and a Claude verify pass, with an AWS Textract path for scanned docs. Handles the messy realities of real packets — multi-employer batches, multi-page/2-up/4-up forms, and per-state W-2 splits. An automated <b>W-2 ↔ W-3 reconciliation engine</b> keyed per (EIN, tax year) cross-checks employee count, federal Box 1, and state Box 16 wages with cents-level tolerance, emitting PASS / FAIL / PARTIAL / UNVERIFIABLE verdicts plus a roster and human-readable diagnostics; structures extracted entities into a Neo4j knowledge graph. Built at Ventive.</div>
+  <div class="stack">Python · AWS Textract · Gemini 2.5 Flash + Grok 4.1 Fast (dual-model via OpenRouter) · Claude Opus &amp; Sonnet · Pydantic · FastAPI · Neo4j · Next.js</div>
+  <div class="links"><a href="https://share.descript.com/view/Nju5rPW9SN0">Watch demo ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">Tax Assistant — AI Tax Strategy Optimisation <span class="badge demo">DEMO</span></div>
+  <div>A GPT-4.1 + LangGraph agentic system that takes a tax scenario, asks structured clarifying questions, then generates optimised strategies with simulated returns for each and a comparative trade-off analysis — integrated with tax-filing APIs for execution.</div>
+  <div class="stack">OpenAI GPT-4.1 · LangGraph · Python · Streamlit · Tax Filing APIs</div>
+  <div class="links"><a href="https://www.loom.com/share/635fa15ee7dc43a3a2207c79c7e12837">Watch demo ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">AI-Enhanced Financial Analysis Tool</div>
+  <div>Bank-statement analysis pipeline with OCR + LLM extraction, ML transaction categorisation, anomaly detection, and advice generation, visualised through FastAPI and Plotly.</div>
+  <div class="stack">Azure OCR · GPT · Pandas · NLTK · scikit-learn · PyCaret · FastAPI · Plotly</div>
+</div>
+
+<!-- 02 -->
+<div class="sec"><h2>02 · PropTech / Real Estate</h2><span>4 projects</span></div>
+
+<div class="proj">
+  <div class="t">PropertyAI CRM — AI Property Management Platform <span class="badge live">LIVE</span><span class="badge demo">DEMO</span></div>
+  <div>An AI tenant-communication layer on top of Buildium that autonomously handles tenant SMS — rent follow-ups, maintenance intake (auto-creates work orders), lease-renewal outreach with PDF generation, and smart escalation — with per-tenant conversation memory. Includes a grounded Portfolio Copilot, a Buildium-mirrored dashboard, a WhatsApp-style inbox, role-based admin, and dark mode.</div>
+  <div class="stack">React 18 · TypeScript · Vite · FastAPI · PostgreSQL · OpenRouter (Claude Sonnet 4.5) · Vonage SMS · Buildium REST API · APScheduler · ReportLab · JWT</div>
+  <div class="links"><a href="https://propertyai.kognio.ai">propertyai.kognio.ai ↗</a> · <a href="https://www.loom.com/share/b7b46dc5d0fa4f70ba91d8746bfa43d6">Watch demo ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">Real-Estate CRM Intelligence Layer <span class="badge live">LIVE</span></div>
+  <div>AI layer connecting four platforms that do not talk to each other for a high-volume real-estate team: Gmail, Follow Up Boss (people), Monday.com (deals), and Slack. Reads the agent's inbox in real time through Gmail Pub/Sub push, runs Claude over every email to classify it, identify each person and their role (buyer, seller, agent, vendor, co-owner), extract purchase-agreement terms from attached PDFs, and keep contact tags, deal stages, and activity notes in sync across the CRM and the deal board, with an <b>SLA state machine</b> that escalates missed VIP messages. <b>Thin fast-ack webhook edges, fat Celery workers</b>: every LLM call and platform write runs as a task, with nightly reconciliation and an LLM-judged property matcher behind a confidence threshold. All client-specific behavior lives in one policy file, so the same codebase deploys to the next agent by reconfiguring. Validated by <b>month-by-month dry-run replays</b> of 500 to 800 real emails per month with per-email verdicts before any live write. ~1,150 tests.</div>
+  <div class="stack">Python 3.12 · FastAPI · Celery + Beat · Redis · PostgreSQL · SQLAlchemy 2.0 · Alembic · Claude Sonnet 5.5 (Anthropic SDK) · Gmail API (Pub/Sub) · Follow Up Boss REST · Monday.com GraphQL · Slack Bolt · Railway</div>
+</div>
+
+<div class="proj">
+  <div class="t">Deal Analyzer (DealScope) — Investment Underwriting <span class="badge live">LIVE</span></div>
+  <div>Underwrites any property deal with a deterministic engine (cap rate, cash-on-cash, NOI, comps) plus an AI Underwriting Agent that streams a multi-strategy fit assessment (buy-and-hold / BRRRR / flip / wholesale) and a Negotiation Strategist that produces an offer ladder and scripts. Kanban pipeline, portfolio dashboard, side-by-side compare, CSV import.</div>
+  <div class="stack">Next.js (App Router) · React · TypeScript · shadcn/ui · FastAPI · SQLAlchemy (async) · OpenRouter (Claude)</div>
+  <div class="links"><a href="https://analyzer.kognio.ai">analyzer.kognio.ai ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">Forensic Lease Audit / Desktop True-Up Assistant <span class="badge demo">DEMO</span></div>
+  <div>Agentic system that ingests leases, amendments, prior true-ups, and current invoices; extracts and interprets clauses to validate line items; cross-checks against external data (weather, utility benchmarks — e.g. snow-removal fees vs. actual snowfall); performs year-over-year anomaly detection; and gives clause-cited justification for every decision, with a conversational agent to question and override findings. <b>Automated ~90% of the manual audit process.</b></div>
+  <div class="stack">React · LangGraph · OpenAI · Python · FAISS · External Data APIs</div>
+  <div class="links"><a href="https://drive.google.com/file/d/1MK8Dz2xeEwHqi9E_WP4MnZue9MAKJbyp/view">Watch demo ↗</a></div>
+</div>
+
+<!-- 03 -->
+<div class="sec"><h2>03 · E-Commerce &amp; Retail Intelligence</h2><span>4 projects</span></div>
+
+<div class="proj">
+  <div class="t">Commerce IQ — Commerce Intelligence Platform <span class="badge live">LIVE</span><span class="badge demo">DEMO</span></div>
+  <div>A founder-facing decision-support platform for Amazon-led D2C brands: ingests commerce data into a canonical warehouse, applies deterministic scoring plus AI workflows, and surfaces "what changed yesterday, what to worry about, what to do" via dashboard, a tool-calling chat agent, real-time alerts, and a daily Telegram digest. Lead-time-aware reorder recommendations, a True-Profit calculator, Buy-Box monitoring, and returns/refunds tracking.</div>
+  <div class="stack">React 18 · TypeScript · Vite · Tailwind · TanStack Query · FastAPI · SQLAlchemy 2.0 (async) · PostgreSQL 16 · Redis 7 · OpenRouter (multi-model) · APScheduler · python-telegram-bot</div>
+  <div class="links"><a href="https://commerce.kognio.ai">commerce.kognio.ai ↗</a> · <a href="https://share.descript.com/view/NZbqt7OjTxl">Watch demo ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">Digital Karen — Order Lifecycle Tracker</div>
+  <div>A multi-agent system that classifies and parses retailer emails (order confirmation, shipping, returns), extracts Order ID / Tracking Number / SKU, and presents a unified end-to-end order-tracking view.</div>
+  <div class="stack">LangGraph · OpenAI · Supabase · Docker</div>
+</div>
+
+<div class="proj">
+  <div class="t">Ecommerce AI — Buyer/Seller Matchmaking</div>
+  <div>A multi-agent solution that analyses buyer-seller conversations for intent, interest, and temporal patterns to enable intelligent real-time matchmaking; containerised and deployed on AWS.</div>
+  <div class="stack">LangGraph · OpenAI · Docker · Firebase · MongoDB · AWS</div>
+</div>
+
+<div class="proj">
+  <div class="t">Smart Scan AI — Retail Product Extraction</div>
+  <div>An OCR + LLM pipeline that extracts and structures product details from retail labels (including Icelandic text) in real time to power personalised recommendations and dynamic retail updates.</div>
+  <div class="stack">Azure OCR · GPT-4 · Pandas · SpaCy · FastAPI · Flask · Streamlit</div>
+</div>
+
+<!-- 04 -->
+<div class="sec"><h2>04 · Logistics &amp; Operations</h2><span>1 project</span></div>
+
+<div class="proj">
+  <div class="t">MoveOps — AI Operations Platform for Movers <span class="badge live">LIVE</span></div>
+  <div>An AI-driven operations platform for moving companies: a lead pipeline with an event-triggered automation engine, an AI Move Estimator that streams reasoning and returns structured inventory/volume/crew/price, lead-intelligence scoring, jobs &amp; scheduling, invoicing, and a public quote flow. Full light/dark theming and role-based access.</div>
+  <div class="stack">React · TypeScript · Vite · Tailwind · FastAPI · SQLAlchemy (async) · PostgreSQL · OpenRouter (Claude Sonnet 4.5)</div>
+  <div class="links"><a href="https://moveops.kognio.ai">moveops.kognio.ai ↗</a></div>
+</div>
+
+<!-- 05 -->
+<div class="sec"><h2>05 · HealthTech &amp; Elderly Care</h2><span>12 projects</span></div>
+
+<div class="proj">
+  <div class="t">Biologics Intelligence: Citation-Verified Research Assistant <span class="badge flagship">FLAGSHIP</span><span class="badge live">LIVE</span></div>
+  <div><b>The problem.</b> A consultancy in the spinal biologics market answered client questions such as "which of these 49 products are cleared as 510(k), PMA, or 361 HCT/P, and since when?" by reading FDA records, trial registries, journals, and SEC filings by hand. Days per question, and no way to show where each fact came from.</div>
+  <div><b>What I built, as sole engineer from first commit to production handover.</b> A research assistant that answers such questions in <b>about 2 minutes for about $1 of model spend</b>, with every sentence tied to a passage the reviewer can open. The <b>ingestion pipeline</b> keeps a library current from five public sources (FDA 510(k)/PMA/openFDA, ClinicalTrials.gov, PubMed and PMC, SEC EDGAR, DailyMed) plus uploads: PDF parsing with GROBID, chunking, embedding, and product and company <b>entity resolution</b> across <b>33,800 documents, 668,000 passages, and 711 tracked products</b>. <b>Retrieval</b> runs three lanes (vector, keyword, and sentence windows that surface one decisive sentence buried in boilerplate) merged by rank fusion over a <b>pgvectorscale DiskANN filtered index</b>. A <b>five-stage LangGraph workflow</b> then plans the searches, has a <b>judge model read every candidate passage</b> and keep only what supports an answer, writes, and <b>checks each sentence against its citation</b> before the reader sees it, refusing when the corpus does not hold the answer.</div>
+  <div><b>Results.</b> A hard question went from <b>6 minutes and $4 to 2 minutes and $1</b> after retrieval and judge optimisation (filtered index, judging during retrieval, a small judge model on a fast host with fallback). On the client acceptance set, <b>every regulatory number in the answers was verified correct</b> against the FDA record. Each answer ships with a live progress view, a source panel per citation, an audit trail of what was searched and kept, and its cost. Delivered with an admin console (product registry, source schedules, user approval, per-stage model and reasoning settings, cost reporting), scheduled backups, and a full operations runbook, administrator guide, illustrated user guide, and cost sheet for handover.</div>
+  <div class="stack">Python · FastAPI · LangGraph · PostgreSQL 16 + pgvector + pgvectorscale · SQLAlchemy 2.0 (async) · Alembic · Celery + Redis · Next.js 15 · TypeScript · Tailwind v4 · OpenRouter (GPT-5.5, gpt-oss-20b on Groq) · GROBID · Docker · Railway · GitHub Actions</div>
+</div>
+
+<div class="proj">
+  <div class="t">Cure Health — Unified Digital Health Platform <span class="badge live">LIVE</span></div>
+  <div>A multi-portal platform connecting the whole care loop across six role-scoped dashboards — booking → visit → e-prescription → pharmacy dispensing → insurance adjudication → financing — with AI clinical support (symptom triage, a streaming Care Navigator, clinical-note drafting via a tool-calling agent) and in-browser WebRTC telehealth. 46 API endpoints, 24 role-scoped screens.</div>
+  <div class="stack">Next.js 16 · React 19 · TypeScript · shadcn/ui · FastAPI · async SQLAlchemy · Alembic · PostgreSQL · WebRTC · OpenRouter (Claude)</div>
+  <div class="links"><a href="https://curehealth.kognio.ai">curehealth.kognio.ai ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">Gait Analysis — CV for Rehab &amp; Athletics <span class="badge demo">DEMO</span></div>
+  <div>Depth-camera keypoint detection and pose estimation for real-time gait analysis across 15 clinical parameters (step length, knee-flexion, cadence), with historical comparison and personalised suggestions for rehab professionals and athletic trainers.</div>
+  <div class="stack">OpenCV · TensorRT · ROS · MediaPipe · PyTorch · scikit-learn · Azure Kinect / Orbbec · FastAPI · Plotly · ReportLab</div>
+  <div class="links"><a href="https://www.loom.com/share/2af5e38ac40d41e8adfaf1eda7b207cc">Watch demo ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">Exercise Module — Rep Counting &amp; Form Feedback <span class="badge demo">DEMO</span></div>
+  <div>A lightweight exercise-recognition and rep-counting system from video with real-time form feedback and personalised workout recommendations, deployable on ARM64 edge devices.</div>
+  <div class="stack">OpenCV · TensorFlow Lite · MediaPipe · PyTorch · TensorRT · Flask · Streamlit</div>
+  <div class="links"><a href="https://www.loom.com/share/1d7d618a3a714638a597470337622ca1">Watch demo ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">ADL / Transition Detection for Dementia Care <span class="badge demo">DEMO</span></div>
+  <div>Real-time recognition of Activities of Daily Living and risky transitions (sit-to-stand, lying-to-sit) to flag unsafe movements and trigger timely interventions in elderly-care facilities and home monitoring — reducing fall risk and improving caregiver response.</div>
+  <div class="stack">PyTorch · MMAction2 · MMDetection · MMCV · OpenCV · Flask · Plotly</div>
+  <div class="links"><a href="https://www.loom.com/share/d715f2ce846f41a19b2f6842a08c49f1">Watch demo ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">Risky-Behaviour Detection in Post-Op Elderly <span class="badge demo">DEMO</span></div>
+  <div>Pose-estimation detection of risky movements (improper knee angle, hip flexion) for hip/knee-surgery patients, integrated with healthcare systems for predictive fall-risk forecasting, personalised prevention plans, and real-time alerts.</div>
+  <div class="stack">TensorFlow · TFLite · ONNX · TensorRT · MediaPipe · Flask</div>
+  <div class="links"><a href="https://www.loom.com/share/326c8625dbab427cb9a0da4eb955e984">Watch demo ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">Agitation Detection in Dementia Patients</div>
+  <div>A PoseC3D-based system that identifies agitation-related behaviours with real-time monitoring, historical trend analysis, and personalised care suggestions — reducing caregiver burden and response time.</div>
+  <div class="stack">PyTorch · MMAction2 · MMPose · MMDetection · OpenCV · Flask · ROS</div>
+</div>
+
+<div class="proj">
+  <div class="t">Real-Time Facial Recognition on Edge</div>
+  <div>DeepFace deployed directly on Jetson Xavier for on-device facial recognition, mapping patient activities to identities for secure, low-latency, individualised behaviour tracking in care facilities.</div>
+  <div class="stack">DeepFace · Jetpack · Jetson Xavier · OpenCV · TensorRT · Flask · ROS</div>
+</div>
+
+<div class="proj">
+  <div class="t">Scene Description for Elderly Care</div>
+  <div>A BLIP-based scene-description module that captions images from care environments in real time to support monitoring and documentation; Dockerised and deployed on AWS.</div>
+  <div class="stack">BLIP · FastAPI · Hugging Face · PyTorch · Docker · AWS</div>
+</div>
+
+<div class="proj">
+  <div class="t">Multi-Modal Empathetic Healthcare Chatbot</div>
+  <div>A planner-based chatbot that integrates vital signs, medical history, and real-time voice + facial emotion recognition, with patient-persona profiling to generate empathetic, personalised responses.</div>
+  <div class="stack">Opencha · OpenAI · LangChain · DeepFace · Voice/Facial Emotion Recognition · SQLite</div>
+</div>
+
+<div class="proj">
+  <div class="t">Physio Facilitator — Patient Record Summarisation</div>
+  <div>An LLM-powered chatbot that generates concise, relevant summaries of patient medical histories for clinicians, with modular integration into existing patient-data sources.</div>
+  <div class="stack">Opencha · OpenAI API · LangChain · RAG</div>
+</div>
+
+<div class="proj">
+  <div class="t">Atheris — Medical Data Insights &amp; Visualisation</div>
+  <div>Scraped large medical datasets and built ETL pipelines for clinical-trial extraction, expert identification, and social-media sentiment analysis on drug trials/conferences, visualised in Power BI via a full-stack app with auth on AWS.</div>
+  <div class="stack">Web Scraping · ETL · OpenAI GPT · Topic Modeling · Power BI · LinkedIn/Twitter APIs · AWS</div>
+</div>
+
+<!-- 06 -->
+<div class="sec"><h2>06 · AI Sales &amp; Outreach</h2><span>2 projects</span></div>
+
+<div class="proj">
+  <div class="t">Speed-to-Lead — Multi-Channel AI Intake &amp; Booking Engine <span class="badge demo">DEMO</span></div>
+  <div>One lead-qualification engine behind three doorways — website chat (GoHighLevel Conversation AI), a web and phone voice agent (Vapi), and web forms — that answers within seconds, any hour. Each lead is <b>scored by Claude against rules the business owns in Airtable</b> (weights, threshold, disqualifiers — change a cell, behaviour changes, no deploy), enriched from the lead's own website, and the assistant books a discovery call on the live calendar mid-conversation. Contact, scored opportunity, note and follow-up task land in whichever CRM the client already uses — <b>GoHighLevel or HubSpot, switched by one field</b>. Engineered for production: idempotent intake with a replay guard, a dead-letter path where every failure answers 500 rather than a silent 200, per-contact opportunity upsert, an outbound Google Maps prospecting lane, a nightly metrics roll-up, and a client-facing Lead Desk dashboard. Chat-to-booked-call in about a minute; form-to-CRM in ~20 seconds.</div>
+  <div class="stack">n8n · Claude Haiku 4.5 (OpenRouter) · Vapi (Deepgram STT, Clara voice) · GoHighLevel API · HubSpot API · Airtable + Interface Designer · Apify · Cloudflare Tunnel · Docker · PostgreSQL</div>
+  <div class="links"><a href="https://share.descript.com/view/prx4nWoPmdu">Watch demo ↗</a></div>
+</div>
+
+<div class="proj">
+  <div class="t">AI-Driven Personalised Sales Outreach</div>
+  <div>An outreach pipeline that uses LinkedIn data (via ProxyCurl), generates personalised emails with GPT (content in S3), and tracks emails and history in DynamoDB.</div>
+  <div class="stack">Python · GPT (LLMs) · FastAPI · AWS S3 · AWS DynamoDB · ProxyCurl</div>
+</div>
+
+<!-- 07 -->
+<div class="sec"><h2>07 · Conversational AI / Telecom</h2><span>1 project</span></div>
+
+<!-- Long flagship entry: allowed to split across pages so it doesn't leave a half-empty page -->
+<div class="proj" style="page-break-inside: auto; break-inside: auto">
+  <div class="t">Omvi William — Multi-Tenant Agentic AI SaaS with Real-Time Voice <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></div>
+  <div>Designed and built end to end a white-labelled, multi-tenant AI SaaS for a telecom operator (World Mobile). Users talk or type to "William," which answers from the company knowledge base, acts in email and calendar, remembers earlier conversations, and turns a voice call into a project that a team of AI agents completes live. <b>Architected six services around one agent brain</b>: a FastAPI gateway that every chat and voice request passes through (Redis sessions and history, SSE streaming, LangGraph onboarding flows with human-in-the-loop pauses); a <b>standalone LangGraph graph server</b> so the agent ships independently of the API; a <b>LiveKit voice worker</b>; a <b>pgvector RAG service</b> with neighbouring-passage context; a <b>multi-agent orchestrator</b>; and a Next.js studio.</div>
+  <div style="margin-top:5px"><b>Agentic core:</b> the LangGraph agent classifies every message and routes it to dedicated <b>email and calendar orchestrators</b>, knowledge-base search, <b>cross-session memory recall</b> with safeguards against fabricated recall, or a tool-calling responder (knowledge, web search, time, task creation), streaming tokens as they are generated, including the RAG answer stream relayed through the graph. Tasks extracted from each call run through <b>five specialised agents</b> (research, plan, build, review, write-up) with live WebSocket progress, per-agent output and token cost, instruction-driven re-runs, and downloadable reports. <b>Voice:</b> built the real-time voice agent (LiveKit Agents, Deepgram speech-to-text, Cartesia text-to-speech, Silero VAD, noise cancellation) on the same brain as chat, <b>patching the LangChain adapter so the graph controls what is spoken</b>; clear product questions go straight to retrieval behind an instant spoken filler, warm workers let the agent join a call in about 10 s, and each call's transcript becomes a titled session of linked tasks.</div>
+  <div style="margin-top:5px"><b>Knowledge and models:</b> pgvector RAG with neighbouring-passage context and <b>multilingual retrieval</b>; every model routed through OpenRouter with automatic fallbacks and per-provider token and latency tracking; token streaming fixed for LangGraph on Python 3.10, cutting the first chat reply from <b>35 s to under 10 s</b>. <b>Platform:</b> designed and implemented the <b>multi-tenancy model</b> (organization-scoped state, role-to-scope RBAC, scope-filtered tool binding) and authored the architecture plans the team adopted for serving many clients from one codebase, so a new client is configuration rather than a fork. Shipped to GCP through GitHub Actions and later as <b>8 services on Railway</b> with auto-deploy from main and Playwright-verified releases.</div>
+  <div style="break-inside: avoid; page-break-inside: avoid">
+  <div class="stack">Python · LangGraph · LangChain · FastAPI · LiveKit Agents · Deepgram · Cartesia · Silero · PostgreSQL + pgvector · Redis · OpenRouter · WebSockets · SSE · Next.js 16 · TypeScript · Clerk · Docker · Railway · Playwright · GCP · GitHub Actions</div>
+  <div class="links"><a href="https://www.youtube.com/watch?v=gWZj9BjP2rE">Watch demo ↗</a></div>
+  </div>
+</div>
+
+<!-- 08 -->
+<div class="sec"><h2>08 · EdTech / LMS</h2><span>1 project</span></div>
+
+<div class="proj">
+  <div class="t">AI-Infused E-Learning Platform <span class="badge demo">DEMO</span></div>
+  <div>An end-to-end e-learning app with AI agents for content creation, automated marking, exam creation and feedback, and a content-aware chatbot; plus user management, AI games, quizzes, a practice trainer, and an admin dashboard.</div>
+  <div class="stack">LangChain · OpenAI · Supabase · Vercel · Next.js (full-stack)</div>
+  <div class="links"><a href="https://www.loom.com/share/e245d0059fae429a95be46459260a2d8">Watch demo ↗</a></div>
+</div>
+
+<!-- 09 -->
+<div class="sec"><h2>09 · Content / SEO</h2><span>1 project</span></div>
+
+<div class="proj">
+  <div class="t">AI SEO Blog Generator <span class="badge demo">DEMO</span></div>
+  <div>A full-stack app that turns a single keyword (plus tone and length) into a publish-ready SEO blog post — meta descriptions, title suggestions, keyword analysis, structured outline — in under 60 seconds via a 4-step AI pipeline, with a content library, inline editing, DOCX export, and Google SERP preview.</div>
+  <div class="stack">Next.js 15 · React 19 · TypeScript · Tailwind · FastAPI · PostgreSQL · SQLAlchemy · Alembic · Claude Sonnet (OpenRouter) · Docker</div>
+  <div class="links"><a href="https://www.loom.com/share/f48e3b41152c48ba9ee35f0943a7471c">Watch demo ↗</a></div>
+</div>
+
+<!-- 10 -->
+<div class="sec"><h2>10 · AI Infrastructure / Open Source</h2><span>1 project</span></div>
+
+<div class="proj">
+  <div class="t">OptiML — LLM Compression &amp; Fine-Tuning Framework</div>
+  <div>An open-source framework that turns fine-tuning into a compression pipeline, so models come out smaller and ready for production. One config-driven API covers multiple techniques — <b>pruning (magnitude, Wanda, SparseGPT), quantization, LoRA, and MLA</b> — on a dynamic graph execution model that adapts to the target hardware. Scales across multi-GPU setups (NVIDIA and Intel) via PyTorch DDP, with SageMaker JumpStart pipelines and lm-eval benchmarking built in. Also built the supporting GPU infrastructure: a control plane that rents cost-capped Vast.ai GPUs into a K3s cluster (Ray, FastAPI job API, Tailscale networking) and serves the compressed models for <b>self-hosted, optimised inference</b> via Text Generation Inference. Led a team of 4 — architecture, CI/CD, and releases.</div>
+  <div class="stack">Python · PyTorch · Hugging Face · AWS SageMaker JumpStart · Ray · Kubernetes (K3s) · FastAPI · Text Generation Inference · Docker · GitHub Actions</div>
+</div>
+
+<div class="foot">
+  <div>mjehanzaib99@gmail.com · <a href="https://linkedin.com/in/muhammad-jehanzaib-4036b5195">linkedin.com/in/muhammad-jehanzaib-4036b5195</a> · <a href="https://github.com/mjehanzaib999">github.com/mjehanzaib999</a></div>
+  <div>Muhammad Jehanzaib · AI Portfolio</div>
+</div>
+
+</body>
+</html>

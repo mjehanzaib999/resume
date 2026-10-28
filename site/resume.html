@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Muhammad Jehanzaib — Resume</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Inter, Arial, sans-serif; color: #1f2937; font-size: 10.2pt; line-height: 1.42; margin: 0; text-align: justify; }
+  .head, .head * { text-align: center; }
+  .job .row, .skills p, .feat .stack, .pub a { text-align: left; }
+  a { color: #1d4ed8; text-decoration: none; }
+  .head { text-align: center; border-bottom: 2px solid #1f2937; padding-bottom: 8px; margin-bottom: 12px; }
+  .head h1 { margin: 0; font-size: 24pt; letter-spacing: 2px; color: #0f172a; font-weight: 800; }
+  .head .role { color: #1d4ed8; font-size: 12.5pt; font-weight: 600; margin-top: 2px; }
+  .head .tag { font-style: italic; color: #374151; margin-top: 4px; }
+  .head .contact { margin-top: 4px; color: #374151; }
+  .head .contact span { margin: 0 4px; color: #9ca3af; }
+  h2 { font-size: 11.5pt; letter-spacing: 2px; color: #0f172a; text-transform: uppercase; font-weight: 800; border-bottom: 2px solid #1d4ed8; padding-bottom: 3px; margin: 14px 0 7px; page-break-after: avoid; }
+  p { margin: 0 0 7px; }
+  .skills p { margin-bottom: 4px; }
+  .job { margin-bottom: 10px; }
+  .job .row { display: flex; justify-content: space-between; align-items: baseline; page-break-after: avoid; }
+  .job .title { font-weight: 700; font-size: 11pt; color: #0f172a; }
+  .job .dates { color: #4b5563; font-size: 9.6pt; }
+  .job .org { color: #1d4ed8; font-weight: 700; font-style: italic; margin-bottom: 4px; page-break-after: avoid; }
+  ul { margin: 4px 0 0; padding-left: 18px; }
+  li { margin-bottom: 4px; page-break-inside: avoid; }
+  .pub { margin-bottom: 8px; }
+  .pub .t { font-weight: 700; }
+  .pub .j { font-style: italic; color: #4b5563; }
+  .feat { margin-bottom: 9px; page-break-inside: avoid; }
+  .feat .t { font-weight: 700; color: #0f172a; }
+  .feat .stack { font-style: italic; color: #4b5563; font-size: 9.4pt; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>MUHAMMAD JEHANZAIB</h1>
+  <div class="role">Senior AI Engineer &amp; Solutions Architect</div>
+  <div class="tag">Shipping production-grade AI systems across agentic automation, applied LLMs, computer vision, and medical AI.</div>
+  <div class="contact">mjehanzaib99@gmail.com <span>|</span> <a href="https://linkedin.com/in/muhammad-jehanzaib-4036b5195">linkedin.com/in/muhammad-jehanzaib-4036b5195</a> <span>|</span> <a href="https://github.com/mjehanzaib999">github.com/mjehanzaib999</a> <span>|</span> Portfolio available on request</div>
+</div>
+
+<h2>Summary</h2>
+<p style="text-align: justify;">Senior AI Engineer and Solutions Architect with 5+ years shipping production AI systems, specializing in agentic LLM platforms, RAG, LLM fine-tuning and optimized inference, real-time voice, computer vision, and edge deployment. Distinguished by owning products end to end, from architecture and agent design through backend, frontend, deployment, and production hardening. Shipped 25+ production systems across tax automation, conversational AI with real-time voice, live AI SaaS products, open-source LLM compression, and edge healthcare robotics. Published twice in Medical Image Analysis (Impact Factor 10.9). Bachelor of Science in Computer Science.</p>
+
+<h2>Skills &amp; Expertise</h2>
+<div class="skills">
+<p><b>LLM Engineering:</b> LangGraph · LangChain · LlamaIndex · LangSmith · Anthropic and OpenAI SDKs · OpenRouter · MCP · multi-agent orchestration · human-in-the-loop workflows · tool-calling · RAG · conversational memory · LLM compression (pruning, quantization, LoRA)</p>
+<p><b>Voice &amp; Real-Time:</b> LiveKit Agents · speech-to-speech models (OpenAI Realtime, Gemini Live, Amazon Nova Sonic) · Deepgram STT · Cartesia TTS · ElevenLabs</p>
+<p><b>ML &amp; Computer Vision:</b> PyTorch · TensorFlow · Hugging Face · scikit-learn · TensorRT · MMAction2 · MediaPipe · OpenCV · DeepFace</p>
+<p><b>Languages &amp; Frameworks:</b> Python · FastAPI · Flask · Next.js · React · TypeScript · SQL / PostgreSQL · Streamlit</p>
+<p><b>Cloud, MLOps &amp; Infra:</b> AWS · Azure · GCP · Docker · Kubernetes (K3s) · Ray · Celery · Redis · Railway · Vercel · Supabase · AWS SageMaker · GitHub Actions · CI/CD</p>
+<p><b>Edge &amp; Robotics:</b> NVIDIA Jetson · Jetson Xavier · ROS · DeepStream · Azure Kinect · TFLite · ONNX</p>
+</div>
+
+<h2>Work Experience</h2>
+
+<div class="job">
+  <div class="row"><span class="title">Full-Stack AI Engineer &amp; Architect</span><span class="dates">Jan 2026 – Present</span></div>
+  <div class="org">Ventive</div>
+  <p>Lead engineer on a <b>five-service platform</b> that automates IRC §41 R&amp;D tax-credit qualification for a U.S. tax-advisory firm: an LLM contract-analysis engine, a FastAPI gateway, a React admin console, a tax-form extraction engine, and a §41 calculation and workpaper engine. Responsible for security, concurrency, and data-integrity hardening across all five services, including client data isolation.</p>
+  <ul>
+    <li>Architected the contract-analysis engine (Python, LangGraph, Celery, Redis) as a <b>multi-agentic workflow</b> in which specialized stages (triage, rights assessment, contingency, jurisdiction, adversarial review, IRS counter-argument, final determination) each evaluate one aspect of a contract against IRC §41 and §6662 standards. Each stage receives only the clauses relevant to it, and independent stages execute in parallel to reduce analysis time.</li>
+    <li>Converted the model's raw confidence output into an <b>auditable §6662 Tax Position score</b> suitable for reviewer defense, with an automated approval gate that clears unambiguous cases and routes the remainder for human review.</li>
+    <li>Built a <b>streaming multi-LLM chat interface</b> for reviewers, supporting model switching mid-analysis, clean cancellation of long-running jobs, and safe correction of results with protection against prompt injection.</li>
+    <li>Designed <b>server-authoritative resumable sessions</b> so that long-running analyses persist across page reloads, navigation, and tab switches, with automatic repair of corrupted state and strict isolation between clients.</li>
+    <li>Delivered a <b>multi-tenant automation platform</b> in which system events trigger configurable actions (for example, provisioning Google Drive folder structures) through a reliable event pipeline, with a no-code workflow editor and dashboards for runs and events.</li>
+    <li>Built a <b>tax-form extraction engine</b> (AWS Textract with Claude post-processing) covering <b>29 IRS form types</b> (W-2/W-3, 1099, K-1, 1120/1120-S/1065, 6765, 2553, state forms), with per-form document segmentation and LLM-based form classification.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><span class="title">AI Engineer (Contract)</span><span class="dates">Oct 2025 – Mar 2026</span></div>
+  <div class="org">Omvi AI · <a href="https://www.youtube.com/watch?v=gWZj9BjP2rE">Watch demo ↗</a></div>
+  <p>Designed and built end to end "William," a multi-tenant agentic AI SaaS with real-time voice for a telecom client (World Mobile): users talk or type to an assistant that answers from the company knowledge base, acts in email and calendar, remembers earlier conversations, and turns a voice call into a project that a team of AI agents completes live.</p>
+  <ul>
+    <li>Architected the platform as <b>six services around one agent brain</b>: a <b>FastAPI gateway</b> through which every chat and voice request passes (Redis-backed sessions and history, streamed responses, <b>LangGraph onboarding flows</b> with pauses for user input), a <b>standalone LangGraph graph server</b> so the agent ships independently of the API, a LiveKit voice worker, a pgvector RAG service, a multi-agent orchestrator, and a Next.js studio.</li>
+    <li>Built the <b>LangGraph agent</b>: it classifies each message, directs email and calendar requests to dedicated orchestrators, and routes all other requests to <b>knowledge-base search, cross-session memory recall</b> (with safeguards against fabricated recall), or a <b>tool-enabled responder</b> (knowledge search, web search, time, task creation), streaming tokens as they are generated.</li>
+    <li>Built a <b>multi-agent orchestrator</b> that runs every task extracted from a call through <b>five specialised agents</b> (research, plan, build, review, write-up), with live WebSocket progress, per-agent output and token cost, instruction-driven re-runs, and downloadable reports.</li>
+    <li>Built the <b>real-time voice agent on LiveKit</b> (Deepgram speech-to-text, Cartesia text-to-speech, Silero voice activity detection, noise cancellation) on the same agent core as chat, and <b>patched the LiveKit LangChain adapter</b> so that the agent, rather than the plugin, governs spoken output. Added a fast retrieval route with an instant spoken filler and warm workers so the agent joins a call in about 10 seconds; each call's transcript becomes a session of linked tasks.</li>
+    <li>Built the <b>knowledge and model layer</b>: pgvector RAG with neighbouring-passage context and <b>multilingual retrieval</b>, every model routed through OpenRouter with automatic fallbacks, and token streaming fixed for LangGraph on Python 3.10, cutting the first reply from <b>35 seconds to under 10</b>.</li>
+    <li>Designed and implemented <b>multi-tenancy</b>: organization-level data separation in Redis, role-based permissions, and tool access restricted to each user's entitlements. Authored the architecture plans adopted by the team for serving multiple clients from a single codebase.</li>
+    <li>Shipped to GCP through GitHub Actions and later as <b>8 services on Railway</b> with auto-deploy from main and Playwright-verified releases, with per-provider token and latency tracking.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><span class="title">AI Solution Architect &amp; Researcher (Contract, Founding Engineering Team)</span><span class="dates">Feb 2025 – Jan 2026</span></div>
+  <div class="org">Optiml</div>
+  <p>Founding engineer on OptiML, an open-source framework for LLM compression and fine-tuning that produces smaller, lower-cost models for production. Responsible for architecture, CI/CD, release management, and a team of 4.</p>
+  <ul>
+    <li>Designed a single <b>config-driven API</b> covering <b>pruning (magnitude, Wanda, SparseGPT), quantization, LoRA fine-tuning, and MLA</b>, including hardware-friendly 2:4 structured sparsity, with integrated lm-eval benchmarking.</li>
+    <li>Scaled training and compression across <b>multi-GPU NVIDIA and Intel environments</b> with PyTorch DDP.</li>
+    <li>Built the GPU infrastructure: cost-capped Vast.ai GPUs provisioned into a <b>K3s cluster</b> over Tailscale, Ray on AWS EC2, a FastAPI job API with per-user quotas, and <b>self-hosted inference</b> through Text Generation Inference.</li>
+    <li>Implemented AWS SageMaker JumpStart pipelines and GitHub Actions CI/CD; managed sprints and releases.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><span class="title">Senior Machine Learning Engineer</span><span class="dates">Feb 2021 – Feb 2025</span></div>
+  <div class="org">Xavor Corp USA</div>
+  <p>Built the AI modules of "Ruyi," a robot that supports the recovery of elderly and post-surgery patients using personalized longitudinal data, together with a medical data bank for clinicians integrated with social-media intelligence.</p>
+  <ul>
+    <li>Developed the <b>ADL (Activities of Daily Living) module</b>, which recognizes patient activities and measures the effort and duration of each movement, running at <b>30 FPS on the device</b>.</li>
+    <li>Built an <b>audio module recognizing 9 health-critical sounds</b>, and a vision pipeline that converts robot sensor data into a structured patient record for recovery planning.</li>
+    <li>Co-developed a <b>gait analysis module tracking 15 clinical parameters</b>, from step length and knee flexion to cadence.</li>
+    <li>Deployed across <b>NVIDIA Xavier edge devices</b>, Microsoft Azure, and AWS.</li>
+    <li>Built data scrapers, cleaning routines, and a <b>generative-AI social-media intelligence</b> layer supporting medical-data explainability.</li>
+  </ul>
+</div>
+
+<h2>Publications</h2>
+<div class="pub"><span class="t">FFPE++</span>, <span class="j">Medical Image Analysis (Impact Factor 10.9)</span><br>Unpaired image-to-image translation with mixed channel-spatial attention for histopathology artifact correction.<br><a href="https://doi.org/10.1016/j.media.2023.102992">doi.org/10.1016/j.media.2023.102992</a></div>
+<div class="pub"><span class="t">MediSeg &amp; MediGan</span>, <span class="j">Medical Image Analysis (Impact Factor 10.9)</span><br>Novel attention-based segmentation and semantically controlled synthetic generation for histopathology datasets.<br><a href="https://doi.org/10.1016/j.media.2024.103344">doi.org/10.1016/j.media.2024.103344</a></div>
+
+<h2>Featured Work</h2>
+
+
+<div class="feat">
+  <div class="t">Forensic Lease Audit Engine</div>
+  <div>Agentic system that ingests leases, amendments, prior true-ups, and invoices, extracts and interprets the governing clauses, and validates each line item against them and against external data sources (weather records, utility benchmarks). A LangGraph workflow runs clause extraction, cross-checks, and year-over-year anomaly detection as separate stages, with vector retrieval over the lease corpus to locate the relevant clause for every charge. Each finding carries a clause-cited justification, and auditors can query, challenge, and override findings through a conversational agent with access to the same retrieval tools. Automated approximately 90% of the manual audit process.</div>
+  <div class="stack">LangGraph · OpenAI · Vector retrieval · React · Python · External APIs</div>
+</div>
+
+<div class="feat">
+  <div class="t">Biologics Intelligence: Citation-Verified Research Assistant</div>
+  <div>Sole engineer, from architecture to production handover, of a competitive-intelligence platform for a medical-device consultancy. Research questions that took analysts days of reading across FDA records, clinical trials, journals, and SEC filings now return in <b>about 2 minutes for about $1 in model spend</b>, with every sentence tied to a source passage a reviewer can open. Built the <b>ingestion pipeline</b> (scheduled syncs from five public sources, PDF parsing, entity resolution over <b>33,800 documents, 668,000 passages, and 711 tracked products</b>), <b>hybrid retrieval</b> (vector, keyword, and sentence-window lanes merged by rank fusion over a pgvectorscale filtered index), and a <b>five-stage LangGraph workflow</b>: planner, retrieval, a judge model that reads every candidate passage, a writer, and a checker that <b>verifies each sentence against its citation</b> before display, refusing when the evidence is not there. Cut a hard question from <b>6 minutes and $4 to 2 minutes and $1</b> through retrieval and judge optimisation. On the client acceptance set, <b>every regulatory number was correct</b> against the FDA record. Shipped with live progress, audit trail, per-stage model controls, cost reporting, an admin console, scheduled backups, and full operations and user documentation.</div>
+  <div class="stack">Python · FastAPI · LangGraph · PostgreSQL + pgvector + pgvectorscale · Celery + Redis · Next.js · TypeScript · OpenRouter (GPT-5.5, gpt-oss) · Railway</div>
+</div>
+
+<div class="feat">
+  <div class="t">PropertyAI CRM: AI Property Management Platform (<a href="https://propertyai.kognio.ai">propertyai.kognio.ai</a>)</div>
+  <div>AI tenant-communication layer on top of Buildium for property managers. Inbound tenant SMS (Vonage) is classified and handled autonomously by a Claude-based agent: rent follow-ups, maintenance intake with automatic work-order creation through the Buildium REST API, lease-renewal outreach with ReportLab PDF generation, and escalation to staff when confidence is low, with per-tenant conversation memory persisted in PostgreSQL. APScheduler drives the follow-up and renewal cadences. Includes a portfolio copilot grounded in the manager's Buildium data, a Buildium-mirrored dashboard, a WhatsApp-style inbox, and JWT-based role-based administration.</div>
+  <div class="stack">React 18 · TypeScript · FastAPI · PostgreSQL · OpenRouter (Claude Sonnet 4.5) · Vonage SMS · Buildium REST API · APScheduler · Railway</div>
+</div>
+
+<div class="feat">
+  <div class="t">Commerce IQ: Commerce Intelligence Platform (<a href="https://commerce.kognio.ai">commerce.kognio.ai</a>)</div>
+  <div>Decision-support platform for Amazon-led D2C brands. Scheduled ingestion jobs (APScheduler) consolidate orders, inventory, advertising, and returns data into a canonical PostgreSQL warehouse, where deterministic scoring rules and AI workflows run against it. Findings surface through a React dashboard, a tool-calling chat agent that queries the warehouse directly, Redis-backed real-time alerts, and a daily Telegram digest. Includes lead-time-aware reorder recommendations, a true-profit calculator that nets fees and returns, Buy Box monitoring, and returns and refunds tracking, with multi-model routing through OpenRouter.</div>
+  <div class="stack">React 18 · TypeScript · FastAPI · SQLAlchemy 2.0 (async) · PostgreSQL 16 · Redis 7 · OpenRouter (multi-model) · APScheduler · python-telegram-bot · Railway</div>
+</div>
+
+<div class="feat">
+  <div class="t">Cure Health: Unified Digital Health Platform (<a href="https://curehealth.kognio.ai">curehealth.kognio.ai</a>)</div>
+  <div>Multi-portal digital health platform covering the full care loop across six role-scoped dashboards: booking, visit, e-prescription, pharmacy dispensing, insurance adjudication, and financing. Built on a FastAPI backend with async SQLAlchemy and Alembic migrations over PostgreSQL, exposing 46 API endpoints to a Next.js 16 front end with 24 role-scoped screens. AI clinical support includes symptom triage, a streaming care navigator, and clinical-note drafting by a tool-calling agent, all served through OpenRouter (Claude), together with in-browser WebRTC telehealth.</div>
+  <div class="stack">Next.js 16 · React 19 · TypeScript · FastAPI · async SQLAlchemy · Alembic · PostgreSQL · WebRTC · OpenRouter (Claude) · Railway</div>
+</div>
+
+</body>
+</html>
