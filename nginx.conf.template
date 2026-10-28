@@ -7,6 +7,10 @@ server {
     # reachable by name so one link can point at either.
     index ${ROOT_DOC};
 
+    # Redirects behind Railway's proxy must be relative: nginx only knows its
+    # internal port, and "http://host:8080/..." is not a public address.
+    absolute_redirect off;
+
     location / {
         try_files $uri $uri/ =404;
     }
