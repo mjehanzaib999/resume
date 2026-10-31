@@ -50,7 +50,7 @@
 <div class="hero">
   <h1>Muhammad Jehanzaib</h1>
   <div class="role">Senior ML / Full-Stack AI Engineer &amp; AI Architect</div>
-  <p>Production AI projects across FinTech &amp; TaxTech, PropTech, E-Commerce, HealthTech, Logistics, Sales, Telecom, EdTech, and AI Infrastructure — each with the problem, approach, outcome, and stack. Grounded in agentic LLMs, RAG, computer vision, and MLOps.</p>
+  <p>Production AI projects across FinTech &amp; TaxTech, PropTech, E-Commerce, HealthTech, Logistics, Sales, Telecom, EdTech, HR Operations, and AI Infrastructure — each with the problem, approach, outcome, and stack. Grounded in agentic LLMs, MCP, RAG, computer vision, and MLOps.</p>
   <div class="contact">mjehanzaib99@gmail.com · <a href="https://linkedin.com/in/muhammad-jehanzaib-4036b5195">linkedin.com/in/muhammad-jehanzaib-4036b5195</a> · <a href="https://github.com/mjehanzaib999">github.com/mjehanzaib999</a> · Resume: <a href="https://mjehanzaib-ai-resume.up.railway.app">mjehanzaib-ai-resume.up.railway.app</a></div>
   <div class="legend"><span class="badge live">LIVE</span> deployed &amp; clickable &nbsp;·&nbsp; <span class="badge demo">DEMO</span> video walkthrough &nbsp;·&nbsp; <span class="badge flagship">FLAGSHIP</span> lead production work</div>
 </div>
@@ -68,6 +68,7 @@
     <tr><td class="n">08</td><td>EdTech / LMS</td><td class="c">1 project</td></tr>
     <tr><td class="n">09</td><td>Content / SEO</td><td class="c">1 project</td></tr>
     <tr><td class="n">10</td><td>AI Infrastructure / Open Source</td><td class="c">1 project</td></tr>
+    <tr><td class="n">11</td><td>HR Operations / Agent Tooling (MCP)</td><td class="c">1 project</td></tr>
   </table>
 </div>
 
@@ -310,6 +311,16 @@
   <div class="t">OptiML — LLM Compression &amp; Fine-Tuning Framework</div>
   <div>An open-source framework that turns fine-tuning into a compression pipeline, so models come out smaller and ready for production. One config-driven API covers multiple techniques — <b>pruning (magnitude, Wanda, SparseGPT), quantization, LoRA, and MLA</b> — on a dynamic graph execution model that adapts to the target hardware. Scales across multi-GPU setups (NVIDIA and Intel) via PyTorch DDP, with SageMaker JumpStart pipelines and lm-eval benchmarking built in. Also built the supporting GPU infrastructure: a control plane that rents cost-capped Vast.ai GPUs into a K3s cluster (Ray, FastAPI job API, Tailscale networking) and serves the compressed models for <b>self-hosted, optimised inference</b> via Text Generation Inference. Led a team of 4 — architecture, CI/CD, and releases.</div>
   <div class="stack">Python · PyTorch · Hugging Face · AWS SageMaker JumpStart · Ray · Kubernetes (K3s) · FastAPI · Text Generation Inference · Docker · GitHub Actions</div>
+</div>
+
+<!-- 11 -->
+<div class="sec"><h2>11 · HR Operations / Agent Tooling (MCP)</h2><span>1 project</span></div>
+
+<div class="proj">
+  <div class="t">AI Onboarding Ops — Employee &amp; Client Onboarding as an MCP Server <span class="badge live">LIVE</span></div>
+  <div>Onboarding operations delivered two ways from one codebase: a web console for people, and a <b>Model Context Protocol (MCP) server</b> that Claude Desktop, Claude in Slack, or any agent can call with a personal token. One instruction starts an employee onboarding — person record, task list from a template, document requests with upload links, account provisioning — and tasks that need paperwork stay closed until the document is actually accepted; client onboarding (contract, workspace, billing, security review, kickoff, go-live) runs on the same state machine. Policy questions are answered only from the company's own <b>versioned handbook</b>, with a citation for every claim and a refusal when the documents are silent. The design centre is <b>25 narrow tools behind a single guard</b> that runs role check → idempotent replay → handler → audit write, on success and on failure, so the console, the in-app chat agent, and the MCP endpoint cannot change data without a record. Five roles with row-level scoping, restricted personal data behind a separate audited call that is never exposed to chat or MCP, and every model call priced at write time from a versioned price table with daily/weekly/monthly cost views. 24 tools, 3 resources, and 3 prompts over a hand-rolled JSON-RPC 2.0 MCP endpoint; the seed data is produced by driving the real tools, so the audit log is genuine.</div>
+  <div class="stack">Python · FastAPI · SQLAlchemy 2.0 (async) · Alembic · PostgreSQL · MCP (JSON-RPC 2.0) · BM25 retrieval · OpenRouter (Claude Sonnet 4.5) · React 18 · TypeScript · Vite · TanStack Router · Tailwind · Docker · Railway</div>
+  <div class="links"><a href="https://onboarding.kognio.ai">onboarding.kognio.ai ↗</a> · <a href="https://github.com/mjehanzaib999/onboarding-ops">Case study on GitHub ↗</a></div>
 </div>
 
 <div class="foot">

@@ -29,7 +29,7 @@
   .pub { margin-bottom: 8px; }
   .pub .t { font-weight: 700; }
   .pub .j { font-style: italic; color: #4b5563; }
-  .feat { margin-bottom: 9px; page-break-inside: avoid; }
+  .feat { margin-bottom: 6px; page-break-inside: avoid; }
   .feat .t { font-weight: 700; color: #0f172a; }
   .feat .stack { font-style: italic; color: #4b5563; font-size: 9.4pt; }
   /* On screen only: a way to the portfolio and the PDF. Never printed. */
@@ -51,7 +51,7 @@
 </div>
 
 <h2>Summary</h2>
-<p style="text-align: justify;">Senior AI Engineer and Solutions Architect with 5+ years shipping production AI systems, specializing in agentic LLM platforms, RAG, LLM fine-tuning and optimized inference, real-time voice, computer vision, and edge deployment. Distinguished by owning products end to end, from architecture and agent design through backend, frontend, deployment, and production hardening. Shipped 25+ production systems across tax automation, conversational AI with real-time voice, live AI SaaS products, open-source LLM compression, and edge healthcare robotics. Published twice in Medical Image Analysis (Impact Factor 10.9). Bachelor of Science in Computer Science.</p>
+<p style="text-align: justify;">Senior AI Engineer and Solutions Architect with 5+ years shipping production AI systems, specializing in agentic LLM platforms, RAG, LLM fine-tuning and optimized inference, real-time voice, computer vision, and edge deployment. Distinguished by owning products end to end, from architecture and agent design through backend, frontend, deployment, and production hardening. Shipped 25+ production systems across tax automation, conversational AI with real-time voice, live AI SaaS products, MCP agent tooling, open-source LLM compression, and edge healthcare robotics. Published twice in Medical Image Analysis (Impact Factor 10.9). Bachelor of Science in Computer Science.</p>
 
 <h2>Skills &amp; Expertise</h2>
 <div class="skills">
@@ -136,6 +136,12 @@
   <div class="t">Biologics Intelligence: Citation-Verified Research Assistant (<a href="https://youtu.be/sobTYD4ZE5M">Watch demo ↗</a>)</div>
   <div>Sole engineer, from architecture to production handover, of a competitive-intelligence platform for a medical-device consultancy. Research questions that took analysts days of reading across FDA records, clinical trials, journals, and SEC filings now return in <b>about 2 minutes for about $1 in model spend</b>, with every sentence tied to a source passage a reviewer can open. Built the <b>ingestion pipeline</b> (scheduled syncs from five public sources, PDF parsing, entity resolution over <b>33,800 documents, 668,000 passages, and 711 tracked products</b>), <b>hybrid retrieval</b> (vector, keyword, and sentence-window lanes merged by rank fusion over a pgvectorscale filtered index), and a <b>five-stage LangGraph workflow</b>: planner, retrieval, a judge model that reads every candidate passage, a writer, and a checker that <b>verifies each sentence against its citation</b> before display, refusing when the evidence is not there. Cut a hard question from <b>6 minutes and $4 to 2 minutes and $1</b> through retrieval and judge optimisation. On the client acceptance set, <b>every regulatory number was correct</b> against the FDA record. Shipped with live progress, audit trail, per-stage model controls, cost reporting, an admin console, scheduled backups, and full operations and user documentation.</div>
   <div class="stack">Python · FastAPI · LangGraph · PostgreSQL + pgvector + pgvectorscale · Celery + Redis · Next.js · TypeScript · OpenRouter (GPT-5.5, gpt-oss) · Railway</div>
+</div>
+
+<div class="feat">
+  <div class="t">AI Onboarding Ops: Employee and Client Onboarding as an MCP Server (<a href="https://onboarding.kognio.ai">onboarding.kognio.ai</a>)</div>
+  <div>A web console and a <b>Model Context Protocol (MCP) server</b> from one codebase, which any AI client can call with a personal token. One instruction starts an employee or client onboarding (person record, tasks, documents, accounts); tasks that need paperwork stay closed until the document is accepted, and policy questions are answered only from the versioned handbook with a citation per claim. <b>25 narrow tools sit behind one guard</b> that runs the role check, idempotent replay, the handler, and the audit write on success and on failure, so no front door can change data without a record; restricted personal data never reaches chat or MCP.</div>
+  <div class="stack">Python · FastAPI · PostgreSQL · MCP (JSON-RPC 2.0) · OpenRouter (Claude Sonnet 4.5) · React 18 · TypeScript · Railway</div>
 </div>
 
 <div class="feat">
