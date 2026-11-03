@@ -30,15 +30,18 @@
   .toc .c { color: #6b7280; font-size: 8.8pt; white-space: nowrap; }
   [id] { scroll-margin-top: 16px; }
   @media screen and (max-width: 640px) { .toc .grid { grid-template-columns: 1fr; } }
-  .sec { background: #f3f4f6; border-left: 4px solid #1d4ed8; padding: 8px 16px; margin: 18px 0 10px; display: flex; justify-content: space-between; align-items: baseline; page-break-after: avoid; }
-  .sec h2 { margin: 0; font-size: 13pt; }
-  .sec span { color: #6b7280; font-size: 9.4pt; }
-  .proj { padding: 8px 0 10px; border-bottom: 1px solid #e5e7eb; page-break-inside: avoid; }
-  .proj { text-align: justify; }
-  .proj .t { font-weight: 700; font-size: 11pt; color: #0f172a; margin-bottom: 3px; text-align: left; }
-  .proj .stack, .proj .links { text-align: left; }
-  .proj .stack { font-style: italic; color: #4b5563; font-size: 9.2pt; margin-top: 4px; }
-  .proj .links { margin-top: 4px; font-size: 9.6pt; }
+  /* Level 1: domain bar */
+  .sec { background: #0f172a; color: #fff; padding: 11px 18px; margin: 26px 0 12px; border-radius: 6px; display: flex; justify-content: space-between; align-items: baseline; page-break-after: avoid; }
+  .sec h2 { margin: 0; font-size: 14pt; }
+  .sec span { color: #93c5fd; font-size: 9pt; font-weight: 600; text-transform: uppercase; letter-spacing: .6px; }
+  /* Level 2: project card */
+  .proj { border: 1px solid #e5e7eb; border-left: 4px solid #1d4ed8; border-radius: 8px; padding: 0 16px 12px; margin: 0 0 12px; background: #fff; page-break-inside: avoid; }
+  .proj .t { font-weight: 700; font-size: 11.5pt; color: #0f172a; margin: 0 -16px 10px; padding: 9px 16px; background: #eff6ff; border-bottom: 1px solid #dbeafe; border-radius: 0 7px 0 0; }
+  .proj > div:not(.t):not(.stack):not(.links) { margin-top: 4px; }
+  .proj .stack { color: #475569; font-size: 9.2pt; margin-top: 9px; padding: 6px 10px; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 6px; }
+  .proj .stack::before { content: "Stack"; display: inline-block; margin-right: 8px; font-size: 8pt; font-weight: 700; color: #1e40af; text-transform: uppercase; letter-spacing: .6px; }
+  .proj .links { margin-top: 7px; font-size: 9.6pt; }
+  .proj .links::before { content: "Links"; display: inline-block; margin-right: 8px; font-size: 8pt; font-weight: 700; color: #1e40af; text-transform: uppercase; letter-spacing: .6px; }
   .proj .links a { margin-right: 6px; }
   .foot { display: flex; justify-content: space-between; color: #6b7280; font-size: 9pt; border-top: 1px solid #e5e7eb; padding-top: 10px; margin-top: 18px; }
   /* On screen only: a way to the resume and the PDF. Never printed. */
