@@ -22,20 +22,27 @@
   .live { background: #dcfce7; color: #166534; }
   .demo { background: #dbeafe; color: #1e40af; }
   .flagship { background: #fef3c7; color: #92400e; }
-  /* Index */
-  .idx { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px 24px 10px; margin-bottom: 22px; }
-  .idx h2 { margin: 0 0 4px; font-size: 14pt; }
-  .idx .hint { color: #6b7280; font-size: 9pt; margin: 0 0 6px; }
-  .idx .grp { margin-top: 16px; page-break-inside: avoid; }
-  .idx .gh { display: flex; align-items: baseline; gap: 10px; font-size: 8.8pt; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: #1d4ed8; padding-bottom: 5px; border-bottom: 1px solid #e5e7eb; }
-  .idx .gh .gn { color: #9ca3af; font-variant-numeric: tabular-nums; }
-  .idx a.row { display: grid; grid-template-columns: 38px 1fr; column-gap: 10px; padding: 9px 6px; color: #1f2937; border-bottom: 1px solid #f1f5f9; border-radius: 4px; }
-  .idx a.row:last-child { border-bottom: 0; }
-  .idx a.row:hover { background: #eff6ff; }
-  .idx .rn { color: #1d4ed8; font-weight: 700; font-size: 9.6pt; padding-top: 1px; font-variant-numeric: tabular-nums; }
-  .idx .rt { font-weight: 600; color: #0f172a; }
-  .idx .rt .badge { margin-left: 6px; font-size: 7pt; padding: 0 5px; }
-  .idx .rs { grid-column: 2; color: #6b7280; font-size: 9pt; margin-top: 2px; }
+  /* Index (same card grid as the portfolio) */
+  .toc { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 18px 22px; margin-bottom: 22px; page-break-inside: avoid; }
+  .toc .head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .toc h2 { margin: 0 0 3px; font-size: 14pt; }
+  .toc .hint { color: #6b7280; font-size: 9pt; margin: 0 0 12px; }
+  .toc .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 14px; }
+  .toc a.card { display: grid; grid-template-columns: 34px 1fr auto; align-items: baseline; gap: 8px; padding: 8px 10px; border: 1px solid #e5e7eb; border-radius: 6px; color: #1f2937; background: #f8fafc; }
+  .toc a.card:hover { border-color: #1d4ed8; background: #eff6ff; }
+  .toc .n { color: #1d4ed8; font-weight: 700; font-size: 9.6pt; font-variant-numeric: tabular-nums; }
+  .toc .d { font-weight: 600; color: #0f172a; }
+  .toc .c { color: #6b7280; font-size: 8.8pt; white-space: nowrap; }
+  /* Collapsible cards (screen only) */
+  .ctl { display: flex; gap: 6px; }
+  .ctl button, .tg { font: inherit; font-size: 8.8pt; font-weight: 600; color: #1e40af; background: #fff; border: 1px solid #bfdbfe; border-radius: 5px; padding: 3px 9px; cursor: pointer; }
+  .ctl button:hover, .tg:hover { background: #eff6ff; }
+  .tg { flex: 0 0 auto; width: 26px; height: 26px; padding: 0; display: inline-flex; align-items: center; justify-content: center; margin-left: 6px; }
+  .tg svg { width: 14px; height: 14px; transition: transform .15s; }
+  .sec { cursor: pointer; }
+  .sec.closed { border-radius: 8px; margin-bottom: 14px; }
+  .sec.closed .tg svg { transform: rotate(-90deg); }
+  .sec.closed + .cs { display: none; }
   /* Domain + case-study bars */
   /* Level 1: domain bar */
   .dom-sec { background: #0f172a; color: #fff; padding: 12px 20px; margin: 30px 0 16px; border-radius: 6px; display: flex; justify-content: space-between; align-items: baseline; page-break-before: always; page-break-after: avoid; }
@@ -95,9 +102,9 @@
   /* On screen only: a way to the resume, the portfolio and the PDF. Never printed. */
   .bar { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; padding: 9px 12px; margin: 0 0 14px; background: #eef2ff; border-radius: 6px; font-size: 10pt; text-align: center; }
   .bar a { font-weight: 600; color: #1d4ed8; }
-  @media print { .bar, .up { display: none; } }
+  @media print { .bar, .up, .ctl, .tg { display: none !important; } .sec.closed + .cs { display: block !important; } .sec.closed { border-radius: 8px 8px 0 0; margin-bottom: 0; } }
   @media screen { body { max-width: 860px; margin: 24px auto; padding: 0 20px; } }
-  @media screen and (max-width: 640px) { .kpis { grid-template-columns: repeat(2, 1fr); } .glance { grid-template-columns: 1fr; } .hero { padding: 20px; } .hero h1 { font-size: 20pt; } .sec, .dom-sec { flex-direction: column; gap: 2px; } .idx { padding: 16px 14px 6px; } }
+  @media screen and (max-width: 640px) { .kpis { grid-template-columns: repeat(2, 1fr); } .glance { grid-template-columns: 1fr; } .hero { padding: 20px; } .hero h1 { font-size: 20pt; } .sec, .dom-sec { flex-direction: column; gap: 2px; } .toc .grid { grid-template-columns: 1fr; } .toc .head { flex-direction: column; } }
 </style>
 </head>
 <body>
@@ -113,66 +120,24 @@
 </div>
 
 <!-- INDEX ================================================================ -->
-<nav class="idx" id="index">
-  <h2>Case studies</h2>
+<nav class="toc" id="index">
+  <div class="head"><h2>Case studies</h2><div class="ctl"><button type="button" data-all="open">Expand all</button><button type="button" data-all="close">Collapse all</button></div></div>
   <p class="hint">14 case studies in 11 domains. Click one to jump to it.</p>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">01</span>FinTech / TaxTech</div>
-    <a class="row" href="#cs-ventive"><span class="rn">1.1</span><span class="rt">Ventive — AI R&amp;D Tax Credit Platform<span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></span><span class="rs">Multi-agent contract analysis, tax-document extraction, credit calculation and client deliverables.</span></a>
-  </div>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">02</span>PropTech / Real Estate</div>
-    <a class="row" href="#cs-butch"><span class="rn">2.1</span><span class="rt">Real-Estate CRM Intelligence Layer<span class="badge live">LIVE</span></span><span class="rs">Claude reads every email and keeps Follow Up Boss, Monday and Slack in sync.</span></a>
-    <a class="row" href="#cs-propertyai"><span class="rn">2.2</span><span class="rt">PropertyAI CRM<span class="badge live">LIVE</span><span class="badge demo">DEMO</span></span><span class="rs">AI tenant communication and scheduled operations on top of Buildium.</span></a>
-    <a class="row" href="#cs-analyzer"><span class="rn">2.3</span><span class="rt">Deal Analyzer<span class="badge live">LIVE</span></span><span class="rs">Deterministic underwriting engine with an AI underwriting agent and negotiation strategist.</span></a>
-  </div>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">03</span>E-Commerce &amp; Retail Intelligence</div>
-    <a class="row" href="#cs-commerce"><span class="rn">3.1</span><span class="rt">Commerce IQ<span class="badge live">LIVE</span><span class="badge demo">DEMO</span></span><span class="rs">Rule-based scoring, reorder and profit engines, plus a tool-calling chat agent for Amazon-led brands.</span></a>
-  </div>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">04</span>Logistics &amp; Operations</div>
-    <a class="row" href="#cs-moveops"><span class="rn">4.1</span><span class="rt">MoveOps<span class="badge live">LIVE</span></span><span class="rs">Lead-to-invoice platform for movers with a data-driven automation engine and streaming AI estimator.</span></a>
-  </div>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">05</span>HealthTech &amp; Life Sciences</div>
-    <a class="row" href="#cs-biologics"><span class="rn">5.1</span><span class="rt">Biologics Intelligence<span class="badge flagship">FLAGSHIP</span><span class="badge live">LIVE</span><span class="badge demo">DEMO</span></span><span class="rs">Citation-verified research assistant over 33,800 regulatory, clinical and financial documents.</span></a>
-    <a class="row" href="#cs-cure"><span class="rn">5.2</span><span class="rt">Cure Health<span class="badge live">LIVE</span></span><span class="rs">Five role-scoped portals on one care loop, with 16 role-limited AI tools and telehealth.</span></a>
-  </div>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">06</span>AI Sales &amp; Outreach</div>
-    <a class="row" href="#cs-s2l"><span class="rn">6.1</span><span class="rt">Speed-to-Lead<span class="badge demo">DEMO</span></span><span class="rs">Chat, voice and form leads scored by Claude against rules in Airtable and booked into GoHighLevel or HubSpot.</span></a>
-  </div>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">07</span>Conversational AI / Telecom</div>
-    <a class="row" href="#cs-omvi"><span class="rn">7.1</span><span class="rt">Omvi William<span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></span><span class="rs">Multi-tenant agentic SaaS with one LangGraph brain behind chat, real-time voice and a five-agent task team.</span></a>
-  </div>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">08</span>EdTech / LMS</div>
-    <a class="row" href="#cs-hsc"><span class="rn">8.1</span><span class="rt">HSC Chemistry E-Learning Platform<span class="badge demo">DEMO</span></span><span class="rs">Question generation, automated marking and exam feedback with analytics in Postgres.</span></a>
-  </div>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">09</span>Content / SEO</div>
-    <a class="row" href="#cs-seo"><span class="rn">9.1</span><span class="rt">AI SEO Blog Generator<span class="badge demo">DEMO</span></span><span class="rs">A four-stage pipeline from keyword to publish-ready article, with library, editor and DOCX export.</span></a>
-  </div>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">10</span>AI Infrastructure</div>
-    <a class="row" href="#cs-optiml"><span class="rn">10.1</span><span class="rt">OptiML — LLM Compression &amp; Fine-Tuning Framework</span><span class="rs">Pruning, LoRA and quantization on an event-driven tuner; lead developer on the core.</span></a>
-  </div>
-
-  <div class="grp">
-    <div class="gh"><span class="gn">11</span>HR Operations / Agent Tooling (MCP)</div>
-    <a class="row" href="#cs-onboarding"><span class="rn">11.1</span><span class="rt">AI Onboarding Ops<span class="badge live">LIVE</span></span><span class="rs">Employee and client onboarding as 25 narrow tools behind one audited guard, served as an MCP server.</span></a>
+  <div class="grid">
+    <a class="card" href="#cs-ventive"><span class="n">1.1</span><span class="d">Ventive — AI R&amp;D Tax Credit Platform</span><span class="c">FinTech / TaxTech</span></a>
+    <a class="card" href="#cs-butch"><span class="n">2.1</span><span class="d">Real-Estate CRM Intelligence Layer</span><span class="c">PropTech</span></a>
+    <a class="card" href="#cs-propertyai"><span class="n">2.2</span><span class="d">PropertyAI CRM</span><span class="c">PropTech</span></a>
+    <a class="card" href="#cs-analyzer"><span class="n">2.3</span><span class="d">Deal Analyzer</span><span class="c">PropTech</span></a>
+    <a class="card" href="#cs-commerce"><span class="n">3.1</span><span class="d">Commerce IQ</span><span class="c">E-Commerce</span></a>
+    <a class="card" href="#cs-moveops"><span class="n">4.1</span><span class="d">MoveOps</span><span class="c">Logistics</span></a>
+    <a class="card" href="#cs-biologics"><span class="n">5.1</span><span class="d">Biologics Intelligence</span><span class="c">Life Sciences</span></a>
+    <a class="card" href="#cs-cure"><span class="n">5.2</span><span class="d">Cure Health</span><span class="c">HealthTech</span></a>
+    <a class="card" href="#cs-s2l"><span class="n">6.1</span><span class="d">Speed-to-Lead</span><span class="c">AI Sales</span></a>
+    <a class="card" href="#cs-omvi"><span class="n">7.1</span><span class="d">Omvi William</span><span class="c">Conversational AI</span></a>
+    <a class="card" href="#cs-hsc"><span class="n">8.1</span><span class="d">HSC Chemistry E-Learning</span><span class="c">EdTech</span></a>
+    <a class="card" href="#cs-seo"><span class="n">9.1</span><span class="d">AI SEO Blog Generator</span><span class="c">Content / SEO</span></a>
+    <a class="card" href="#cs-optiml"><span class="n">10.1</span><span class="d">OptiML — LLM Compression Framework</span><span class="c">AI Infrastructure</span></a>
+    <a class="card" href="#cs-onboarding"><span class="n">11.1</span><span class="d">AI Onboarding Ops (MCP)</span><span class="c">HR Operations</span></a>
   </div>
 </nav>
 
@@ -1571,5 +1536,28 @@
 
 <div class="foot"><span>mjehanzaib99@gmail.com · <a href="https://linkedin.com/in/muhammad-jehanzaib-4036b5195">linkedin.com/in/muhammad-jehanzaib-4036b5195</a> · <a href="https://github.com/mjehanzaib999">github.com/mjehanzaib999</a></span><span>Muhammad Jehanzaib · AI Case Studies</span></div>
 
+<script>
+(function () {
+  var CHEV = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg>';
+  var heads = document.querySelectorAll('.sec');
+  heads.forEach(function (h) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'tg'; b.innerHTML = CHEV;
+    b.setAttribute('aria-expanded', 'true'); b.setAttribute('aria-label', 'Collapse this case study');
+    h.appendChild(b);
+    h.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      var closed = h.classList.toggle('closed');
+      b.setAttribute('aria-expanded', String(!closed));
+      b.setAttribute('aria-label', closed ? 'Expand this case study' : 'Collapse this case study');
+    });
+  });
+  function setAll(closed) { heads.forEach(function (h) { h.classList.toggle('closed', closed); var b = h.querySelector('.tg'); if (b) b.setAttribute('aria-expanded', String(!closed)); }); }
+  document.querySelectorAll('.ctl [data-all]').forEach(function (btn) { btn.addEventListener('click', function () { setAll(btn.dataset.all === 'close'); }); });
+  // A link into a collapsed case study opens it first.
+  function openTarget() { var id = location.hash.slice(1); if (!id) return; var el = document.getElementById(id); if (el && el.classList.contains('sec')) el.classList.remove('closed'); }
+  window.addEventListener('hashchange', openTarget); openTarget();
+})();
+</script>
 </body>
 </html>

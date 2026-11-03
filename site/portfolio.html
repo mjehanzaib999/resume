@@ -43,6 +43,19 @@
   .proj .links { margin-top: 7px; font-size: 9.6pt; }
   .proj .links::before { content: "Links"; display: inline-block; margin-right: 8px; font-size: 8pt; font-weight: 700; color: #1e40af; text-transform: uppercase; letter-spacing: .6px; }
   .proj .links a { margin-right: 6px; }
+  /* Collapsible cards (screen only) */
+  .toc .head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .ctl { display: flex; gap: 6px; }
+  .ctl button, .tg { font: inherit; font-size: 8.8pt; font-weight: 600; color: #1e40af; background: #fff; border: 1px solid #bfdbfe; border-radius: 5px; padding: 3px 9px; cursor: pointer; }
+  .ctl button:hover, .tg:hover { background: #eff6ff; }
+  .tg { flex: 0 0 auto; width: 26px; height: 26px; padding: 0; display: inline-flex; align-items: center; justify-content: center; margin-left: auto; }
+  .tg svg { width: 14px; height: 14px; transition: transform .15s; }
+  .proj .t { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; cursor: pointer; }
+  .proj.closed { padding-bottom: 0; }
+  .proj.closed .t { margin-bottom: 0; border-bottom: 0; border-radius: 0 7px 7px 0; }
+  .proj.closed .tg svg { transform: rotate(-90deg); }
+  .proj.closed > :not(.t) { display: none; }
+  @media print { .ctl, .tg { display: none !important; } .proj.closed > :not(.t) { display: block !important; } .proj.closed { padding-bottom: 12px; } .proj.closed .t { margin-bottom: 10px; border-bottom: 1px solid #dbeafe; } }
   .foot { display: flex; justify-content: space-between; color: #6b7280; font-size: 9pt; border-top: 1px solid #e5e7eb; padding-top: 10px; margin-top: 18px; }
   /* On screen only: a way to the resume and the PDF. Never printed. */
   .bar { display: flex; justify-content: center; gap: 18px; padding: 9px 12px; margin: 0 0 14px; background: #eef2ff; border-radius: 6px; font-size: 10pt; text-align: center; }
@@ -64,7 +77,7 @@
 </div>
 
 <nav class="toc" id="contents">
-  <h2>Contents</h2>
+  <div class="head"><h2>Contents</h2><div class="ctl"><button type="button" data-all="open">Expand all</button><button type="button" data-all="close">Collapse all</button></div></div>
   <p class="hint">32 projects in 11 domains. Click a domain to jump to it.</p>
   <div class="grid">
     <a class="card" href="#sec-01"><span class="n">01</span><span class="d">FinTech / TaxTech</span><span class="c">4 projects</span></a>
@@ -337,5 +350,26 @@
   <div>Muhammad Jehanzaib · AI Portfolio</div>
 </div>
 
+<script>
+(function () {
+  var CHEV = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg>';
+  var cards = document.querySelectorAll('.proj');
+  cards.forEach(function (card) {
+    var t = card.querySelector('.t'); if (!t) return;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'tg'; b.innerHTML = CHEV;
+    b.setAttribute('aria-expanded', 'true'); b.setAttribute('aria-label', 'Collapse this project');
+    t.appendChild(b);
+    t.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      var closed = card.classList.toggle('closed');
+      b.setAttribute('aria-expanded', String(!closed));
+      b.setAttribute('aria-label', closed ? 'Expand this project' : 'Collapse this project');
+    });
+  });
+  function setAll(closed) { cards.forEach(function (c) { c.classList.toggle('closed', closed); var b = c.querySelector('.tg'); if (b) b.setAttribute('aria-expanded', String(!closed)); }); }
+  document.querySelectorAll('.ctl [data-all]').forEach(function (btn) { btn.addEventListener('click', function () { setAll(btn.dataset.all === 'close'); }); });
+})();
+</script>
 </body>
 </html>
