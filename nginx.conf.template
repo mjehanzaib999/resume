@@ -17,6 +17,7 @@ server {
 
     location = /resume { return 302 /resume.html; }
     location = /portfolio { return 302 /portfolio.html; }
+    location = /case-studies { return 302 /case-studies.html; }
 
     gzip on;
     gzip_types text/html text/css application/pdf;

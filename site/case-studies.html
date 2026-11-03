@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Jehanzaib — AI Case Studies</title>
+<style>
+  @page { size: A4; margin: 12mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Inter, Arial, sans-serif; color: #1f2937; font-size: 10.2pt; line-height: 1.45; margin: 0; }
+  a { color: #1d4ed8; text-decoration: none; }
+  .hero { background: #0f172a; color: #fff; padding: 26px 30px; border-radius: 6px; margin-bottom: 18px; }
+  .hero h1 { margin: 0; font-size: 26pt; font-weight: 800; }
+  .hero .role { color: #93c5fd; font-size: 13pt; font-weight: 600; margin-top: 4px; }
+  .hero p { margin: 10px 0 0; color: #e5e7eb; }
+  .hero .contact { margin-top: 8px; color: #d1d5db; }
+  .hero .contact a { color: #93c5fd; }
+  .hero .legend { margin-top: 10px; color: #d1d5db; font-size: 9.4pt; }
+  .badge { display: inline-block; font-size: 7.5pt; font-weight: 700; letter-spacing: .5px; padding: 1px 6px; border-radius: 3px; vertical-align: middle; margin-left: 4px; }
+  .live { background: #dcfce7; color: #166534; }
+  .demo { background: #dbeafe; color: #1e40af; }
+  .flagship { background: #fef3c7; color: #92400e; }
+  .toc { background: #f3f4f6; border-left: 4px solid #1d4ed8; padding: 12px 18px; margin-bottom: 18px; }
+  .toc h2 { margin: 0 0 8px; font-size: 13pt; }
+  .toc table { width: 100%; border-collapse: collapse; }
+  .toc td { padding: 4px 0; border-bottom: 1px solid #e5e7eb; }
+  .toc td.n { color: #1d4ed8; font-weight: 700; width: 34px; }
+  .toc td.c { text-align: right; color: #6b7280; }
+  .sec { background: #f3f4f6; border-left: 4px solid #1d4ed8; padding: 8px 16px; margin: 18px 0 10px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; page-break-after: avoid; }
+  .sec h2 { margin: 0; font-size: 13pt; }
+  .sec span { color: #6b7280; font-size: 9.4pt; white-space: nowrap; }
+  .cs .meta { color: #4b5563; font-size: 9.6pt; margin: 0 0 10px; }
+  .cs .meta b { color: #1f2937; }
+  .cs h3 { font-size: 11pt; color: #0f172a; margin: 16px 0 6px; padding-bottom: 3px; border-bottom: 1px solid #e5e7eb; page-break-after: avoid; }
+  .cs p { margin: 0 0 7px; text-align: justify; }
+  .cs ul { margin: 4px 0 8px; padding-left: 18px; }
+  .cs li { margin-bottom: 4px; page-break-inside: avoid; }
+  .lead { font-size: 10.6pt; color: #111827; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 8px 0 4px; page-break-inside: avoid; }
+  .kpi { border: 1px solid #e5e7eb; border-radius: 6px; padding: 8px 10px; background: #fff; }
+  .kpi b { display: block; font-size: 15pt; color: #0f172a; line-height: 1.15; }
+  .kpi span { color: #4b5563; font-size: 8.8pt; }
+  table.t { width: 100%; border-collapse: collapse; margin: 4px 0 8px; font-size: 9.4pt; page-break-inside: avoid; }
+  table.t th { text-align: left; background: #f3f4f6; color: #0f172a; padding: 5px 8px; border-bottom: 1px solid #d1d5db; }
+  table.t td { padding: 5px 8px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table.t td.num { white-space: nowrap; font-weight: 600; color: #0f172a; }
+  figure { margin: 6px 0 10px; page-break-inside: avoid; }
+  figure svg { width: 100%; height: auto; display: block; }
+  figcaption { color: #6b7280; font-size: 8.8pt; margin-top: 4px; }
+  .stack { font-style: italic; color: #4b5563; font-size: 9.2pt; margin-top: 6px; }
+  .links { margin-top: 4px; font-size: 9.6pt; }
+  .note { color: #6b7280; font-size: 8.8pt; }
+  .foot { display: flex; justify-content: space-between; color: #6b7280; font-size: 9pt; border-top: 1px solid #e5e7eb; padding-top: 10px; margin-top: 18px; }
+  /* On screen only: a way to the resume, the portfolio and the PDF. Never printed. */
+  .bar { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; padding: 9px 12px; margin: 0 0 14px; background: #eef2ff; border-radius: 6px; font-size: 10pt; text-align: center; }
+  .bar a { font-weight: 600; color: #1d4ed8; }
+  @media print { .bar { display: none; } }
+  @media screen { body { max-width: 860px; margin: 24px auto; padding: 0 20px; } }
+  @media screen and (max-width: 640px) { .kpis { grid-template-columns: repeat(2, 1fr); } .hero { padding: 20px; } .hero h1 { font-size: 20pt; } .sec { flex-direction: column; gap: 2px; } }
+</style>
+</head>
+<body>
+
+<div class="bar"><a href="https://mjehanzaib-ai-resume.up.railway.app">← Resume</a><a href="https://mjehanzaib-ai-portfolio.up.railway.app">Portfolio</a><a href="/Muhammad_Jehanzaib_Case_Studies.pdf" download>Download PDF</a></div>
+
+<div class="hero">
+  <h1>Muhammad Jehanzaib</h1>
+  <div class="role">AI Case Studies — Architecture, Agents &amp; Voice</div>
+  <p>In-depth engineering case studies of products I designed and built: the problem, the requirements, the architecture, the key decisions, and measured results.</p>
+  <div class="contact">mjehanzaib99@gmail.com · <a href="https://linkedin.com/in/muhammad-jehanzaib-4036b5195">linkedin.com/in/muhammad-jehanzaib-4036b5195</a> · <a href="https://github.com/mjehanzaib999">github.com/mjehanzaib999</a> · Resume: <a href="https://mjehanzaib-ai-resume.up.railway.app">mjehanzaib-ai-resume.up.railway.app</a> · Portfolio: <a href="https://mjehanzaib-ai-portfolio.up.railway.app">mjehanzaib-ai-portfolio.up.railway.app</a></div>
+  <div class="legend"><span class="badge live">LIVE</span> deployed &amp; clickable &nbsp;·&nbsp; <span class="badge demo">DEMO</span> video walkthrough &nbsp;·&nbsp; <span class="badge flagship">FLAGSHIP</span> lead production work</div>
+</div>
+
+<div class="toc">
+  <h2>Case studies</h2>
+  <table>
+    <tr><td class="n">01</td><td>Omvi William — Multi-Tenant Agentic AI SaaS with Real-Time Voice</td><td class="c">Conversational AI / Telecom</td></tr>
+  </table>
+</div>
+
+<!-- 01 ================================================================== -->
+<div class="sec"><h2>01 · Omvi William — Multi-Tenant Agentic AI SaaS with Real-Time Voice <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></h2><span>Conversational AI / Telecom</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> World Mobile (telecom operator), delivered through Omvi AI &nbsp;·&nbsp; <b>Role:</b> architect and engineer, designed and built end to end &nbsp;·&nbsp; <b>Timeline:</b> Oct 2025 – Mar 2026, demo platform Oct 2026 &nbsp;·&nbsp; <b>Demo:</b> <a href="https://www.youtube.com/watch?v=gWZj9BjP2rE">Watch the walkthrough ↗</a></p>
+
+  <p class="lead">A white-labelled AI assistant, "William," that people can talk to or type to. It answers from the operator's own knowledge base, acts in email and calendar, remembers earlier conversations, guides new users through onboarding, and turns a voice call into a project that a team of five AI agents completes while the user watches. One agent brain serves both chat and voice, and the platform is built to serve many clients from one codebase.</p>
+
+  <div class="kpis">
+    <div class="kpi"><b>2.0 s</b><span>end of question → agent starts speaking (median, 9 live calls)</span></div>
+    <div class="kpi"><b>3.9 s</b><span>end of question → grounded knowledge answer starts</span></div>
+    <div class="kpi"><b>35 → &lt;10 s</b><span>first reply after a cold start</span></div>
+    <div class="kpi"><b>15–20 s</b><span>per task through all five agents</span></div>
+    <div class="kpi"><b>6</b><span>services around one agent brain</span></div>
+    <div class="kpi"><b>15 + 6</b><span>LangGraph nodes in the chat and voice graphs</span></div>
+    <div class="kpi"><b>25</b><span>agent tools (12 email, 7 calendar, 6 general)</span></div>
+    <div class="kpi"><b>6</b><span>RBAC roles in the multi-tenant model</span></div>
+  </div>
+
+  <h3>The problem</h3>
+  <p>A telecom operator wanted one assistant its customers and staff could use both by voice and by text, grounded in the company's own material rather than the open web, able to take actions (email, calendar, tasks) rather than only answer, and good enough on a live call that it never feels like a slow bot. The vendor building it, Omvi AI, also needed the product to be sellable to the next telecom or enterprise client without rebuilding it for each one.</p>
+
+  <h3>Requirements I derived and built against</h3>
+  <table class="t">
+    <tr><th style="width:34%">Requirement</th><th>How the system meets it</th></tr>
+    <tr><td>Talk or type, and get the same answers</td><td>One LangGraph agent behind both: chat streams over SSE through the gateway; voice runs the same reasoning inside a LiveKit worker.</td></tr>
+    <tr><td>Answer from the operator's knowledge, not the web</td><td>pgvector RAG over the company corpus with neighbouring-passage context and a similarity floor; says so plainly when nothing relevant is found.</td></tr>
+    <tr><td>Take actions in email and calendar</td><td>Dedicated intent resolvers with 12 email and 7 calendar tools over Google and Microsoft OAuth; drafts are confirmed before anything is sent.</td></tr>
+    <tr><td>Remember the user</td><td>Temporal and cross-session memory recall nodes over Redis chat history, with safeguards against fabricated recall.</td></tr>
+    <tr><td>Guide new users</td><td>Human-in-the-loop onboarding and daily-reminder flows that pause for the user with LangGraph <code>interrupt()</code> and resume where they left off.</td></tr>
+    <tr><td>Turn conversation into work</td><td>A call transcript becomes a titled session with up to 20 tasks across 8 lanes and their dependencies; five agents then complete each task.</td></tr>
+    <tr><td>Feel instant on a phone-style call</td><td>Under 2.5 s from the end of a question to the agent speaking, measured on the deployed system.</td></tr>
+    <tr><td>Serve many clients from one codebase</td><td>Organization-scoped state, 6 roles mapped to <code>module:action</code> scopes, per-endpoint scope checks and a cross-organization guard.</td></tr>
+    <tr><td>Let admins control the knowledge</td><td>Knowledge entries can be added, edited, locked against changes, deleted, or uploaded as PDF, DOCX, HTML or text.</td></tr>
+    <tr><td>Show cost and progress</td><td>Per-agent output, timing and token cost; a live usage dashboard; notifications when agents finish.</td></tr>
+  </table>
+
+  <h3>Architecture</h3>
+  <p>I split the product into six services so the agent, the voice runtime and the task agents can each scale and ship on their own, while sharing one brain and one data layer.</p>
+  <figure>
+    <svg viewBox="0 0 760 392" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Inter, Arial, sans-serif" role="img" aria-label="Omvi architecture: browser, Omvi Studio, LiveKit, gateway, orchestrator, voice agent, graph server, RAG service, speech providers, and the shared data layer">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+      </defs>
+      <style>
+        .bx { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.2; rx: 6; }
+        .core { fill: #eff6ff; stroke: #1d4ed8; }
+        .ext { fill: #f8fafc; stroke: #cbd5e1; stroke-dasharray: 4 3; }
+        .tt { font-size: 12px; font-weight: 700; fill: #0f172a; }
+        .st { font-size: 9.6px; fill: #475569; }
+        .ln { stroke: #64748b; stroke-width: 1.3; fill: none; marker-end: url(#ah); }
+        .lb { font-size: 9px; fill: #334155; }
+        .band { fill: #f1f5f9; stroke: #cbd5e1; }
+      </style>
+      <!-- Row A -->
+      <rect class="bx ext" x="12" y="12" width="150" height="48"/><text class="tt" x="87" y="33" text-anchor="middle">User</text><text class="st" x="87" y="49" text-anchor="middle">browser · mic</text>
+      <rect class="bx core" x="226" y="12" width="300" height="48"/><text class="tt" x="376" y="33" text-anchor="middle">Omvi Studio</text><text class="st" x="376" y="49" text-anchor="middle">Next.js 16 · Clerk · Prisma · 74 API routes</text>
+      <rect class="bx ext" x="598" y="12" width="150" height="48"/><text class="tt" x="673" y="33" text-anchor="middle">LiveKit Cloud</text><text class="st" x="673" y="49" text-anchor="middle">WebRTC rooms</text>
+      <!-- Row B -->
+      <rect class="bx core" x="12" y="118" width="226" height="58"/><text class="tt" x="125" y="140" text-anchor="middle">Gateway (omvi-agents)</text><text class="st" x="125" y="156" text-anchor="middle">FastAPI · sessions · SSE · RBAC</text><text class="st" x="125" y="169" text-anchor="middle">human-in-the-loop flows</text>
+      <rect class="bx core" x="267" y="118" width="226" height="58"/><text class="tt" x="380" y="140" text-anchor="middle">Agent orchestrator</text><text class="st" x="380" y="156" text-anchor="middle">FastAPI · 5 agents · WebSocket</text><text class="st" x="380" y="169" text-anchor="middle">re-runs · reports</text>
+      <rect class="bx core" x="522" y="118" width="226" height="58"/><text class="tt" x="635" y="140" text-anchor="middle">Voice agent</text><text class="st" x="635" y="156" text-anchor="middle">LiveKit Agents · 6-node graph</text><text class="st" x="635" y="169" text-anchor="middle">VAD · turn detection · fillers</text>
+      <!-- Row C -->
+      <rect class="bx core" x="12" y="232" width="226" height="58"/><text class="tt" x="125" y="254" text-anchor="middle">Graph server (fractal)</text><text class="st" x="125" y="270" text-anchor="middle">LangGraph · 15 nodes · 25 tools</text><text class="st" x="125" y="283" text-anchor="middle">email · calendar · memory · RAG</text>
+      <rect class="bx core" x="267" y="232" width="226" height="58"/><text class="tt" x="380" y="254" text-anchor="middle">RAG service (omvi-search)</text><text class="st" x="380" y="270" text-anchor="middle">FastAPI · pgvector · streaming</text><text class="st" x="380" y="283" text-anchor="middle">admin: add · edit · lock · upload</text>
+      <rect class="bx ext" x="522" y="232" width="226" height="58"/><text class="tt" x="635" y="254" text-anchor="middle">Speech</text><text class="st" x="635" y="270" text-anchor="middle">Deepgram speech-to-text</text><text class="st" x="635" y="283" text-anchor="middle">Cartesia text-to-speech</text>
+      <!-- Arrows -->
+      <path class="ln" d="M162 36 H224"/><text class="lb" x="193" y="30" text-anchor="middle">HTTPS</text>
+      <path class="ln" d="M526 36 H596"/><text class="lb" x="561" y="30" text-anchor="middle">audio</text>
+      <path class="ln" d="M300 60 L150 116"/><text class="lb" x="196" y="84">chat · SSE</text>
+      <path class="ln" d="M380 60 V116"/><text class="lb" x="386" y="92">tasks · WS</text>
+      <path class="ln" d="M673 60 L650 116"/><text class="lb" x="666" y="92">room</text>
+      <path class="ln" d="M125 176 V230"/><text class="lb" x="131" y="206">SSE</text>
+      <path class="ln" d="M238 261 H265"/>
+      <path class="ln" d="M380 176 V230"/><text class="lb" x="386" y="206">search</text>
+      <path class="ln" d="M590 176 L460 230"/><text class="lb" x="500" y="198">RAG</text>
+      <path class="ln" d="M680 176 V230"/>
+      <!-- Data band -->
+      <rect class="band" x="12" y="316" width="736" height="66" rx="6"/>
+      <text class="tt" x="24" y="334">Shared data and model layer</text>
+      <text class="st" x="24" y="352">Postgres (Prisma, 37 models: sessions, tasks, flow graph) · Postgres + pgvector (knowledge, 1536-dim, HNSW)</text>
+      <text class="st" x="24" y="368">Redis (sessions, chat history, memory, flow state, checkpoints) · SQLite (agent runs) · OpenRouter (all LLM calls, with fallbacks)</text>
+    </svg>
+    <figcaption>Six services (blue) around one agent brain; dashed boxes are external. Chat flows Studio → gateway → graph server; voice flows LiveKit → voice agent; tasks flow Studio → orchestrator, with progress pushed back over WebSocket.</figcaption>
+  </figure>
+  <ul>
+    <li><b>Omvi Studio</b> (Next.js 16, Clerk, Prisma): the workspace. Sessions, chat, the voice call screen with a live transcript, Board / Grid / Canvas views of tasks, email and calendar cards, dashboard, knowledge admin, notifications and search.</li>
+    <li><b>Gateway</b> (FastAPI): the single stateful entry point for every chat and voice request. Redis sessions and history, SSE streaming to the client, role and scope checks, and LangGraph flows that pause for user input.</li>
+    <li><b>Graph server</b> (FastAPI + LangGraph): the agent brain, split out of the gateway so it ships independently. Streams tokens back to the gateway over SSE.</li>
+    <li><b>Voice agent</b> (LiveKit Agents): joins each call room, listens, reasons with its own LangGraph graph and speaks; kept warm so it joins quickly.</li>
+    <li><b>RAG service</b> (FastAPI + pgvector): retrieval and grounded answers, streamed or whole, plus the knowledge admin API.</li>
+    <li><b>Agent orchestrator</b> (FastAPI): watches for new tasks and runs each through five agents, pushing progress to the Studio over WebSocket and storing every output and report.</li>
+  </ul>
+
+  <h3>Agent design</h3>
+  <p>The graph server's LangGraph agent has 15 nodes. A <b>main orchestrator</b> decides each turn: email and calendar requests go to their own <b>decision → intent resolver → action</b> chains (the resolvers bind 12 email and 7 calendar tools, and a tool interpreter turns raw tool results into a reply); everything else goes through an <b>LLM domain classifier</b> and a <b>normal decision</b> node to knowledge retrieval, <b>temporal or cross-session memory recall</b>, or the <b>speaker</b>, a tool-calling responder bound to knowledge search, web search, time and task creation.</p>
+  <ul>
+    <li><b>Human in the loop:</b> onboarding, daily-reminder and content flows (7, 6 and 3 nodes) pause with <code>interrupt()</code> and resume with <code>Command(resume=…)</code>, checkpointed in Redis, so a user can answer days later and pick up mid-flow.</li>
+    <li><b>Streaming end to end:</b> only the answer-writing model calls are tagged for the user; routers and classifiers stay internal. On Python 3.10 nested LLM calls only reach the graph's event stream when a node hands down its run config, so each answer node passes it explicitly, and the RAG service's own answer stream is relayed through the graph as custom events.</li>
+    <li><b>Resilience:</b> every model call goes through OpenRouter with ordered fallback models and retries, so a rate-limited provider becomes a slower answer, not an error.</li>
+  </ul>
+
+  <h3>Voice pipeline</h3>
+  <p>The voice agent runs on LiveKit Agents: Silero voice activity detection, a multilingual turn-detection model, BVC noise cancellation, Deepgram speech-to-text and Cartesia text-to-speech. Its six-node LangGraph graph (decide, greeting, general response, memory recall, retrieval, content creation) answers every turn, and I patched the LiveKit LangChain adapter so the graph, not the plugin, decides what is spoken.</p>
+  <ul>
+    <li><b>Fast route:</b> a clear product question goes straight to retrieval without an LLM routing call; requests that need judgement (summaries, drafts, recall) still use the router.</li>
+    <li><b>No dead air:</b> a short filler line ("let me check that for you") is spoken the moment retrieval starts, then the answer streams sentence by sentence.</li>
+    <li><b>Warm workers:</b> two idle worker processes are kept ready, so the agent joins a call without a cold start.</li>
+    <li><b>Call to project:</b> when the caller hangs up, the transcript is sent to the Studio, which creates a titled session and extracts tasks (1 to 20, scaled to the length of the call) with lanes and dependencies.</li>
+  </ul>
+
+  <h3>From conversation to finished work</h3>
+  <p>The orchestrator picks up new tasks as soon as they are written (it also polls the task table every 3 seconds, because voice-created tasks never call its API) and runs up to three at a time through <b>Omni</b> (research), <b>Planner</b>, <b>Builder</b>, <b>Reviewer</b> and <b>Nexus</b> (write-up). Each stage streams lane transitions to the Studio, stores its output with timing and input/output tokens in SQLite, and the last stage produces a downloadable report. <b>Refine</b> re-runs the agents with a user instruction instead of starting over.</p>
+
+  <h3>Knowledge (RAG)</h3>
+  <p>Documents are chunked to about 1,800 characters and embedded with <code>text-embedding-3-small</code> (1536 dimensions) into Postgres with an HNSW cosine index. Each query retrieves at least 8 passages above a similarity floor and adds the passage that follows each of the top four, so answers keep their surrounding context. Answers are written by Gemini 2.5 Flash Lite with GPT-4.1 mini and GPT-4o mini as fallbacks, either whole or streamed.</p>
+
+  <h3>Multi-tenancy and platform</h3>
+  <ul>
+    <li><b>Tenant isolation:</b> every request carries an organization, role and scopes; Redis state is keyed <code>{namespace}:{org}:{user}:{session}</code>; a middleware guard blocks cross-organization access.</li>
+    <li><b>Roles and scopes:</b> six roles (platform admin through client viewer) map to <code>{module}:{action}</code> scopes, and an endpoint-to-scope map enforces them. I authored the architecture plans the team adopted for serving many clients from one codebase.</li>
+    <li><b>Delivery:</b> shipped to GCP through GitHub Actions, and later as 8 services on Railway (six apps plus Postgres with pgvector and Redis) with auto-deploy on merge and Playwright browser audits before release.</li>
+  </ul>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Chat and voice drifting apart</td><td>One LangGraph brain; the voice worker runs the same reasoning and a patched adapter lets the graph control speech.</td></tr>
+    <tr><td>Silence while the agent thinks</td><td>Skip the router for clear product questions, speak a filler immediately, stream the answer by sentence.</td></tr>
+    <tr><td>Answers arriving all at once</td><td>Pass run config into answer nodes, tag user-facing calls, relay the RAG stream as graph events.</td></tr>
+    <tr><td>Slow first request after deploy</td><td>Build and compile the agent graph at startup; first reply went from 35 s to under 10 s.</td></tr>
+    <tr><td>Provider outages and rate limits</td><td>One OpenRouter gateway with ordered fallback models and retries in every service.</td></tr>
+    <tr><td>Voice-created tasks invisible to the agents</td><td>Orchestrator watches the task table directly, in addition to its trigger API.</td></tr>
+    <tr><td>Each new client needing a fork</td><td>Organization-scoped state, role-to-scope permissions and per-endpoint checks from day one.</td></tr>
+  </table>
+
+  <h3>Results</h3>
+  <p>Voice latency measured on the deployed system on 3 November 2026: nine live calls, each a spoken question played into a browser microphone, timed from the live transcript (which is shown in step with the agent's audio).</p>
+  <table class="t">
+    <tr><th>Moment</th><th>Median</th><th>Range</th></tr>
+    <tr><td>Click "Voice" → agent greets the user</td><td class="num">7.5 s</td><td>7.4 – 10.1 s</td></tr>
+    <tr><td>End of a knowledge question → agent starts speaking</td><td class="num">2.0 s</td><td>1.7 – 2.6 s</td></tr>
+    <tr><td>End of a knowledge question → grounded answer starts</td><td class="num">3.9 s</td><td>3.5 – 4.5 s</td></tr>
+    <tr><td>End of a general question → answer starts</td><td class="num">4.0 s</td><td>2.8 – 4.0 s</td></tr>
+  </table>
+  <ul>
+    <li>All nine spoken questions were transcribed correctly and answered from the knowledge base, including exact plan prices.</li>
+    <li>A task created from a call finishes all five agents in about 15–20 seconds; Refine re-runs in about 13 seconds.</li>
+    <li>The first reply after a deploy dropped from 35 s to under 10 s.</li>
+  </ul>
+
+  <div class="stack">Python · LangGraph · LangChain · FastAPI · LiveKit Agents · Deepgram · Cartesia · Silero · PostgreSQL + pgvector · Redis · SQLite · OpenRouter (Gemini 2.5 Flash Lite, GPT-4.1 mini, GPT-4o mini) · SSE · WebSockets · Next.js 16 · TypeScript · Prisma · Clerk · Docker · Railway · GCP · GitHub Actions · Playwright</div>
+  <div class="links"><a href="https://www.youtube.com/watch?v=gWZj9BjP2rE">Watch demo ↗</a></div>
+</div>
+
+<div class="foot"><span>mjehanzaib99@gmail.com · <a href="https://linkedin.com/in/muhammad-jehanzaib-4036b5195">linkedin.com/in/muhammad-jehanzaib-4036b5195</a> · <a href="https://github.com/mjehanzaib999">github.com/mjehanzaib999</a></span><span>Muhammad Jehanzaib · AI Case Studies</span></div>
+
+</body>
+</html>
