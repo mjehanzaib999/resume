@@ -19,12 +19,17 @@
   .live { background: #dcfce7; color: #166534; }
   .demo { background: #dbeafe; color: #1e40af; }
   .flagship { background: #fef3c7; color: #92400e; }
-  .toc { background: #f3f4f6; border-left: 4px solid #1d4ed8; padding: 12px 18px; margin-bottom: 18px; }
-  .toc h2 { margin: 0 0 8px; font-size: 13pt; }
-  .toc table { width: 100%; border-collapse: collapse; }
-  .toc td { padding: 4px 0; border-bottom: 1px solid #e5e7eb; }
-  .toc td.n { color: #1d4ed8; font-weight: 700; width: 34px; }
-  .toc td.c { text-align: right; color: #6b7280; }
+  .toc { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 18px 22px; margin-bottom: 22px; page-break-inside: avoid; }
+  .toc h2 { margin: 0 0 3px; font-size: 14pt; }
+  .toc .hint { color: #6b7280; font-size: 9pt; margin: 0 0 12px; }
+  .toc .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 14px; }
+  .toc a.card { display: grid; grid-template-columns: 28px 1fr auto; align-items: baseline; gap: 8px; padding: 8px 10px; border: 1px solid #e5e7eb; border-radius: 6px; color: #1f2937; background: #f8fafc; }
+  .toc a.card:hover { border-color: #1d4ed8; background: #eff6ff; }
+  .toc .n { color: #1d4ed8; font-weight: 700; font-size: 9.6pt; font-variant-numeric: tabular-nums; }
+  .toc .d { font-weight: 600; color: #0f172a; }
+  .toc .c { color: #6b7280; font-size: 8.8pt; white-space: nowrap; }
+  [id] { scroll-margin-top: 16px; }
+  @media screen and (max-width: 640px) { .toc .grid { grid-template-columns: 1fr; } }
   .sec { background: #f3f4f6; border-left: 4px solid #1d4ed8; padding: 8px 16px; margin: 18px 0 10px; display: flex; justify-content: space-between; align-items: baseline; page-break-after: avoid; }
   .sec h2 { margin: 0; font-size: 13pt; }
   .sec span { color: #6b7280; font-size: 9.4pt; }
@@ -55,25 +60,26 @@
   <div class="legend"><span class="badge live">LIVE</span> deployed &amp; clickable &nbsp;·&nbsp; <span class="badge demo">DEMO</span> video walkthrough &nbsp;·&nbsp; <span class="badge flagship">FLAGSHIP</span> lead production work</div>
 </div>
 
-<div class="toc">
+<nav class="toc" id="contents">
   <h2>Contents</h2>
-  <table>
-    <tr><td class="n">01</td><td>FinTech / TaxTech</td><td class="c">4 projects</td></tr>
-    <tr><td class="n">02</td><td>PropTech / Real Estate</td><td class="c">4 projects</td></tr>
-    <tr><td class="n">03</td><td>E-Commerce &amp; Retail Intelligence</td><td class="c">4 projects</td></tr>
-    <tr><td class="n">04</td><td>Logistics &amp; Operations</td><td class="c">1 project</td></tr>
-    <tr><td class="n">05</td><td>HealthTech &amp; Elderly Care</td><td class="c">12 projects</td></tr>
-    <tr><td class="n">06</td><td>AI Sales &amp; Outreach</td><td class="c">2 projects</td></tr>
-    <tr><td class="n">07</td><td>Conversational AI / Telecom</td><td class="c">1 project</td></tr>
-    <tr><td class="n">08</td><td>EdTech / LMS</td><td class="c">1 project</td></tr>
-    <tr><td class="n">09</td><td>Content / SEO</td><td class="c">1 project</td></tr>
-    <tr><td class="n">10</td><td>AI Infrastructure / Open Source</td><td class="c">1 project</td></tr>
-    <tr><td class="n">11</td><td>HR Operations / Agent Tooling (MCP)</td><td class="c">1 project</td></tr>
-  </table>
-</div>
+  <p class="hint">32 projects in 11 domains. Click a domain to jump to it.</p>
+  <div class="grid">
+    <a class="card" href="#sec-01"><span class="n">01</span><span class="d">FinTech / TaxTech</span><span class="c">4 projects</span></a>
+    <a class="card" href="#sec-02"><span class="n">02</span><span class="d">PropTech / Real Estate</span><span class="c">4 projects</span></a>
+    <a class="card" href="#sec-03"><span class="n">03</span><span class="d">E-Commerce &amp; Retail Intelligence</span><span class="c">4 projects</span></a>
+    <a class="card" href="#sec-04"><span class="n">04</span><span class="d">Logistics &amp; Operations</span><span class="c">1 project</span></a>
+    <a class="card" href="#sec-05"><span class="n">05</span><span class="d">HealthTech &amp; Elderly Care</span><span class="c">12 projects</span></a>
+    <a class="card" href="#sec-06"><span class="n">06</span><span class="d">AI Sales &amp; Outreach</span><span class="c">2 projects</span></a>
+    <a class="card" href="#sec-07"><span class="n">07</span><span class="d">Conversational AI / Telecom</span><span class="c">1 project</span></a>
+    <a class="card" href="#sec-08"><span class="n">08</span><span class="d">EdTech / LMS</span><span class="c">1 project</span></a>
+    <a class="card" href="#sec-09"><span class="n">09</span><span class="d">Content / SEO</span><span class="c">1 project</span></a>
+    <a class="card" href="#sec-10"><span class="n">10</span><span class="d">AI Infrastructure / Open Source</span><span class="c">1 project</span></a>
+    <a class="card" href="#sec-11"><span class="n">11</span><span class="d">HR Operations / Agent Tooling (MCP)</span><span class="c">1 project</span></a>
+  </div>
+</nav>
 
 <!-- 01 -->
-<div class="sec"><h2>01 · FinTech / TaxTech</h2><span>4 projects</span></div>
+<div class="sec" id="sec-01"><h2>01 · FinTech / TaxTech</h2><span>4 projects</span></div>
 
 <div class="proj">
   <div class="t">Contract Analysis Engine — IRC §41 R&amp;D Tax Credit <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></div>
@@ -103,7 +109,7 @@
 </div>
 
 <!-- 02 -->
-<div class="sec"><h2>02 · PropTech / Real Estate</h2><span>4 projects</span></div>
+<div class="sec" id="sec-02"><h2>02 · PropTech / Real Estate</h2><span>4 projects</span></div>
 
 <div class="proj">
   <div class="t">PropertyAI CRM — AI Property Management Platform <span class="badge live">LIVE</span><span class="badge demo">DEMO</span></div>
@@ -133,7 +139,7 @@
 </div>
 
 <!-- 03 -->
-<div class="sec"><h2>03 · E-Commerce &amp; Retail Intelligence</h2><span>4 projects</span></div>
+<div class="sec" id="sec-03"><h2>03 · E-Commerce &amp; Retail Intelligence</h2><span>4 projects</span></div>
 
 <div class="proj">
   <div class="t">Commerce IQ — Commerce Intelligence Platform <span class="badge live">LIVE</span><span class="badge demo">DEMO</span></div>
@@ -161,7 +167,7 @@
 </div>
 
 <!-- 04 -->
-<div class="sec"><h2>04 · Logistics &amp; Operations</h2><span>1 project</span></div>
+<div class="sec" id="sec-04"><h2>04 · Logistics &amp; Operations</h2><span>1 project</span></div>
 
 <div class="proj">
   <div class="t">MoveOps — AI Operations Platform for Movers <span class="badge live">LIVE</span></div>
@@ -171,7 +177,7 @@
 </div>
 
 <!-- 05 -->
-<div class="sec"><h2>05 · HealthTech &amp; Elderly Care</h2><span>12 projects</span></div>
+<div class="sec" id="sec-05"><h2>05 · HealthTech &amp; Elderly Care</h2><span>12 projects</span></div>
 
 <div class="proj">
   <div class="t">Biologics Intelligence: Citation-Verified Research Assistant <span class="badge flagship">FLAGSHIP</span><span class="badge live">LIVE</span><span class="badge demo">DEMO</span></div>
@@ -254,7 +260,7 @@
 </div>
 
 <!-- 06 -->
-<div class="sec"><h2>06 · AI Sales &amp; Outreach</h2><span>2 projects</span></div>
+<div class="sec" id="sec-06"><h2>06 · AI Sales &amp; Outreach</h2><span>2 projects</span></div>
 
 <div class="proj">
   <div class="t">Speed-to-Lead — Multi-Channel AI Intake &amp; Booking Engine <span class="badge demo">DEMO</span></div>
@@ -270,7 +276,7 @@
 </div>
 
 <!-- 07 -->
-<div class="sec"><h2>07 · Conversational AI / Telecom</h2><span>1 project</span></div>
+<div class="sec" id="sec-07"><h2>07 · Conversational AI / Telecom</h2><span>1 project</span></div>
 
 <!-- Long flagship entry: allowed to split across pages so it doesn't leave a half-empty page -->
 <div class="proj" style="page-break-inside: auto; break-inside: auto">
@@ -285,7 +291,7 @@
 </div>
 
 <!-- 08 -->
-<div class="sec"><h2>08 · EdTech / LMS</h2><span>1 project</span></div>
+<div class="sec" id="sec-08"><h2>08 · EdTech / LMS</h2><span>1 project</span></div>
 
 <div class="proj">
   <div class="t">AI-Infused E-Learning Platform <span class="badge demo">DEMO</span></div>
@@ -295,7 +301,7 @@
 </div>
 
 <!-- 09 -->
-<div class="sec"><h2>09 · Content / SEO</h2><span>1 project</span></div>
+<div class="sec" id="sec-09"><h2>09 · Content / SEO</h2><span>1 project</span></div>
 
 <div class="proj">
   <div class="t">AI SEO Blog Generator <span class="badge demo">DEMO</span></div>
@@ -305,7 +311,7 @@
 </div>
 
 <!-- 10 -->
-<div class="sec"><h2>10 · AI Infrastructure / Open Source</h2><span>1 project</span></div>
+<div class="sec" id="sec-10"><h2>10 · AI Infrastructure / Open Source</h2><span>1 project</span></div>
 
 <div class="proj">
   <div class="t">OptiML — LLM Compression &amp; Fine-Tuning Framework</div>
@@ -314,7 +320,7 @@
 </div>
 
 <!-- 11 -->
-<div class="sec"><h2>11 · HR Operations / Agent Tooling (MCP)</h2><span>1 project</span></div>
+<div class="sec" id="sec-11"><h2>11 · HR Operations / Agent Tooling (MCP)</h2><span>1 project</span></div>
 
 <div class="proj">
   <div class="t">AI Onboarding Ops — Employee &amp; Client Onboarding as an MCP Server <span class="badge live">LIVE</span></div>

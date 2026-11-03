@@ -23,16 +23,19 @@
   .demo { background: #dbeafe; color: #1e40af; }
   .flagship { background: #fef3c7; color: #92400e; }
   /* Index */
-  .toc { background: #f3f4f6; border-left: 4px solid #1d4ed8; padding: 12px 18px 6px; margin-bottom: 18px; }
-  .toc h2 { margin: 0 0 4px; font-size: 13pt; }
-  .toc .hint { color: #6b7280; font-size: 9pt; margin: 0 0 8px; }
-  .toc .dom { font-weight: 700; color: #0f172a; margin: 10px 0 2px; font-size: 10.6pt; }
-  .toc table { width: 100%; border-collapse: collapse; margin-bottom: 6px; }
-  .toc td { padding: 4px 0; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
-  .toc td.n { color: #1d4ed8; font-weight: 700; width: 40px; }
-  .toc td.c { text-align: right; color: #6b7280; width: 110px; font-size: 9pt; }
-  .toc td a { color: #1f2937; }
-  .toc td a:hover { color: #1d4ed8; }
+  .idx { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px 24px 10px; margin-bottom: 22px; }
+  .idx h2 { margin: 0 0 4px; font-size: 14pt; }
+  .idx .hint { color: #6b7280; font-size: 9pt; margin: 0 0 6px; }
+  .idx .grp { margin-top: 16px; page-break-inside: avoid; }
+  .idx .gh { display: flex; align-items: baseline; gap: 10px; font-size: 8.8pt; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: #1d4ed8; padding-bottom: 5px; border-bottom: 1px solid #e5e7eb; }
+  .idx .gh .gn { color: #9ca3af; font-variant-numeric: tabular-nums; }
+  .idx a.row { display: grid; grid-template-columns: 38px 1fr; column-gap: 10px; padding: 9px 6px; color: #1f2937; border-bottom: 1px solid #f1f5f9; border-radius: 4px; }
+  .idx a.row:last-child { border-bottom: 0; }
+  .idx a.row:hover { background: #eff6ff; }
+  .idx .rn { color: #1d4ed8; font-weight: 700; font-size: 9.6pt; padding-top: 1px; font-variant-numeric: tabular-nums; }
+  .idx .rt { font-weight: 600; color: #0f172a; }
+  .idx .rt .badge { margin-left: 6px; font-size: 7pt; padding: 0 5px; }
+  .idx .rs { grid-column: 2; color: #6b7280; font-size: 9pt; margin-top: 2px; }
   /* Domain + case-study bars */
   .dom-sec { background: #0f172a; color: #fff; padding: 8px 16px; margin: 26px 0 12px; border-radius: 4px; display: flex; justify-content: space-between; align-items: baseline; page-break-before: always; page-break-after: avoid; }
   .dom-sec:first-of-type { page-break-before: auto; }
@@ -88,7 +91,7 @@
   .bar a { font-weight: 600; color: #1d4ed8; }
   @media print { .bar, .up { display: none; } }
   @media screen { body { max-width: 860px; margin: 24px auto; padding: 0 20px; } }
-  @media screen and (max-width: 640px) { .kpis { grid-template-columns: repeat(2, 1fr); } .glance { grid-template-columns: 1fr; } .hero { padding: 20px; } .hero h1 { font-size: 20pt; } .sec, .dom-sec { flex-direction: column; gap: 2px; } .toc td.c { display: none; } }
+  @media screen and (max-width: 640px) { .kpis { grid-template-columns: repeat(2, 1fr); } .glance { grid-template-columns: 1fr; } .hero { padding: 20px; } .hero h1 { font-size: 20pt; } .sec, .dom-sec { flex-direction: column; gap: 2px; } .idx { padding: 16px 14px 6px; } }
 </style>
 </head>
 <body>
@@ -104,68 +107,68 @@
 </div>
 
 <!-- INDEX ================================================================ -->
-<div class="toc" id="index">
-  <h2>Index</h2>
-  <p class="hint">Click a case study to jump to it. Each case study follows the same layout: at a glance → numbers → problem → requirements → architecture → how it works → decisions → results.</p>
+<nav class="idx" id="index">
+  <h2>Case studies</h2>
+  <p class="hint">14 case studies in 11 domains. Click one to jump to it.</p>
 
-  <div class="dom">01 · FinTech / TaxTech</div>
-  <table>
-    <tr><td class="n">1.1</td><td><a href="#cs-ventive">Ventive — AI R&amp;D Tax Credit Platform</a> <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></td><td class="c">Contracts · documents · calculation · delivery</td></tr>
-  </table>
+  <div class="grp">
+    <div class="gh"><span class="gn">01</span>FinTech / TaxTech</div>
+    <a class="row" href="#cs-ventive"><span class="rn">1.1</span><span class="rt">Ventive — AI R&amp;D Tax Credit Platform<span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></span><span class="rs">Multi-agent contract analysis, tax-document extraction, credit calculation and client deliverables.</span></a>
+  </div>
 
-  <div class="dom">02 · PropTech / Real Estate</div>
-  <table>
-    <tr><td class="n">2.1</td><td><a href="#cs-butch">Real-Estate CRM Intelligence Layer — Gmail, Follow Up Boss, Monday and Slack</a> <span class="badge live">LIVE</span></td><td class="c">Email AI · CRM sync</td></tr>
-    <tr><td class="n">2.2</td><td><a href="#cs-propertyai">PropertyAI CRM — AI Property Management on Buildium</a> <span class="badge live">LIVE</span><span class="badge demo">DEMO</span></td><td class="c">Tenant comms · automation</td></tr>
-    <tr><td class="n">2.3</td><td><a href="#cs-analyzer">Deal Analyzer — Investment Underwriting</a> <span class="badge live">LIVE</span></td><td class="c">Underwriting engine · AI</td></tr>
-  </table>
+  <div class="grp">
+    <div class="gh"><span class="gn">02</span>PropTech / Real Estate</div>
+    <a class="row" href="#cs-butch"><span class="rn">2.1</span><span class="rt">Real-Estate CRM Intelligence Layer<span class="badge live">LIVE</span></span><span class="rs">Claude reads every email and keeps Follow Up Boss, Monday and Slack in sync.</span></a>
+    <a class="row" href="#cs-propertyai"><span class="rn">2.2</span><span class="rt">PropertyAI CRM<span class="badge live">LIVE</span><span class="badge demo">DEMO</span></span><span class="rs">AI tenant communication and scheduled operations on top of Buildium.</span></a>
+    <a class="row" href="#cs-analyzer"><span class="rn">2.3</span><span class="rt">Deal Analyzer<span class="badge live">LIVE</span></span><span class="rs">Deterministic underwriting engine with an AI underwriting agent and negotiation strategist.</span></a>
+  </div>
 
-  <div class="dom">03 · E-Commerce &amp; Retail Intelligence</div>
-  <table>
-    <tr><td class="n">3.1</td><td><a href="#cs-commerce">Commerce IQ — Commerce Intelligence for Amazon-Led Brands</a> <span class="badge live">LIVE</span><span class="badge demo">DEMO</span></td><td class="c">Scoring · alerts · chat agent</td></tr>
-  </table>
+  <div class="grp">
+    <div class="gh"><span class="gn">03</span>E-Commerce &amp; Retail Intelligence</div>
+    <a class="row" href="#cs-commerce"><span class="rn">3.1</span><span class="rt">Commerce IQ<span class="badge live">LIVE</span><span class="badge demo">DEMO</span></span><span class="rs">Rule-based scoring, reorder and profit engines, plus a tool-calling chat agent for Amazon-led brands.</span></a>
+  </div>
 
-  <div class="dom">04 · Logistics &amp; Operations</div>
-  <table>
-    <tr><td class="n">4.1</td><td><a href="#cs-moveops">MoveOps — AI Operations Platform for Movers</a> <span class="badge live">LIVE</span></td><td class="c">Automation engine · estimator</td></tr>
-  </table>
+  <div class="grp">
+    <div class="gh"><span class="gn">04</span>Logistics &amp; Operations</div>
+    <a class="row" href="#cs-moveops"><span class="rn">4.1</span><span class="rt">MoveOps<span class="badge live">LIVE</span></span><span class="rs">Lead-to-invoice platform for movers with a data-driven automation engine and streaming AI estimator.</span></a>
+  </div>
 
-  <div class="dom">05 · HealthTech &amp; Life Sciences</div>
-  <table>
-    <tr><td class="n">5.1</td><td><a href="#cs-biologics">Biologics Intelligence — Citation-Verified Research Assistant</a> <span class="badge flagship">FLAGSHIP</span><span class="badge live">LIVE</span><span class="badge demo">DEMO</span></td><td class="c">RAG · LangGraph · verification</td></tr>
-    <tr><td class="n">5.2</td><td><a href="#cs-cure">Cure Health — Unified Digital Health Platform</a> <span class="badge live">LIVE</span></td><td class="c">Care loop · AI tools · telehealth</td></tr>
-  </table>
+  <div class="grp">
+    <div class="gh"><span class="gn">05</span>HealthTech &amp; Life Sciences</div>
+    <a class="row" href="#cs-biologics"><span class="rn">5.1</span><span class="rt">Biologics Intelligence<span class="badge flagship">FLAGSHIP</span><span class="badge live">LIVE</span><span class="badge demo">DEMO</span></span><span class="rs">Citation-verified research assistant over 33,800 regulatory, clinical and financial documents.</span></a>
+    <a class="row" href="#cs-cure"><span class="rn">5.2</span><span class="rt">Cure Health<span class="badge live">LIVE</span></span><span class="rs">Five role-scoped portals on one care loop, with 16 role-limited AI tools and telehealth.</span></a>
+  </div>
 
-  <div class="dom">06 · AI Sales &amp; Outreach</div>
-  <table>
-    <tr><td class="n">6.1</td><td><a href="#cs-s2l">Speed-to-Lead — Multi-Channel AI Intake &amp; Booking Engine</a> <span class="badge demo">DEMO</span></td><td class="c">n8n · Claude · CRM adapters</td></tr>
-  </table>
+  <div class="grp">
+    <div class="gh"><span class="gn">06</span>AI Sales &amp; Outreach</div>
+    <a class="row" href="#cs-s2l"><span class="rn">6.1</span><span class="rt">Speed-to-Lead<span class="badge demo">DEMO</span></span><span class="rs">Chat, voice and form leads scored by Claude against rules in Airtable and booked into GoHighLevel or HubSpot.</span></a>
+  </div>
 
-  <div class="dom">07 · Conversational AI / Telecom</div>
-  <table>
-    <tr><td class="n">7.1</td><td><a href="#cs-omvi">Omvi William — Multi-Tenant Agentic AI SaaS with Real-Time Voice</a> <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></td><td class="c">Chat · voice · agent teams</td></tr>
-  </table>
+  <div class="grp">
+    <div class="gh"><span class="gn">07</span>Conversational AI / Telecom</div>
+    <a class="row" href="#cs-omvi"><span class="rn">7.1</span><span class="rt">Omvi William<span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></span><span class="rs">Multi-tenant agentic SaaS with one LangGraph brain behind chat, real-time voice and a five-agent task team.</span></a>
+  </div>
 
-  <div class="dom">08 · EdTech / LMS</div>
-  <table>
-    <tr><td class="n">8.1</td><td><a href="#cs-hsc">HSC Chemistry — AI-Assisted E-Learning Platform</a> <span class="badge demo">DEMO</span></td><td class="c">Generation · marking · analytics</td></tr>
-  </table>
+  <div class="grp">
+    <div class="gh"><span class="gn">08</span>EdTech / LMS</div>
+    <a class="row" href="#cs-hsc"><span class="rn">8.1</span><span class="rt">HSC Chemistry E-Learning Platform<span class="badge demo">DEMO</span></span><span class="rs">Question generation, automated marking and exam feedback with analytics in Postgres.</span></a>
+  </div>
 
-  <div class="dom">09 · Content / SEO</div>
-  <table>
-    <tr><td class="n">9.1</td><td><a href="#cs-seo">AI SEO Blog Generator</a> <span class="badge demo">DEMO</span></td><td class="c">4-stage pipeline</td></tr>
-  </table>
+  <div class="grp">
+    <div class="gh"><span class="gn">09</span>Content / SEO</div>
+    <a class="row" href="#cs-seo"><span class="rn">9.1</span><span class="rt">AI SEO Blog Generator<span class="badge demo">DEMO</span></span><span class="rs">A four-stage pipeline from keyword to publish-ready article, with library, editor and DOCX export.</span></a>
+  </div>
 
-  <div class="dom">10 · AI Infrastructure</div>
-  <table>
-    <tr><td class="n">10.1</td><td><a href="#cs-optiml">OptiML — LLM Compression &amp; Fine-Tuning Framework</a></td><td class="c">Pruning · LoRA · event-driven tuner</td></tr>
-  </table>
+  <div class="grp">
+    <div class="gh"><span class="gn">10</span>AI Infrastructure</div>
+    <a class="row" href="#cs-optiml"><span class="rn">10.1</span><span class="rt">OptiML — LLM Compression &amp; Fine-Tuning Framework</span><span class="rs">Pruning, LoRA and quantization on an event-driven tuner; lead developer on the core.</span></a>
+  </div>
 
-  <div class="dom">11 · HR Operations / Agent Tooling (MCP)</div>
-  <table>
-    <tr><td class="n">11.1</td><td><a href="#cs-onboarding">AI Onboarding Ops — Onboarding as an MCP Server</a> <span class="badge live">LIVE</span></td><td class="c">25 tools · one guard</td></tr>
-  </table>
-</div>
+  <div class="grp">
+    <div class="gh"><span class="gn">11</span>HR Operations / Agent Tooling (MCP)</div>
+    <a class="row" href="#cs-onboarding"><span class="rn">11.1</span><span class="rt">AI Onboarding Ops<span class="badge live">LIVE</span></span><span class="rs">Employee and client onboarding as 25 narrow tools behind one audited guard, served as an MCP server.</span></a>
+  </div>
+</nav>
 
 <!-- DOMAIN 01 ============================================================ -->
 <div class="dom-sec" id="dom-fintech"><h2>01 · FinTech / TaxTech</h2><span>1 case study</span></div>
