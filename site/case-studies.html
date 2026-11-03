@@ -67,6 +67,16 @@
   table.t td { padding: 5px 8px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
   table.t tr { page-break-inside: avoid; }
   figure { margin: 6px 0 10px; page-break-inside: avoid; }
+  /* shared diagram classes for the later case studies */
+  svg.dg { font-family: "Segoe UI", Inter, Arial, sans-serif; }
+  svg.dg .bx { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.2; rx: 6; }
+  svg.dg .core { fill: #eff6ff; stroke: #1d4ed8; }
+  svg.dg .ext { fill: #f8fafc; stroke: #cbd5e1; stroke-dasharray: 4 3; }
+  svg.dg .tt { font-size: 12px; font-weight: 700; fill: #0f172a; }
+  svg.dg .st { font-size: 9.6px; fill: #475569; }
+  svg.dg .ln { stroke: #64748b; stroke-width: 1.3; fill: none; }
+  svg.dg .lb { font-size: 9px; fill: #334155; }
+  svg.dg .band { fill: #f1f5f9; stroke: #cbd5e1; }
   figure svg { width: 100%; height: auto; display: block; }
   figcaption { color: #6b7280; font-size: 8.8pt; margin-top: 4px; }
   .stack { font-style: italic; color: #4b5563; font-size: 9.2pt; margin-top: 10px; }
@@ -103,9 +113,57 @@
     <tr><td class="n">1.1</td><td><a href="#cs-ventive">Ventive — AI R&amp;D Tax Credit Platform</a> <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></td><td class="c">Contracts · documents · calculation · delivery</td></tr>
   </table>
 
-  <div class="dom">02 · Conversational AI / Telecom</div>
+  <div class="dom">02 · PropTech / Real Estate</div>
   <table>
-    <tr><td class="n">2.1</td><td><a href="#cs-omvi">Omvi William — Multi-Tenant Agentic AI SaaS with Real-Time Voice</a> <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></td><td class="c">Chat · voice · agent teams</td></tr>
+    <tr><td class="n">2.1</td><td><a href="#cs-butch">Real-Estate CRM Intelligence Layer — Gmail, Follow Up Boss, Monday and Slack</a> <span class="badge live">LIVE</span></td><td class="c">Email AI · CRM sync</td></tr>
+    <tr><td class="n">2.2</td><td><a href="#cs-propertyai">PropertyAI CRM — AI Property Management on Buildium</a> <span class="badge live">LIVE</span><span class="badge demo">DEMO</span></td><td class="c">Tenant comms · automation</td></tr>
+    <tr><td class="n">2.3</td><td><a href="#cs-analyzer">Deal Analyzer — Investment Underwriting</a> <span class="badge live">LIVE</span></td><td class="c">Underwriting engine · AI</td></tr>
+  </table>
+
+  <div class="dom">03 · E-Commerce &amp; Retail Intelligence</div>
+  <table>
+    <tr><td class="n">3.1</td><td><a href="#cs-commerce">Commerce IQ — Commerce Intelligence for Amazon-Led Brands</a> <span class="badge live">LIVE</span><span class="badge demo">DEMO</span></td><td class="c">Scoring · alerts · chat agent</td></tr>
+  </table>
+
+  <div class="dom">04 · Logistics &amp; Operations</div>
+  <table>
+    <tr><td class="n">4.1</td><td><a href="#cs-moveops">MoveOps — AI Operations Platform for Movers</a> <span class="badge live">LIVE</span></td><td class="c">Automation engine · estimator</td></tr>
+  </table>
+
+  <div class="dom">05 · HealthTech &amp; Life Sciences</div>
+  <table>
+    <tr><td class="n">5.1</td><td><a href="#cs-biologics">Biologics Intelligence — Citation-Verified Research Assistant</a> <span class="badge flagship">FLAGSHIP</span><span class="badge live">LIVE</span><span class="badge demo">DEMO</span></td><td class="c">RAG · LangGraph · verification</td></tr>
+    <tr><td class="n">5.2</td><td><a href="#cs-cure">Cure Health — Unified Digital Health Platform</a> <span class="badge live">LIVE</span></td><td class="c">Care loop · AI tools · telehealth</td></tr>
+  </table>
+
+  <div class="dom">06 · AI Sales &amp; Outreach</div>
+  <table>
+    <tr><td class="n">6.1</td><td><a href="#cs-s2l">Speed-to-Lead — Multi-Channel AI Intake &amp; Booking Engine</a> <span class="badge demo">DEMO</span></td><td class="c">n8n · Claude · CRM adapters</td></tr>
+  </table>
+
+  <div class="dom">07 · Conversational AI / Telecom</div>
+  <table>
+    <tr><td class="n">7.1</td><td><a href="#cs-omvi">Omvi William — Multi-Tenant Agentic AI SaaS with Real-Time Voice</a> <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></td><td class="c">Chat · voice · agent teams</td></tr>
+  </table>
+
+  <div class="dom">08 · EdTech / LMS</div>
+  <table>
+    <tr><td class="n">8.1</td><td><a href="#cs-hsc">HSC Chemistry — AI-Assisted E-Learning Platform</a> <span class="badge demo">DEMO</span></td><td class="c">Generation · marking · analytics</td></tr>
+  </table>
+
+  <div class="dom">09 · Content / SEO</div>
+  <table>
+    <tr><td class="n">9.1</td><td><a href="#cs-seo">AI SEO Blog Generator</a> <span class="badge demo">DEMO</span></td><td class="c">4-stage pipeline</td></tr>
+  </table>
+
+  <div class="dom">10 · AI Infrastructure</div>
+  <table>
+    <tr><td class="n">10.1</td><td><a href="#cs-optiml">OptiML — LLM Compression &amp; Fine-Tuning Framework</a></td><td class="c">Pruning · LoRA · event-driven tuner</td></tr>
+  </table>
+
+  <div class="dom">11 · HR Operations / Agent Tooling (MCP)</div>
+  <table>
+    <tr><td class="n">11.1</td><td><a href="#cs-onboarding">AI Onboarding Ops — Onboarding as an MCP Server</a> <span class="badge live">LIVE</span></td><td class="c">25 tools · one guard</td></tr>
   </table>
 </div>
 
@@ -301,10 +359,728 @@
 </div>
 
 <!-- DOMAIN 02 ============================================================ -->
-<div class="dom-sec" id="dom-conversational"><h2>02 · Conversational AI / Telecom</h2><span>1 case study</span></div>
+<div class="dom-sec" id="dom-proptech"><h2>02 · PropTech / Real Estate</h2><span>3 case studies</span></div>
 
-<!-- 2.1 Omvi -->
-<div class="sec" id="cs-omvi"><h2>2.1 · Omvi William — Multi-Tenant Agentic AI SaaS with Real-Time Voice <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></h2><span>Conversational AI / Telecom</span></div>
+<!-- 2.1 Butch CRM intelligence -->
+<div class="sec" id="cs-butch"><h2>2.1 · Real-Estate CRM Intelligence Layer <span class="badge live">LIVE</span></h2><span>PropTech / Real Estate</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> a high-volume residential real-estate agent and their four-person team &nbsp;·&nbsp; <b>Role:</b> sole engineer, design through production operation &nbsp;·&nbsp; <b>Timeline:</b> Jul 2026 – present, live since Oct 2026 &nbsp;·&nbsp; <b>Code:</b> private repo, 246 commits</p>
+
+  <p class="lead">An AI layer between four systems that do not talk to each other: Gmail, Follow Up Boss (people), Monday.com (deals) and Slack. It reads every email as it arrives, works out who each person is and what role they play, extracts the terms of attached contracts, and keeps tags, deal stages and notes in sync. It owns no data of its own and never writes without a confidence floor or a human rule behind it.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>300–400 emails a day and 40–50 closings a year, triaged by hand.</li>
+      <li>The old CRM had no API, so nothing could be automated.</li>
+      <li>Contacts, deals and conversations lived in four tools with no link between them.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>A Gmail push pipeline with Claude classification, identity and contract extraction.</li>
+      <li>A memory of every person's role per property, ranked by evidence source.</li>
+      <li>An SLA state machine that escalates missed VIP messages to Slack.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>Validated by month-by-month dry-run replays of 500–800 real emails before any live write.</li>
+      <li>In production: 1,039 emails in the first three days with zero errors.</li>
+      <li>Next agent is a config change, not a fork.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>1,168</b><span>tests across 45 files; the suite is larger than the app</span></div>
+    <div class="kpi"><b>7</b><span>versioned prompts; classification is on v32</span></div>
+    <div class="kpi"><b>0.80 / 0.85</b><span>confidence floors for property and identity matches</span></div>
+    <div class="kpi"><b>20 + 9</b><span>Celery tasks and scheduled Beat jobs</span></div>
+    <div class="kpi"><b>3</b><span>Claude roles (fast / contracts / smart) with OpenAI failover</span></div>
+    <div class="kpi"><b>554</b><span>lines of policy YAML, the only client-specific layer</span></div>
+    <div class="kpi"><b>~84%</b><span>of input tokens served from prompt cache</span></div>
+    <div class="kpi"><b>150</b><span>messages per catch-up chunk so a backlog drains safely</span></div>
+  </div>
+
+  <h3>The problem</h3>
+  <ul>
+    <li><b>Volume:</b> hundreds of emails a day, many with contracts, disclosures and closing statements attached.</li>
+    <li><b>Identity:</b> the same person appears as buyer on one property and agent on another; names are misspelt; trusts and LLCs hide the people behind them.</li>
+    <li><b>Sync:</b> tags in Follow Up Boss and stages on the Monday deal board drifted apart, and nobody knew which was right.</li>
+    <li><b>Response time:</b> VIP and in-escrow messages were missed because nothing tracked them.</li>
+  </ul>
+
+  <h3>Requirements I derived and built against</h3>
+  <table class="t">
+    <tr><th style="width:34%">Requirement</th><th>How the system meets it</th></tr>
+    <tr><td>Read mail the moment it arrives</td><td>Gmail Pub/Sub push to a thin webhook that checks a token, claims the message id, enqueues a Celery task and answers in milliseconds. Workers read history from a stored checkpoint in bounded chunks.</td></tr>
+    <tr><td>Classify every email reliably</td><td>Claude with a forced tool call and Pydantic validation; categories vip, active_deal, vendor, fyi, spam. The address is rebuilt from structured parts, never from free text.</td></tr>
+    <tr><td>Know who each person is</td><td>Exact email match first; otherwise up to 8 candidates go to an identity prompt that answers same_as, new_person, not_a_client or unsure, with invented ids rejected.</td></tr>
+    <tr><td>Understand the contract, not the forwarder</td><td>PDFs go to Claude as native document blocks (25 MB cap). Parties come from the document; non-transaction documents are refused.</td></tr>
+    <tr><td>Link to the right property</td><td>An LLM match against live board items with a 0.80 floor. A clean no-match may create a listing; an ambiguous match is logged and refused.</td></tr>
+    <tr><td>Escalate what is missed</td><td>SLA tiers: active escrow 2 h, VIP 4 h, sphere 24 h, paused outside business hours. States pending → escalated → covered / dismissed / resolved with Slack claim, snooze and override buttons.</td></tr>
+    <tr><td>Never write twice, never write blind</td><td>Unique (provider, event id) dedupe, claim rows per step, dead-letter rows after retries, a write log per CRM write with its cause, and dry-run-first scripts that need both --apply and --approved-by.</td></tr>
+    <tr><td>Redeploy for the next agent</td><td>Every client-specific value, from board ids to SLA hours, lives in one policy file. The README's setup is "clone and reconfigure".</td></tr>
+  </table>
+
+  <h3>Architecture</h3>
+  <figure>
+    <svg class="dg" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CRM intelligence layer architecture">
+      <defs><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker></defs>
+      <rect class="bx ext" x="12" y="12" width="166" height="48"/><text class="tt" x="95" y="33" text-anchor="middle">Gmail</text><text class="st" x="95" y="49" text-anchor="middle">Pub/Sub push · history API</text>
+      <rect class="bx ext" x="202" y="12" width="166" height="48"/><text class="tt" x="285" y="33" text-anchor="middle">Follow Up Boss</text><text class="st" x="285" y="49" text-anchor="middle">people · tags · deals</text>
+      <rect class="bx ext" x="392" y="12" width="166" height="48"/><text class="tt" x="475" y="33" text-anchor="middle">Monday.com</text><text class="st" x="475" y="49" text-anchor="middle">deal board · groups</text>
+      <rect class="bx ext" x="582" y="12" width="166" height="48"/><text class="tt" x="665" y="33" text-anchor="middle">Slack</text><text class="st" x="665" y="49" text-anchor="middle">SLA alerts · buttons</text>
+      <rect class="bx core" x="12" y="112" width="736" height="48"/><text class="tt" x="380" y="133" text-anchor="middle">Web edge (FastAPI)</text><text class="st" x="380" y="149" text-anchor="middle">4 webhooks + 2 Slack routes · token checks · claim event id · enqueue · 204 in milliseconds</text>
+      <rect class="bx core" x="12" y="200" width="230" height="58"/><text class="tt" x="127" y="222" text-anchor="middle">worker-fast</text><text class="st" x="127" y="238" text-anchor="middle">history, sync, SLA, audits</text><text class="st" x="127" y="251" text-anchor="middle">9 Beat schedules</text>
+      <rect class="bx core" x="265" y="200" width="230" height="58"/><text class="tt" x="380" y="222" text-anchor="middle">worker-llm</text><text class="st" x="380" y="238" text-anchor="middle">classify · identity · contracts</text><text class="st" x="380" y="251" text-anchor="middle">people reading · property match</text>
+      <rect class="bx ext" x="518" y="200" width="230" height="58"/><text class="tt" x="633" y="222" text-anchor="middle">Claude (3 roles)</text><text class="st" x="633" y="238" text-anchor="middle">Haiku fast · Sonnet contracts</text><text class="st" x="633" y="251" text-anchor="middle">Opus smart · OpenAI failover</text>
+      <path class="ln" marker-end="url(#ahb)" d="M95 60 V110"/><text class="lb" x="101" y="90">push</text>
+      <path class="ln" marker-end="url(#ahb)" d="M285 110 V62"/><text class="lb" x="291" y="90">writes</text>
+      <path class="ln" marker-end="url(#ahb)" d="M475 110 V62"/><text class="lb" x="481" y="90">writes</text>
+      <path class="ln" marker-end="url(#ahb)" d="M665 110 V62"/><text class="lb" x="671" y="90">alerts</text>
+      <path class="ln" marker-end="url(#ahb)" d="M127 160 V198"/><text class="lb" x="133" y="184">fast queue</text>
+      <path class="ln" marker-end="url(#ahb)" d="M380 160 V198"/><text class="lb" x="386" y="184">llm queue</text>
+      <path class="ln" marker-end="url(#ahb)" d="M495 229 H516"/>
+      <rect class="band" x="12" y="272" width="736" height="24" rx="6"/><text class="st" x="24" y="288">PostgreSQL (7 tables: events, activity, mappings, SLAs, person_roles…) · Redis (queues, claims) · Railway (web, 2 workers, beat)</text>
+    </svg>
+    <figcaption>Thin webhook edges answer inside each provider's acknowledgement window (Slack 3 s, Follow Up Boss 10 s). Every model call and every platform write runs as a task on one of two queues.</figcaption>
+  </figure>
+
+  <h3>How it works</h3>
+  <h4>One email, start to finish</h4>
+  <ol class="steps">
+    <li><b>Arrive.</b> Gmail pushes a history id. The edge claims it and enqueues; the worker reads new messages under a single-flight lock.</li>
+    <li><b>Classify.</b> Claude returns the category, the property address in structured parts, and whether the mail moves a deal. Outbound mail is only classified if it carries a contract.</li>
+    <li><b>Resolve people.</b> Exact email match, else the identity prompt over candidates. New people are created only with an email address, per the client's rule.</li>
+    <li><b>Read documents.</b> Contracts, addenda and closing statements are extracted (prices, dates, parties, counters, with the latest counter winning). Closing statements can be pulled from Drive.</li>
+    <li><b>Match the property.</b> The LLM matches against live deals; a confident match links, an ambiguous one is refused.</li>
+    <li><b>Update memory.</b> Each person gets a live role row per property (seller, buyer, counterparty, professional…) with a stage and evidence quotes. Sources are ranked human &gt; contract &gt; board &gt; thread &gt; classifier &gt; tags, and a human row is never overridden.</li>
+    <li><b>Sync.</b> Tags, deal stage, a dated note line and contact price are written to Follow Up Boss, each write logged with its cause. Deals move forward only.</li>
+    <li><b>Watch the clock.</b> A pending SLA opens for VIP and in-escrow senders and escalates to Slack if unanswered.</li>
+  </ol>
+
+  <h3>Agent engineering</h3>
+  <ul>
+    <li><b>Models by job:</b> Haiku for property matching and closing-statement picks, Sonnet 5.5 with medium adaptive thinking for classification, contracts, roles and identity, Opus for client synthesis. Chosen on a 40-email comparison.</li>
+    <li><b>Prompt caching:</b> the system prompt and policy context are cached; about 11.2k of 13.4k input tokens per call are cacheable.</li>
+    <li><b>Replay before write:</b> each month's real emails were replayed in dry-run against a scratch database, every verdict reviewed, and defects fixed as versioned prompt changes before the next month went live. Prompts advanced from v24 to v32 this way.</li>
+    <li><b>Facts beat tags:</b> a contract or a human row always outranks what a classifier or an old tag says.</li>
+    <li><b>Deterministic edges:</b> the LLM judges; code builds the canonical address string and enforces stage order, thresholds and the "no contact without email" rule.</li>
+  </ul>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Providers time out on slow webhooks</td><td>Thin fast-ack edges, fat Celery workers; every LLM call and platform write is a task with retries, claims and dead letters.</td></tr>
+    <tr><td>The model invented contact ids and addresses</td><td>Invented-id guards on every pick; addresses rebuilt from structured parts (the model had produced 437 strings for 229 properties).</td></tr>
+    <tr><td>Wrong buyers and sellers from forwarded mail</td><td>Attribution from the document and the thread, never the sender; parties behind trusts resolved by surname.</td></tr>
+    <tr><td>A person is a client on one deal, an agent on another</td><td>Per-property role rows with source ranking and forward-only stages, instead of one global tag.</td></tr>
+    <tr><td>One bad write costs trust</td><td>Confidence floors, refuse-on-ambiguity, a write log with causes, Monday writes off by default, and apply scripts that need a named approver.</td></tr>
+    <tr><td>Client-specific rules everywhere</td><td>One policy file for ids, mappings, SLA tiers, team names and thresholds; a sandbox variant for testing.</td></tr>
+  </table>
+
+  <h3>Results</h3>
+  <table class="t">
+    <tr><th style="width:38%">Measure</th><th>Result</th></tr>
+    <tr><td>Dry-run replays before go-live</td><td><b>Aug, Sep and Oct 2026</b>, 500–800 real emails each, every verdict reviewed; fixes shipped as prompt versions</td></tr>
+    <tr><td>First three days in production</td><td><b>1,039 emails, 0 errors</b>; 3 contacts created, 6 flagged for review</td></tr>
+    <tr><td>Steady state</td><td><b>p50 2.5 s</b> per inbound email through classification</td></tr>
+    <tr><td>Outage recovery</td><td>1,050 emails dead-lettered during an API-key outage were replayed in dry run for about $18, then 20 approved writes applied</td></tr>
+    <tr><td>Replay fidelity</td><td><b>97.4% agreement</b> between the live API and an offline replay of 537 emails</td></tr>
+  </table>
+
+  <div class="stack">Python 3.12 · FastAPI · Celery + Beat · Redis · PostgreSQL · SQLAlchemy 2.0 · Alembic (11 migrations) · Anthropic SDK (Claude Haiku 4.5, Sonnet 5.5, Opus) · Gmail API + Pub/Sub · Follow Up Boss REST · Monday.com GraphQL · Slack Bolt · Google Drive · Railway · GitHub Actions</div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- 2.2 PropertyAI -->
+<div class="sec" id="cs-propertyai"><h2>2.2 · PropertyAI CRM — AI Property Management on Buildium <span class="badge live">LIVE</span><span class="badge demo">DEMO</span></h2><span>PropTech / Real Estate</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> Kognio AI product, scoped against a 75+ unit Buildium property manager &nbsp;·&nbsp; <b>Role:</b> architect and sole engineer &nbsp;·&nbsp; <b>Timeline:</b> Apr – Aug 2026, 125 commits &nbsp;·&nbsp; <b>Live:</b> <a href="https://propertyai.kognio.ai">propertyai.kognio.ai ↗</a> &nbsp;·&nbsp; <b>Demo:</b> <a href="https://www.loom.com/share/b7b46dc5d0fa4f70ba91d8746bfa43d6">Watch ↗</a></p>
+
+  <p class="lead">A tenant-communication and operations layer on top of Buildium. Inbound tenant messages on four channels go through one AI pipeline that answers, detects intent and opens the right record: a maintenance request and vendor dispatch, an escalation, a rent-hardship task or a renewal. Fifteen scheduled jobs run the rest of the lifecycle, and a Portfolio Copilot answers questions over a live snapshot of the portfolio.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>Managers of 50–100+ units spend their day on rent reminders, maintenance intake and renewals.</li>
+      <li>Buildium holds the data but does none of the communication.</li>
+      <li>Every vendor (SMS, e-sign, screening, payments) is a separate contract.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>A single-service FastAPI + React app with 248 endpoints and 56 tables.</li>
+      <li>One AI pipeline for tenant messaging with per-tenant memory and intent actions.</li>
+      <li>Eleven provider seams that default to mock, so every flow runs with no vendor accounts.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>Rent follow-ups, renewals, escalation and dispatch run unattended on a schedule.</li>
+      <li>Live two-way Buildium sync for tenants, leases, balances and work orders.</li>
+      <li>Deployed and demo-ready on Railway with seeded data for 27 modules.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>15</b><span>scheduled jobs across the tenant lifecycle</span></div>
+    <div class="kpi"><b>248</b><span>API endpoints across 55 routers</span></div>
+    <div class="kpi"><b>56 / 40</b><span>tables and Alembic migrations</span></div>
+    <div class="kpi"><b>58</b><span>React pages, 10 of them public magic-link flows</span></div>
+    <div class="kpi"><b>4</b><span>inbound channels (SMS, WhatsApp, email, voice) into one pipeline</span></div>
+    <div class="kpi"><b>11</b><span>pluggable provider seams, mock by default</span></div>
+    <div class="kpi"><b>10</b><span>turns of memory per tenant conversation</span></div>
+    <div class="kpi"><b>5</b><span>AI surfaces: messaging, rent follow-up, Copilot, Retention Radar, KB Q&amp;A</span></div>
+  </div>
+
+  <h3>The problem</h3>
+  <ul>
+    <li><b>Repetitive communication:</b> the same reminders, intake questions and renewal offers, written by hand, many times a day.</li>
+    <li><b>Slow intake:</b> a maintenance text sits until someone reads it, then gets re-typed into Buildium.</li>
+    <li><b>No memory:</b> each tenant conversation starts from zero.</li>
+    <li><b>Vendor sprawl:</b> SMS, e-signature, screening, payments and valuation each need a provider before anything can be demonstrated.</li>
+  </ul>
+
+  <h3>Requirements I derived and built against</h3>
+  <table class="t">
+    <tr><th style="width:34%">Requirement</th><th>How the system meets it</th></tr>
+    <tr><td>Answer tenants on any channel</td><td>Inbound webhooks for SMS, WhatsApp, email and voice feed one pipeline; the reply goes back on the same channel through a messaging seam.</td></tr>
+    <tr><td>Act on what the tenant means</td><td>The model returns an intent in a metadata block. Maintenance creates a request, a task and a vendor dispatch; escalation creates an urgent task; rent hardship and lease questions open their own tasks.</td></tr>
+    <tr><td>Remember the conversation</td><td>One active conversation per tenant with a JSON transcript; the last 10 turns and the latest intent are replayed into every prompt, with tenant facts and up to 3 knowledge articles.</td></tr>
+    <tr><td>Run the lifecycle without a person</td><td>APScheduler jobs: rent follow-up daily, renewals weekly, escalation hourly, Buildium sync every 6 h, dispatch every 2 h, late fees, payment plans, insurance offers, turnover, compliance, credit reporting, drips, showing feedback.</td></tr>
+    <tr><td>Renew leases end to end</td><td>Offers built from policy (+3%, 12 months, 60-day window) with a ReportLab PDF and a public token page; status offered → viewed → accepted → signed → completed, each step audited.</td></tr>
+    <tr><td>Mirror Buildium</td><td>REST sync pulls tenants, leases and balances every 6 hours; form-created maintenance requests push work orders back.</td></tr>
+    <tr><td>Answer portfolio questions</td><td>Portfolio Copilot builds a live snapshot (occupancy, top delinquencies, leases ending in 60 days, urgent maintenance, turnovers) and streams the answer over SSE.</td></tr>
+    <tr><td>Demonstrate without vendor accounts</td><td>Provider seams for SMS, email, WhatsApp, voice, payments, screening, e-sign, abstraction, listing content, AVM and MLS, each defaulting to a logged mock.</td></tr>
+  </table>
+
+  <h3>Architecture</h3>
+  <ul>
+    <li><b>One process:</b> FastAPI serves the API, runs the scheduler in its startup hook, and serves the built React app from a catch-all route. Two-stage Docker build; Alembic upgrade on boot; same origin so no CORS.</li>
+    <li><b>Data:</b> PostgreSQL via async SQLAlchemy, 56 tables in one models file, 40 migrations with a create-all fallback.</li>
+    <li><b>Integrations:</b> Buildium REST over httpx is the one real external system; OpenRouter for every model call through a single shared client.</li>
+    <li><b>Client:</b> React 18 + TypeScript + Vite, 49 private routes and 10 public token routes (tenant portal, pay, sign, renew, apply, move, owner).</li>
+  </ul>
+
+  <h3>How it works</h3>
+  <h4>A tenant text message</h4>
+  <ol class="steps">
+    <li><b>Receive.</b> The channel webhook finds the tenant by phone and loads their active conversation.</li>
+    <li><b>Compose.</b> The prompt carries the tenant's facts (unit, rent, balance, lease end), the last 10 turns and matching knowledge articles.</li>
+    <li><b>Reply and classify.</b> Claude answers in plain language and appends a metadata block with the intent and urgency; regex parses it, and a canned apology covers an empty answer.</li>
+    <li><b>Act.</b> The intent handler creates the maintenance request, task, dispatch, escalation or renewal task, and the transcript is saved.</li>
+    <li><b>Follow through.</b> The hourly escalation job promotes stale high-priority tasks; open emergency maintenance older than four hours raises an urgent task.</li>
+  </ol>
+
+  <h3>Agent engineering</h3>
+  <ul>
+    <li><b>Grounded snapshots, not tool calls:</b> the Copilot receives the portfolio as data and is told never to invent tenants; the client holds the last 12 turns.</li>
+    <li><b>Retention Radar:</b> up to 60 tenants' signals in one JSON call; scores are clamped, bands re-derived, and a transparent heuristic fills gaps so the page always renders and reports its source.</li>
+    <li><b>Knowledge base Q&amp;A:</b> keyword-overlap retrieval and an answer-only-from-articles prompt; deflected questions are tagged and article use counts rise.</li>
+    <li><b>Humans keep the pen:</b> screening runs in assist mode and lease abstraction is confirmed by a person before terms are written.</li>
+    <li><b>Deterministic where it should be:</b> listing copy, maintenance triage and lease abstraction are templates and rules with a documented swap to a model provider.</li>
+  </ul>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Demo needs every vendor live</td><td>Mock-first provider seams with a config switch per provider; flows stay repeatable.</td></tr>
+    <tr><td>Scheduled jobs re-sending messages</td><td>Idempotency checks per day, per active renewal and per month inside every job.</td></tr>
+    <tr><td>Streaming closes the request session</td><td>SSE generators open their own database session.</td></tr>
+    <tr><td>Many model clients drifting</td><td>One shared OpenRouter client with a comment forbidding a second.</td></tr>
+    <tr><td>Fair-housing risk in pricing</td><td>Renewal pricing takes no protected-attribute inputs.</td></tr>
+  </table>
+
+  <h3>Results</h3>
+  <ul>
+    <li>Rent follow-ups, renewals, escalation, dispatch and Buildium sync run on schedule with no operator.</li>
+    <li>A tenant maintenance text becomes a request, a task and a vendor dispatch in one turn; a form-created request becomes a Buildium work order.</li>
+    <li>Deployed to Railway with a demo guide, dark mode, 27 seeded modules and a 21-connector integrations catalogue.</li>
+  </ul>
+
+  <div class="stack">React 18 · TypeScript · Vite · FastAPI · PostgreSQL · SQLAlchemy (async) · Alembic · APScheduler · OpenRouter (Claude Sonnet 4.5) · Buildium REST · ReportLab · JWT · Docker · Railway</div>
+  <div class="links"><a href="https://propertyai.kognio.ai">Open the live app ↗</a> · <a href="https://www.loom.com/share/b7b46dc5d0fa4f70ba91d8746bfa43d6">Watch demo ↗</a> · <a href="https://github.com/mjehanzaib999/propertyai-crm-demo">Case study on GitHub ↗</a></div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- 2.3 Deal Analyzer -->
+<div class="sec" id="cs-analyzer"><h2>2.3 · Deal Analyzer — Investment Underwriting <span class="badge live">LIVE</span></h2><span>PropTech / Real Estate</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> Kognio AI product for wholesalers and investors &nbsp;·&nbsp; <b>Role:</b> sole engineer &nbsp;·&nbsp; <b>Timeline:</b> Aug 2026, built in 3 days &nbsp;·&nbsp; <b>Live:</b> <a href="https://analyzer.kognio.ai">analyzer.kognio.ai ↗</a></p>
+
+  <p class="lead">Enter a property and its comparable sales; get the after-repair value, five exit strategies, a 0–100 score, a stress test and an AI underwriting read. Every number comes from a deterministic engine. The model only interprets what the engine computed.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>Underwriting a deal means the same spreadsheet math, repeated per property.</li>
+      <li>Investors want a read on strategy fit and an offer plan, not only numbers.</li>
+      <li>An AI that invents a cap rate is worse than none.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>Pure-function engines for comps, ARV, five strategies, scoring and sensitivity.</li>
+      <li>An Underwriting Agent that streams fit scores and rationale over SSE.</li>
+      <li>A Negotiation Strategist that returns an offer ladder and scripts.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>Numbers appear instantly; AI commentary streams after.</li>
+      <li>Works with no model key at all: deterministic fallbacks everywhere.</li>
+      <li>Kanban pipeline, dashboard, compare and CSV import on top.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>5</b><span>exit strategies (wholesale, flip, buy-and-hold, subject-to, seller finance)</span></div>
+    <div class="kpi"><b>25</b><span>scenarios in the sensitivity grid plus break-even ARV per strategy</span></div>
+    <div class="kpi"><b>6</b><span>weighted scoring criteria → 0–100 score and A–F grade</span></div>
+    <div class="kpi"><b>13 × 3</b><span>rehab line items × severity bands</span></div>
+    <div class="kpi"><b>21</b><span>API endpoints across 11 routers</span></div>
+    <div class="kpi"><b>0</b><span>financial figures written by the model, by design</span></div>
+  </div>
+
+  <h3>How it works</h3>
+  <ol class="steps">
+    <li><b>Comps and ARV.</b> Each comp starts at 100 and loses capped points for size, beds and baths, distance, condition and age; ARV is the similarity-weighted price per square foot times the subject's size.</li>
+    <li><b>Strategies.</b> Wholesale (70% rule less repairs and fee), flip (6 months holding at 1%/month, 8% selling costs), buy-and-hold (rent, taxes, insurance, vacancy and maintenance → NOI, cap rate, cash-on-cash), subject-to when mortgage data exists, and seller finance at 85% of ARV.</li>
+    <li><b>Score and stress.</b> Six weighted criteria give the score and grade; a 5×5 grid moves ARV −10% to +10% and repairs +0% to +50%, and a binary search finds each strategy's break-even ARV.</li>
+    <li><b>Underwrite.</b> The agent streams deterministic strategy cards first, then AI fit scores and risk flags for buy-and-hold, BRRRR, flip and wholesale, then a streamed rationale, over one SSE connection.</li>
+    <li><b>Negotiate.</b> The strategist returns opening, target and walk-away prices, a concession ladder, talking points and two message scripts, with the recommended strategy's offer price as the ceiling.</li>
+  </ol>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Trust in the numbers</td><td>Thin routes, pure service functions; the engine runs first and the model receives its output as JSON with a "never invent numbers" rule.</td></tr>
+    <tr><td>Waiting on the model</td><td>Deterministic cards are sent before any model token, so the page is useful immediately.</td></tr>
+    <tr><td>No API key in some environments</td><td>Heuristic judgement and a fallback plan replace the model, so the product still works.</td></tr>
+    <tr><td>Two services, one origin</td><td>A runtime Next.js route handler proxies to the private FastAPI backend and passes streams through unbuffered.</td></tr>
+    <tr><td>Repeatable demos</td><td>Mock comps are seeded from a hash of the address, and an idempotent seed creates 10 deals and 30 comps on an empty database.</td></tr>
+  </table>
+
+  <div class="stack">Next.js 14 (App Router) · React · TypeScript · shadcn/ui · FastAPI · SQLAlchemy (async) · OpenRouter (Claude Sonnet 4.5) · SSE · Docker · Railway</div>
+  <div class="links"><a href="https://analyzer.kognio.ai">Open the live app ↗</a> · <a href="https://github.com/mjehanzaib999/deal-analyzer">Case study on GitHub ↗</a></div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- DOMAIN 03 ============================================================ -->
+<div class="dom-sec" id="dom-ecommerce"><h2>03 · E-Commerce &amp; Retail Intelligence</h2><span>1 case study</span></div>
+
+<!-- 3.1 Commerce IQ -->
+<div class="sec" id="cs-commerce"><h2>3.1 · Commerce IQ — Commerce Intelligence for Amazon-Led Brands <span class="badge live">LIVE</span><span class="badge demo">DEMO</span></h2><span>E-Commerce &amp; Retail</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> Kognio AI product for founders of Amazon-led D2C brands &nbsp;·&nbsp; <b>Role:</b> sole engineer &nbsp;·&nbsp; <b>Timeline:</b> Apr – Aug 2026 &nbsp;·&nbsp; <b>Live:</b> <a href="https://commerce.kognio.ai">commerce.kognio.ai ↗</a> &nbsp;·&nbsp; <b>Demo:</b> <a href="https://share.descript.com/view/NZbqt7OjTxl">Watch ↗</a></p>
+
+  <p class="lead">A decision-support tool that tells a founder what changed yesterday, what to worry about and what to do. Commerce data lands in a canonical warehouse, six deterministic rules score it every morning, and a tool-calling chat agent, a root-cause analyst and a Telegram digest explain the results without ever inventing a figure.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>Sales, ads, inventory, Buy Box and returns live in separate reports.</li>
+      <li>Founders find out about a stock-out or a conversion drop days late.</li>
+      <li>Generic AI summaries make up numbers.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>A 15-table warehouse fed by a pluggable ingestion seam.</li>
+      <li>Six scoring rules, a lead-time-aware reorder engine and a true-profit calculator.</li>
+      <li>A chat agent with 10 typed, account-scoped tools, plus streaming analysis.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>A nightly pipeline: ingest 02:00, score 06:00, digest 07:00 UTC.</li>
+      <li>Alerts, in-app notifications, email by severity and a Telegram digest.</li>
+      <li>One engine feeds the alert, the page and the AI planner, so they never disagree.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>6</b><span>deterministic alert rules with severity thresholds</span></div>
+    <div class="kpi"><b>10</b><span>typed agent tools, account id injected server-side</span></div>
+    <div class="kpi"><b>44</b><span>API endpoints across 14 routers</span></div>
+    <div class="kpi"><b>15</b><span>warehouse and app tables</span></div>
+    <div class="kpi"><b>3</b><span>nightly stages: ingest → score → digest</span></div>
+    <div class="kpi"><b>5</b><span>selectable models behind one OpenRouter seam</span></div>
+    <div class="kpi"><b>45 × 7 × 25</b><span>days × marketplaces × SKUs of seeded data with planted anomalies</span></div>
+    <div class="kpi"><b>~17k</b><span>lines of code across the stack</span></div>
+  </div>
+
+  <h3>Requirements I derived and built against</h3>
+  <table class="t">
+    <tr><th style="width:34%">Requirement</th><th>How the system meets it</th></tr>
+    <tr><td>Catch what changed yesterday</td><td>Rules on daily facts: revenue ≤ −15% vs 7-day average, conversion ≤ −20% day over day, ACOS ≥ +25%, Buy Box share drop ≥ 15 points from a ≥ 85% baseline, return rate ≥ 2× baseline, and reorder-now from the reorder engine. Each has a high or critical band.</td></tr>
+    <tr><td>Know when to reorder</td><td>Velocity over 7 days, days of cover, reorder point = lead time + safety stock, quantity = (lead + safety + cycle) × velocity − stock, with per-ASIN overrides and a supplier.</td></tr>
+    <tr><td>Show true profit</td><td>(Gross − refunds) − Amazon fee % − other fees − ad spend − units × COGS, with COGS uploaded by CSV and SKUs missing COGS counted.</td></tr>
+    <tr><td>Ask questions in plain English</td><td>A tool loop (max 6 iterations) over summary, marketplaces, products, advertising, alerts, inventory, change, reorder, profit and returns tools; streamed over SSE; history stored.</td></tr>
+    <tr><td>Explain a bad day</td><td>Root-Cause Analyst gathers evidence server-side, streams status and evidence chips, then a narrative, then a strict-JSON list of ranked causes; the narrative stands if the JSON fails.</td></tr>
+    <tr><td>Plan the next order</td><td>Reorder Planner wraps the engine output (15 items) in one JSON call; broken JSON is salvaged per ASIN and every missing field falls back to the engine value.</td></tr>
+    <tr><td>Reach the founder where they are</td><td>In-app notifications for the tenant, email above each user's severity threshold, and a daily Telegram digest from a fixed template.</td></tr>
+    <tr><td>Swap the data source later</td><td>An ingestion Protocol with four fetch methods; mock source implemented, Amazon SP-API documented as a stub, delete-then-insert per window so re-runs are safe.</td></tr>
+  </table>
+
+  <h3>Architecture</h3>
+  <ul>
+    <li><b>Single same-origin service:</b> a two-stage Dockerfile builds the Vite app; FastAPI serves it and the API, and runs APScheduler in its lifespan hook.</li>
+    <li><b>Warehouse:</b> fact tables for account, marketplace, product, advertising and returns by day, plus alerts, notifications, preferences, chat sessions and messages, product settings, COGS and fee settings.</li>
+    <li><b>Models:</b> every call through OpenRouter's OpenAI-compatible client; the chat UI offers Sonnet, Opus, Haiku, GPT-5 and Gemini 2.5 Pro.</li>
+    <li><b>Frontend:</b> React 18 + TypeScript + Vite + TanStack Query; 12 app pages and 7 settings sub-pages.</li>
+  </ul>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Models inventing figures</td><td>Rules produce the facts; prompts say "never invent figures"; the AI only explains and ranks.</td></tr>
+    <tr><td>Three screens showing different reorder advice</td><td>One reorder engine shared by the alert rule, the inventory page and the AI planner.</td></tr>
+    <tr><td>Truncated JSON on large plans</td><td>Cap to 15 items, raise the token budget, salvage complete objects, fall back per field, never raise.</td></tr>
+    <tr><td>Re-running ingestion</td><td>Delete the date window and re-insert, then rebuild the daily rollup.</td></tr>
+    <tr><td>Notifications breaking the scoring job</td><td>Notification and AI steps fail soft so an alert is always written.</td></tr>
+  </table>
+
+  <div class="stack">React 18 · TypeScript · Vite · Tailwind · TanStack Query · FastAPI · SQLAlchemy 2.0 (async) · PostgreSQL 16 · APScheduler · OpenRouter (multi-model) · python-telegram-bot · Docker · Railway</div>
+  <div class="links"><a href="https://commerce.kognio.ai">Open the live app ↗</a> · <a href="https://share.descript.com/view/NZbqt7OjTxl">Watch demo ↗</a> · <a href="https://github.com/mjehanzaib999/commerce-intelligence">Case study on GitHub ↗</a></div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- DOMAIN 04 ============================================================ -->
+<div class="dom-sec" id="dom-logistics"><h2>04 · Logistics &amp; Operations</h2><span>1 case study</span></div>
+
+<!-- 4.1 MoveOps -->
+<div class="sec" id="cs-moveops"><h2>4.1 · MoveOps — AI Operations Platform for Movers <span class="badge live">LIVE</span></h2><span>Logistics &amp; Operations</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> Kognio AI product for removals companies &nbsp;·&nbsp; <b>Role:</b> sole engineer &nbsp;·&nbsp; <b>Timeline:</b> 2026 &nbsp;·&nbsp; <b>Live:</b> <a href="https://moveops.kognio.ai">moveops.kognio.ai ↗</a></p>
+
+  <p class="lead">One hub for a moving company's operations: leads from marketplaces, website and email land in a pipeline, a rules engine automates the follow-ups, an AI estimator turns a description of a home into inventory, volume, crew and price, and field staff close the job to an invoice on their phone.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>Leads arrive from Oneflare, Find a Mover, the website and email and are handled by hand.</li>
+      <li>Slow replies lose bookings; nothing tracks the pipeline.</li>
+      <li>Zapier-style automation adds per-run cost and lock-in.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>A lead → job → invoice pipeline with 52 endpoints and 16 tables.</li>
+      <li>An automation engine with data-defined rules, timed sweeps and a run audit.</li>
+      <li>Four AI features, each with a deterministic fallback.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>New leads get an automatic reply, assignment and reminder with no one watching.</li>
+      <li>The estimator streams its reasoning, then a structured estimate.</li>
+      <li>The whole demo works with or without a model key.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>52</b><span>API endpoints</span></div>
+    <div class="kpi"><b>8 / 4 / 5</b><span>built-in automations, action types, condition operators</span></div>
+    <div class="kpi"><b>3</b><span>messaging channels (SMS, email, WhatsApp) behind one adapter Protocol</span></div>
+    <div class="kpi"><b>4</b><span>AI features, each with a non-LLM fallback</span></div>
+    <div class="kpi"><b>25</b><span>leads scored per batched model call</span></div>
+    <div class="kpi"><b>16</b><span>tables; 21 pages</span></div>
+  </div>
+
+  <h3>How it works</h3>
+  <h4>A rule, end to end</h4>
+  <ol class="steps">
+    <li><b>Event.</b> A domain action fires a trigger: lead created, stage changed, job booked, job completed, invoice generated, or a timed sweep (uncontacted for 30 minutes, job in 3 days, job tomorrow).</li>
+    <li><b>Match.</b> The engine loads the tenant's enabled rules for that trigger and builds a context of lead, job and extras.</li>
+    <li><b>Evaluate.</b> One condition per rule, a dotted path and an operator (eq, ne, in, not_in, contains); an empty condition always passes.</li>
+    <li><b>Act.</b> Send a templated message on a channel, create a notification with interpolated fields, update the lead stage, or round-robin assign.</li>
+    <li><b>Record.</b> Every rule writes a run row as success, skipped or failed with a detail string; exceptions are caught and logged.</li>
+  </ol>
+  <h4>An AI estimate</h4>
+  <ol class="steps">
+    <li>The prompt sets a surveyor persona with per-item volumes, crew and truck bands and hourly pricing.</li>
+    <li>The model streams prose reasoning; the server withholds the last few characters until it sees the JSON marker, so a half-sent marker never reaches the client.</li>
+    <li>After the marker, the JSON is coerced: missing totals are summed from items, cubic feet converted to m³.</li>
+    <li>No key, an error or bad JSON falls back to a heuristic estimate from bedroom count with a price band.</li>
+  </ol>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Automation vendors charge per run</td><td>Rules are JSON data evaluated by plain Python inside the hub; no external workflow tool.</td></tr>
+    <tr><td>Demo without SMS or email accounts</td><td>Each channel adapter logs to the console and returns a fallback id when unconfigured; every send still writes a Message row.</td></tr>
+    <tr><td>Preview and invoice disagreeing</td><td>One pricing engine (quarter-hour rounding, minimum hours, capped discount and deposit, tax after discount) serves both the field preview and the saved invoice.</td></tr>
+    <tr><td>Chatbot making up prices</td><td>A 4-iteration tool loop whose only tools are FAQs, the same rule-based quote service and create-lead with consent; FAQ keyword matching when the model is off.</td></tr>
+    <tr><td>Email leads in free text</td><td>Regex first, then a temperature-0 JSON call; model values win where present.</td></tr>
+  </table>
+
+  <div class="stack">React · TypeScript · Vite · Tailwind · FastAPI · SQLAlchemy (async) · PostgreSQL · APScheduler · OpenRouter (Claude Sonnet 4.5) · aiosmtplib · Twilio · WhatsApp Graph API · Docker · Railway</div>
+  <div class="links"><a href="https://moveops.kognio.ai">Open the live app ↗</a> · <a href="https://github.com/mjehanzaib999/moveops">Case study on GitHub ↗</a></div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- DOMAIN 05 ============================================================ -->
+<div class="dom-sec" id="dom-health"><h2>05 · HealthTech &amp; Life Sciences</h2><span>2 case studies</span></div>
+
+<!-- 5.1 Biologics Intelligence -->
+<div class="sec" id="cs-biologics"><h2>5.1 · Biologics Intelligence — Citation-Verified Research Assistant <span class="badge flagship">FLAGSHIP</span><span class="badge live">LIVE</span><span class="badge demo">DEMO</span></h2><span>Life Sciences / Competitive Intelligence</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> a consultancy in the spinal bone-graft biologics market &nbsp;·&nbsp; <b>Role:</b> sole engineer from first commit to production handover &nbsp;·&nbsp; <b>Timeline:</b> Aug – Oct 2026, 517 commits &nbsp;·&nbsp; <b>Demo:</b> <a href="https://youtu.be/sobTYD4ZE5M">Watch the walkthrough ↗</a></p>
+
+  <p class="lead">A research assistant that answers questions like "which of these 49 products are cleared as 510(k), PMA or 361 HCT/P, and since when?" from a library it keeps current itself. Every sentence is tied to a passage the reviewer can open, every citation is checked before the reader sees it, and when the corpus does not hold the answer it says so.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>Analysts read FDA records, trial registries, journals and SEC filings by hand.</li>
+      <li>Days per question, and no way to show where each fact came from.</li>
+      <li>Product names collide with common words and company aliases.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>An ingestion pipeline over 8 public sources plus uploads, with entity resolution.</li>
+      <li>Three-lane retrieval fused by rank over a filtered DiskANN index.</li>
+      <li>A plan → search → judge → write → check workflow with server-verified quotes.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>A hard question went from 6 minutes and $4 to 2 minutes and $1.</li>
+      <li>Every regulatory number on the acceptance set verified correct against the FDA record.</li>
+      <li>Handed over with admin console, runbook, guides and a cost sheet.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>33,800</b><span>documents · 668,000 passages · 711 tracked products</span></div>
+    <div class="kpi"><b>6 min $4 → 2 min $1</b><span>a hard question, before and after retrieval and judge work</span></div>
+    <div class="kpi"><b>$1.36 → $0.07</b><span>judge cost per broad question</span></div>
+    <div class="kpi"><b>99.9%</b><span>agreement between the filtered index and the exact scan</span></div>
+    <div class="kpi"><b>230</b><span>questions answered in production in 60 days, median $0.12</span></div>
+    <div class="kpi"><b>~$70</b><span>to embed and OCR the first 34,000-document library</span></div>
+    <div class="kpi"><b>~3,000</b><span>API tests · 773 web tests · 47 migrations</span></div>
+    <div class="kpi"><b>31</b><span>LangGraph nodes across research, turn and writer graphs</span></div>
+  </div>
+
+  <h3>Requirements I derived and built against</h3>
+  <table class="t">
+    <tr><th style="width:34%">Requirement</th><th>How the system meets it</th></tr>
+    <tr><td>Keep the library current without a person</td><td>8 connectors (ClinicalTrials.gov, openFDA, FDA 510(k)/PMA, DailyMed, Purple Book, PubMed/PMC, SEC EDGAR, EMA) on per-source cadences stored in Postgres; a 15-minute Beat tick and an outbox table give one dispatch per slot and one catch-up after an outage. EDGAR runs on its own queue at concurrency 1.</td></tr>
+    <tr><td>Read PDFs properly</td><td>GROBID for scientific papers, PyMuPDF in a resource-limited subprocess for regulatory filings, model OCR for scanned pages; section-aware chunks of ~900 tokens with tables kept whole.</td></tr>
+    <tr><td>Know which product a passage is about</td><td>A seeded registry (Purple Book, DailyMed, client list) resolved in three tiers: structured fields, word-boundary alias scan, then an LLM pass only when nothing matched. Short or common-word aliases need two capitalised mentions or the marketer nearby.</td></tr>
+    <tr><td>Find the one decisive sentence</td><td>Three lanes: chunk cosine, keyword rank, and 3-sentence sliding windows; fused by reciprocal rank (k = 60), top 10 per product per search, near-duplicates folded at 0.99.</td></tr>
+    <tr><td>Stay fast at 668k passages</td><td>pgvectorscale StreamingDiskANN with product labels on a narrow vectors table kept by triggers; shortlists rescored exactly; anything not fully indexed falls back to the scan.</td></tr>
+    <tr><td>Keep only evidence that answers the question</td><td>A judge model reads every candidate during retrieval in batches of 5 at concurrency 24, with a fixed schema so the prompt prefix caches, routed to a small open model across three hosts with a fallback.</td></tr>
+    <tr><td>Never cite what the passage does not say</td><td>A checker judges every statement against its cited passages; missing citations publish with visible warnings, invalid or unsupported ones block. The writer can ask a reader for notes whose quotes are verified verbatim by code.</td></tr>
+    <tr><td>Show the work and the cost</td><td>Durable turns on Celery with a watchdog, a Redis stream for live progress, a five-stage progress view, a source panel per citation, an audit trail, and a cost row per model call.</td></tr>
+  </table>
+
+  <h3>Architecture</h3>
+  <figure>
+    <svg class="dg" viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Biologics Intelligence architecture">
+      <defs><marker id="ahbi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker></defs>
+      <rect class="bx ext" x="12" y="12" width="230" height="58"/><text class="tt" x="127" y="34" text-anchor="middle">Public sources</text><text class="st" x="127" y="50" text-anchor="middle">FDA · ClinicalTrials · PubMed/PMC</text><text class="st" x="127" y="63" text-anchor="middle">SEC EDGAR · DailyMed · Purple Book · EMA</text>
+      <rect class="bx core" x="265" y="12" width="230" height="58"/><text class="tt" x="380" y="34" text-anchor="middle">Ingestion workers</text><text class="st" x="380" y="50" text-anchor="middle">Celery + Beat · outbox schedules</text><text class="st" x="380" y="63" text-anchor="middle">GROBID · OCR · chunk · embed · resolve</text>
+      <rect class="bx core" x="518" y="12" width="230" height="58"/><text class="tt" x="633" y="34" text-anchor="middle">Web (Next.js 15)</text><text class="st" x="633" y="50" text-anchor="middle">chat · progress · sources · trail</text><text class="st" x="633" y="63" text-anchor="middle">admin console · costs</text>
+      <rect class="bx core" x="12" y="118" width="736" height="48"/><text class="tt" x="380" y="139" text-anchor="middle">API (FastAPI) · 100 routes · roles admin / contributor / researcher · confidential access levels · SSE progress</text><text class="st" x="380" y="156" text-anchor="middle">durable turns: run_turn task · 1-minute watchdog · Redis stream per turn · Postgres as the record</text>
+      <rect class="bx core" x="12" y="200" width="356" height="58"/><text class="tt" x="190" y="222" text-anchor="middle">Research workflow (LangGraph, 31 nodes)</text><text class="st" x="190" y="238" text-anchor="middle">plan → search (3 lanes, rank fusion) → judge during retrieval</text><text class="st" x="190" y="251" text-anchor="middle">→ write (sections, document lookup) → check every statement</text>
+      <rect class="bx ext" x="392" y="200" width="356" height="58"/><text class="tt" x="570" y="222" text-anchor="middle">Models via OpenRouter</text><text class="st" x="570" y="238" text-anchor="middle">writer / planner / checker gpt-5.5 · judge gpt-oss-20b on Groq,</text><text class="st" x="570" y="251" text-anchor="middle">CoreWeave, DeepInfra, nano fallback · text-embedding-3-large</text>
+      <path class="ln" marker-end="url(#ahbi)" d="M242 41 H263"/>
+      <path class="ln" marker-end="url(#ahbi)" d="M380 70 V116"/><text class="lb" x="386" y="96">writes</text>
+      <path class="ln" marker-end="url(#ahbi)" d="M633 70 V116"/><text class="lb" x="639" y="96">JWT · SSE</text>
+      <path class="ln" marker-end="url(#ahbi)" d="M190 166 V198"/><text class="lb" x="196" y="186">chat-worker</text>
+      <path class="ln" marker-end="url(#ahbi)" d="M368 229 H390"/>
+      <rect class="band" x="12" y="272" width="736" height="48" rx="6"/><text class="tt" x="24" y="290">Data layer</text><text class="st" x="24" y="306">PostgreSQL 16 + pgvector + pgvectorscale (documents, chunks, windows, DiskANN vectors, registry, llm_calls) · Redis (queues, turn streams) · Railway (7 services)</text>
+    </svg>
+    <figcaption>Workers are isolated by queue so a slow SEC crawl never delays a question. Vectors live in Postgres so entity filters stay in one join; there is no separate vector database and no LangChain.</figcaption>
+  </figure>
+
+  <h3>How it works</h3>
+  <h4>A question, start to finish</h4>
+  <ol class="steps">
+    <li><b>Plan.</b> The planner turns the question into up to 10 searches, each one fact with a source kind, and may exclude document types with a stated reason. Low reasoning effort cut planning from 49 s to about 15 s.</li>
+    <li><b>Search.</b> Each search runs the three lanes per product in scope; results are rank-fused and deduplicated. Sentence-window lookups start beside the scans.</li>
+    <li><b>Judge.</b> As passages arrive, the judge reads each one against the question itself and keeps only what supports an answer, writing a short finding.</li>
+    <li><b>Write.</b> The writer composes per-product sections in parallel above a size threshold, citing passages by number; it can ask a reader model for notes on a document, and only verbatim-verified quotes survive.</li>
+    <li><b>Check.</b> Every statement is checked against its citations in parallel batches, at most two attempts; only changed statements are re-checked. Unsupported claims are stripped or the answer is refused with a fixed sentence.</li>
+    <li><b>Show.</b> The reader sees stage progress live, then the answer with a source panel per citation, the trail of what was searched and kept, and the cost.</li>
+  </ol>
+
+  <h3>Agent engineering</h3>
+  <ul>
+    <li><b>Judge economics:</b> judging during retrieval, a fixed passage-slot schema for prefix caching, batch 5, and a 20B open model on fast hosts took the judge from $1.36 to $0.07 per broad question.</li>
+    <li><b>Index with a safety net:</b> the exact scan is the default and the reference; the DiskANN path is switched per environment and verified at 99.9% agreement before production used it.</li>
+    <li><b>Memory like a chat:</b> the model sees the thread verbatim; compaction into a rolling summary happens only at half the window and records the access level it was built under.</li>
+    <li><b>Scope guard:</b> product pins are enforced once for every tool; out-of-scope products get a typed refusal that offers to widen the scope rather than a silent wider search.</li>
+    <li><b>Cost per call:</b> every model call stores tokens, cached tokens, latency and cost (provider-reported or estimated and flagged), so cost per question is a query.</li>
+    <li><b>Reasoning effort per stage:</b> set explicitly for planner, judge, writer and checker after measuring that defaults differed by model.</li>
+  </ul>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>A product name is also a common word</td><td>Stoplist and short-alias rules needing two capitalised mentions or the marketer nearby; search terms stored as provenance, never as tags. One rule removed 1,951 false tags on one product.</td></tr>
+    <tr><td>Blended scores from unlike lanes</td><td>Reciprocal-rank fusion with per-lane floors instead of a weighted sum of incomparable numbers.</td></tr>
+    <tr><td>Label updates too slow through HNSW</td><td>Labels live in a narrow vectors table maintained by triggers; rewriting chunk rows cost ~140 ms each.</td></tr>
+    <tr><td>Hallucinated quotes in notes</td><td>Code checks every quote verbatim against the text the reader saw; unverifiable quotes are withheld.</td></tr>
+    <tr><td>Long turns dying silently</td><td>Celery turns with no auto-retry, a one-minute sweep that judges silence, and a Redis stream so a reconnecting browser catches up.</td></tr>
+    <tr><td>Regulator rate limits</td><td>A dedicated single-concurrency queue for SEC, cadence per source, and one catch-up after downtime.</td></tr>
+  </table>
+
+  <h3>Results</h3>
+  <table class="t">
+    <tr><th style="width:38%">Measure</th><th>Result</th></tr>
+    <tr><td>Hard regulatory question (49 products)</td><td><b>348 s / $3.74 → 110 s / $1.07</b>, answer accurate</td></tr>
+    <tr><td>Broad clinical question in production</td><td><b>273 s / $0.90 → 98 s / $0.13</b> with the filtered index, zero fallbacks</td></tr>
+    <tr><td>Judge cost per broad question</td><td><b>$1.36 → $0.07</b></td></tr>
+    <tr><td>Deduplication stage</td><td><b>5–21 s → 1–6 s</b></td></tr>
+    <tr><td>Client acceptance set</td><td><b>every regulatory number verified correct</b> against the FDA record</td></tr>
+    <tr><td>Production, first 60 days</td><td><b>230 questions</b>, median <b>$0.12</b> each</td></tr>
+  </table>
+
+  <div class="stack">Python · FastAPI · LangGraph · Celery + Beat · Redis · PostgreSQL 16 + pgvector + pgvectorscale · SQLAlchemy 2.0 (async) · Alembic · GROBID · PyMuPDF · OpenRouter (GPT-5.5, gpt-5.4-mini, gpt-oss-20b on Groq / CoreWeave / DeepInfra) · text-embedding-3-large · Next.js 15 · TypeScript · Tailwind v4 · Docker · Railway · GitHub Actions</div>
+  <div class="links"><a href="https://youtu.be/sobTYD4ZE5M">Watch demo ↗</a></div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- 5.2 Cure Health -->
+<div class="sec" id="cs-cure"><h2>5.2 · Cure Health — Unified Digital Health Platform <span class="badge live">LIVE</span></h2><span>HealthTech</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> Kognio AI product, designed for a European, GDPR-first market &nbsp;·&nbsp; <b>Role:</b> sole engineer &nbsp;·&nbsp; <b>Timeline:</b> Jul – Aug 2026, 30 commits &nbsp;·&nbsp; <b>Live:</b> <a href="https://curehealth.kognio.ai">curehealth.kognio.ai ↗</a></p>
+
+  <p class="lead">Five role-scoped portals connected by one care loop: book → visit → e-prescription → pharmacy dispensing → insurance adjudication → patient financing. Sixteen AI features sit inside the loop, each limited to its role and grounded in the same records and rules the portals use, plus in-browser WebRTC telehealth.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>Patients, providers, pharmacies and insurers each have their own system; the hand-offs are paper and phone.</li>
+      <li>AI "assistants" bolted on later skip the business rules.</li>
+      <li>Health data needs audit and least privilege from day one.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>A FastAPI + Next.js 16 platform with 46 routes, 26 screens and 11 tables.</li>
+      <li>Four enforced state machines with coverage and instalment math in code.</li>
+      <li>A per-role AI tool registry where the booking assistant calls the real booking function.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>One coherent demo chain from booking to a 70%-covered claim and a 6-month plan.</li>
+      <li>62 backend tests with every external call mocked; CI on each push.</li>
+      <li>Every AI call audited without storing message content.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>5</b><span>roles, each with its own portal</span></div>
+    <div class="kpi"><b>16</b><span>AI features: 14 in the per-role registry plus Care Navigator and Care Plan</span></div>
+    <div class="kpi"><b>46</b><span>API routes (45 HTTP + 1 WebSocket)</span></div>
+    <div class="kpi"><b>4</b><span>enforced state machines: prescription, pharmacy order, claim, financing</span></div>
+    <div class="kpi"><b>62</b><span>backend tests, no network needed</span></div>
+    <div class="kpi"><b>26</b><span>screens</span></div>
+  </div>
+
+  <h3>How it works</h3>
+  <h4>The care loop</h4>
+  <ol class="steps">
+    <li><b>Book.</b> A patient books a slot (409 if taken); fees are set per specialty; video visits get a room id. The AI booking assistant runs a tool loop over list providers, get slots and book, capped at 6 rounds and one booking per turn, calling the same function as the form.</li>
+    <li><b>Visit.</b> The provider marks the visit and drafts a S/O/A/P note from bullets or a transcript; interaction checks are refused unless a treatment relationship exists.</li>
+    <li><b>Prescribe and dispense.</b> Prescription active → sent → dispensed; the pharmacy order moves received → dispensing → ready → completed, with illegal moves returning 409. Pharmacy tools check dispensing, suggest at most three substitutions with a prescriber note, print labels in English or Albanian, and forecast demand from 30-day aggregates.</li>
+    <li><b>Claim.</b> Submitted → in review → approved or denied → paid. Four checks run in code (policy active, source valid, no duplicate, amount within source); the claims copilot only recommends, and bad output becomes needs-info. Covered amount = amount × coverage %, patient share = the rest, shown on an EOB.</li>
+    <li><b>Finance.</b> The patient's share becomes a 3, 6 or 12-month plan with ceiling-divided instalments; the plan completes when the last one is paid.</li>
+  </ol>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>AI skipping the rules</td><td>The booking assistant calls the same perform_booking as the form; claim checks, coverage math and forecasts are computed in code and the model only narrates.</td></tr>
+    <tr><td>Role leakage</td><td>A tool registry keyed by role, 403 on any cross-role call, pinned by a test that tries every tool with every wrong role.</td></tr>
+    <tr><td>Health data in logs</td><td>Append-only audit rows committed in the same transaction, with AI calls logged by key and no message content.</td></tr>
+    <tr><td>Records revealing their existence</td><td>Ownership checks return 404, not 403.</td></tr>
+    <tr><td>Tests needing a model key</td><td>In-memory SQLite and a monkeypatched model client; bad model output is replaced with the safest valid value.</td></tr>
+  </table>
+
+  <div class="stack">Next.js 16 · React 19 · TypeScript · shadcn/ui · TanStack Query · FastAPI · async SQLAlchemy · Alembic · PostgreSQL 16 · WebRTC + WebSocket signaling · OpenRouter (Claude) · GitHub Actions · Docker · Railway</div>
+  <div class="links"><a href="https://curehealth.kognio.ai">Open the live app ↗</a> · <a href="https://github.com/mjehanzaib999/curehealth">Case study on GitHub ↗</a></div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- DOMAIN 06 ============================================================ -->
+<div class="dom-sec" id="dom-sales"><h2>06 · AI Sales &amp; Outreach</h2><span>1 case study</span></div>
+
+<!-- 6.1 Speed-to-Lead -->
+<div class="sec" id="cs-s2l"><h2>6.1 · Speed-to-Lead — Multi-Channel AI Intake &amp; Booking Engine <span class="badge demo">DEMO</span></h2><span>AI Sales &amp; Outreach</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> Kognio AI portfolio build, demo client Kognio AI itself; positioned for marketing agencies running many clients on GoHighLevel &nbsp;·&nbsp; <b>Role:</b> sole engineer &nbsp;·&nbsp; <b>Timeline:</b> Sep 2026, 49 commits; parked at $0/month after recording &nbsp;·&nbsp; <b>Demo:</b> <a href="https://share.descript.com/view/prx4nWoPmdu">Watch ↗</a></p>
+
+  <p class="lead">One lead-qualification engine behind three doorways: website chat, a voice agent and web forms. Every lead is scored against rules the business owns in Airtable, enriched from its own website, booked onto the live calendar mid-conversation, and written to whichever CRM the client already uses. Change a cell in Airtable and the behaviour changes with no deploy.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>Leads that wait an hour are lost; most businesses cannot answer at 2 AM.</li>
+      <li>Each client's services, area, hours and scoring are different.</li>
+      <li>Agencies will not maintain code per client.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>Seven n8n workflows (98 nodes): intake, two CRM adapters, voice, prospects, metrics, dead letter.</li>
+      <li>An Airtable control plane of 7 tables and 73 fields that a non-developer edits.</li>
+      <li>A Vapi voice assistant that books into GoHighLevel through plain HTTP tools.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>Form to scored CRM record in about 20 s; chat to booked call in about a minute.</li>
+      <li>Re-pointed from roofer to agency to AI studio with three Airtable rows and no code.</li>
+      <li>10 of 10 exit tests passed; every failure answers 500, never a silent 200.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>~20 s</b><span>form to scored CRM record (21.3 s in the demo)</span></div>
+    <div class="kpi"><b>~1 min</b><span>chat to booked discovery call, no human</span></div>
+    <div class="kpi"><b>7 / 98</b><span>workflows and nodes</span></div>
+    <div class="kpi"><b>2</b><span>CRMs (GoHighLevel, HubSpot) switched by one Airtable field</span></div>
+    <div class="kpi"><b>3 rows</b><span>to re-point the engine to a new industry</span></div>
+    <div class="kpi"><b>7 / 73</b><span>Airtable tables and fields in the control plane</span></div>
+    <div class="kpi"><b>10 / 10</b><span>exit tests passed</span></div>
+    <div class="kpi"><b>$0</b><span>per month when parked; about a day to bring back</span></div>
+  </div>
+
+  <h3>Architecture</h3>
+  <figure>
+    <svg class="dg" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Speed-to-Lead architecture">
+      <defs><marker id="ahs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker></defs>
+      <rect class="bx ext" x="12" y="12" width="230" height="48"/><text class="tt" x="127" y="33" text-anchor="middle">Web chat</text><text class="st" x="127" y="49" text-anchor="middle">GHL widget + Conversation AI → webhook</text>
+      <rect class="bx ext" x="265" y="12" width="230" height="48"/><text class="tt" x="380" y="33" text-anchor="middle">Voice</text><text class="st" x="380" y="49" text-anchor="middle">Vapi assistant · Deepgram · end-of-call report</text>
+      <rect class="bx ext" x="518" y="12" width="230" height="48"/><text class="tt" x="633" y="33" text-anchor="middle">Web form</text><text class="st" x="633" y="49" text-anchor="middle">POST /webhook/lead</text>
+      <rect class="bx core" x="12" y="112" width="736" height="58"/><text class="tt" x="380" y="134" text-anchor="middle">n8n intake (35 nodes)</text><text class="st" x="380" y="150" text-anchor="middle">normalize + hash lead_id → replay guard → client / persona / rules from Airtable → enrich (Apify) → Claude Haiku factors</text><text class="st" x="380" y="163" text-anchor="middle">→ code computes score vs threshold → promise-regex guard → Switch on crm → adapter → Runs log → 200 / 422 / 500</text>
+      <rect class="bx core" x="12" y="212" width="230" height="48"/><text class="tt" x="127" y="233" text-anchor="middle">HubSpot adapter</text><text class="st" x="127" y="249" text-anchor="middle">contact · deal · note · task</text>
+      <rect class="bx core" x="265" y="212" width="230" height="48"/><text class="tt" x="380" y="233" text-anchor="middle">GoHighLevel adapter</text><text class="st" x="380" y="249" text-anchor="middle">contact upsert · opportunity · note · task</text>
+      <rect class="bx ext" x="518" y="212" width="230" height="48"/><text class="tt" x="633" y="233" text-anchor="middle">Airtable control plane</text><text class="st" x="633" y="249" text-anchor="middle">7 tables · Lead Desk · nightly metrics</text>
+      <path class="ln" marker-end="url(#ahs)" d="M127 60 V110"/><path class="ln" marker-end="url(#ahs)" d="M380 60 V110"/><path class="ln" marker-end="url(#ahs)" d="M633 60 V110"/>
+      <path class="ln" marker-end="url(#ahs)" d="M127 170 V210"/><path class="ln" marker-end="url(#ahs)" d="M380 170 V210"/><path class="ln" marker-end="url(#ahs)" d="M633 170 V210"/><text class="lb" x="639" y="194">reads · writes</text>
+      <rect class="band" x="12" y="272" width="736" height="24" rx="6"/><text class="st" x="24" y="288">Docker (n8n + Postgres) · Cloudflare tunnel · OpenRouter (Claude Haiku 4.5) · Apify (website crawler, Google Maps) · dead-letter workflow</text>
+    </svg>
+    <figcaption>Three doorways post the same lead shape to one intake. The model returns factors between 0 and 1; code multiplies them by the weights in Airtable, so the business controls the score without touching the prompt.</figcaption>
+  </figure>
+
+  <h3>How it works</h3>
+  <ol class="steps">
+    <li><b>Normalize.</b> Validate, build a stable lead id from channel, phone or email and message, and normalize the phone to E.164. Bad payloads get 422.</li>
+    <li><b>Replay guard.</b> A lead already in Airtable returns 200 "already recorded" and creates nothing.</li>
+    <li><b>Load the client.</b> Client, persona and qualification rules come from Airtable rows; an unknown client is rejected.</li>
+    <li><b>Enrich.</b> The lead's website (explicit, or from a business email domain) is crawled by Apify with a 15 s cap; failure is recorded, never fatal.</li>
+    <li><b>Score.</b> Claude Haiku returns four factors (service match, in area, urgency, budget signal), a disqualifier, an escalate flag and a draft reply. Code computes the weighted score, applies the threshold, and a regex catches replies that promise a time.</li>
+    <li><b>Write.</b> A Switch on the client's CRM field calls the HubSpot or GoHighLevel adapter, which upserts the contact, creates or updates one opportunity, adds a note and a task, and returns the id.</li>
+    <li><b>Log.</b> A Runs row records stage, outcome and latency; any failure goes to Shape Run (failed) → Log Failed → Respond 500.</li>
+  </ol>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>The model would not do weighted arithmetic</td><td>Model returns factors 0..1; code computes the score and writes the sum into the reason field.</td></tr>
+    <tr><td>The model echoed the lead's deadline as a promise</td><td>Prompt rules plus a regex guard that sets needs_review; the rule is enforced twice.</td></tr>
+    <tr><td>Failures answering 200</td><td>Twelve I/O nodes route errors to a failed-run shaper and a 500 response; an error workflow catches the rest.</td></tr>
+    <tr><td>Two opportunities per contact</td><td>The GHL adapter searches by contact and updates the existing opportunity, keeping a booked stage.</td></tr>
+    <tr><td>Voice tools needing OAuth that never worked</td><td>Three plain HTTP tools and a slots endpoint that does the date maths, so the model never computes timestamps.</td></tr>
+    <tr><td>Per-client code</td><td>Everything client-specific is an Airtable row; the HubSpot adapter was built first on a free tier to fix the contract before the GHL trial clock started.</td></tr>
+  </table>
+
+  <div class="stack">n8n · Claude Haiku 4.5 (OpenRouter) · Vapi (Deepgram nova-3, Clara voice) · GoHighLevel API · HubSpot API · Airtable + Interface Designer · Apify · Cloudflare Tunnel · Docker · PostgreSQL</div>
+  <div class="links"><a href="https://share.descript.com/view/prx4nWoPmdu">Watch demo ↗</a></div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- DOMAIN 07 ============================================================ -->
+<div class="dom-sec" id="dom-conversational"><h2>07 · Conversational AI / Telecom</h2><span>1 case study</span></div>
+
+<!-- 7.1 Omvi -->
+<div class="sec" id="cs-omvi"><h2>7.1 · Omvi William — Multi-Tenant Agentic AI SaaS with Real-Time Voice <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></h2><span>Conversational AI / Telecom</span></div>
 
 <div class="cs">
   <p class="meta"><b>Client:</b> World Mobile (telecom operator), delivered through Omvi AI &nbsp;·&nbsp; <b>Role:</b> architect and engineer, designed and built end to end &nbsp;·&nbsp; <b>Timeline:</b> Oct 2025 – Mar 2026, demo platform Oct 2026 &nbsp;·&nbsp; <b>Demo:</b> <a href="https://www.youtube.com/watch?v=gWZj9BjP2rE">Watch the walkthrough ↗</a></p>
@@ -485,6 +1261,302 @@
 
   <div class="stack">Python · LangGraph · LangChain · FastAPI · LiveKit Agents · Deepgram · Cartesia · Silero · PostgreSQL + pgvector · Redis · SQLite · OpenRouter (Gemini 2.5 Flash Lite, GPT-4.1 mini, GPT-4o mini) · SSE · WebSockets · Next.js 16 · TypeScript · Prisma · Clerk · Docker · Railway · GCP · GitHub Actions · Playwright</div>
   <div class="links"><a href="https://www.youtube.com/watch?v=gWZj9BjP2rE">Watch demo ↗</a></div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- DOMAIN 08 ============================================================ -->
+<div class="dom-sec" id="dom-edtech"><h2>08 · EdTech / LMS</h2><span>1 case study</span></div>
+
+<!-- 8.1 HSC Chem -->
+<div class="sec" id="cs-hsc"><h2>8.1 · HSC Chemistry — AI-Assisted E-Learning Platform <span class="badge demo">DEMO</span></h2><span>EdTech / LMS</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> an HSC Chemistry tutoring platform for Year 12 students in New South Wales &nbsp;·&nbsp; <b>Role:</b> full-stack and AI engineering &nbsp;·&nbsp; <b>Timeline:</b> 2025 &nbsp;·&nbsp; <b>Demo:</b> <a href="https://www.loom.com/share/e245d0059fae429a95be46459260a2d8">Watch ↗</a></p>
+
+  <p class="lead">A learning platform with modules, lessons, practicals, quizzes, exams and games, where the model generates practice questions in five formats, marks free-text answers against a rubric, and writes per-question exam feedback that becomes a PDF report. Analytics run inside Postgres.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>Students need unlimited practice questions in the exam's own formats.</li>
+      <li>Marking short and long responses by hand does not scale.</li>
+      <li>Teachers want to see who is struggling, per module.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>An Express API of 193 handlers over a 28-table Supabase schema.</li>
+      <li>Seven model-backed endpoints behind one config-driven gateway.</li>
+      <li>A 76-page Next.js app with student and admin areas.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>Generate, mark and report on exams with validated, repaired model output.</li>
+      <li>Admins change model, temperature and token limits from a settings table.</li>
+      <li>113 API test cases across five suites.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>7</b><span>model-backed endpoints through one gateway</span></div>
+    <div class="kpi"><b>5</b><span>question formats: MCQ, short answer, calculation, long response, true/false</span></div>
+    <div class="kpi"><b>28 / 26</b><span>tables and migrations</span></div>
+    <div class="kpi"><b>193</b><span>REST handlers across 33 routers</span></div>
+    <div class="kpi"><b>76</b><span>Next.js pages</span></div>
+    <div class="kpi"><b>113</b><span>API test cases</span></div>
+  </div>
+
+  <h3>How it works</h3>
+  <ol class="steps">
+    <li><b>Configure.</b> Every call loads the default row of a model-configuration table (model, temperature 0–2, up to 4,000 tokens, one of four prompt styles), so admins tune without a deploy.</li>
+    <li><b>Generate.</b> Templates per question type ask for JSON; fields and types are checked, bad items dropped, fences and trailing commas stripped, and the call retried up to three times. Timestamps and seeds in the prompt push variety.</li>
+    <li><b>Mark.</b> One prompt handles every type with the model answer as the rubric; inputs are capped, MCQ letters mapped to option text, the score clamped to the available marks, and a fixed fallback returned on failure.</li>
+    <li><b>Report.</b> Exam feedback explains each MCQ option and scores each written answer with strengths and weaknesses; totals roll up per section and topic, and pdfkit renders the report.</li>
+    <li><b>Analyse.</b> A plpgsql function buckets each module's students by average into four performance bands; about 20 admin analytics endpoints and materialized progress views feed the dashboard.</li>
+  </ol>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Model output is unreliable JSON</td><td>Validate, clamp, repair, retry, and fall back; never trust a raw parse.</td></tr>
+    <tr><td>Tuning needs a developer</td><td>Model settings and prompt styles live in a database table with limits enforced at the database level.</td></tr>
+    <tr><td>Heavy analytics in app code</td><td>Performance distribution, smart-mix exams and progress are SQL functions and materialized views.</td></tr>
+    <tr><td>Admin changes need a trail</td><td>Admin write operations are wrapped in an activity log.</td></tr>
+  </table>
+
+  <div class="stack">Next.js 15 · React 19 · Redux Toolkit / RTK Query · shadcn/ui · Recharts · Express 5 · Supabase (Postgres, Auth, RLS) · Cloudflare R2 · OpenAI Chat Completions · pdfkit · Jest + supertest · Vercel</div>
+  <div class="links"><a href="https://www.loom.com/share/e245d0059fae429a95be46459260a2d8">Watch demo ↗</a></div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- DOMAIN 09 ============================================================ -->
+<div class="dom-sec" id="dom-content"><h2>09 · Content / SEO</h2><span>1 case study</span></div>
+
+<!-- 9.1 SEO -->
+<div class="sec" id="cs-seo"><h2>9.1 · AI SEO Blog Generator <span class="badge demo">DEMO</span></h2><span>Content / SEO</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> Kognio AI product &nbsp;·&nbsp; <b>Role:</b> sole engineer &nbsp;·&nbsp; <b>Timeline:</b> 2026 &nbsp;·&nbsp; <b>Demo:</b> <a href="https://www.loom.com/share/f48e3b41152c48ba9ee35f0943a7471c">Watch ↗</a></p>
+
+  <p class="lead">One keyword, a tone and a length in; a publish-ready article out, with meta description, title options, slug and keyword analysis. A four-stage pipeline writes each section with its own token budget, then a polish pass restores the flow. A content library, inline editor, Google search preview and DOCX export sit on top.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>One-shot prompts produce thin, repetitive long-form content.</li>
+      <li>Writers need the SEO parts (meta, titles, keywords) as structured data, not prose.</li>
+      <li>Cost needs a cap per user.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>A FastAPI pipeline of 7–11 sequential model calls per article.</li>
+      <li>A Next.js 15 app with library, editor, SEO details and DOCX export in the browser.</li>
+      <li>A generations table recording tokens and errors per run, and a daily quota.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>Keyword research → outline → sections → polish, each structured and inspectable.</li>
+      <li>Three length tiers and five tones applied through the prompts.</li>
+      <li>50 generations per user per day, enforced with HTTP 429.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>4</b><span>stages, 7–11 model calls per article</span></div>
+    <div class="kpi"><b>600 / 1,200 / 2,000</b><span>target words for short, medium, long</span></div>
+    <div class="kpi"><b>12</b><span>REST endpoints across 3 routers</span></div>
+    <div class="kpi"><b>3</b><span>tables: users, blog posts, generations</span></div>
+    <div class="kpi"><b>50</b><span>generations per user per day</span></div>
+    <div class="kpi"><b>~3.8k</b><span>lines of code</span></div>
+  </div>
+
+  <h3>How it works</h3>
+  <ol class="steps">
+    <li><b>Keyword research.</b> JSON with the primary keyword, 5–8 secondary and LSI keywords, search intent and difficulty; an optional brief is folded in.</li>
+    <li><b>Outline.</b> JSON with the H1, three title suggestions, a 150–160 character meta description, a slug, and 4–8 H2 sections with H3s and a brief each.</li>
+    <li><b>Sections.</b> One call per section in markdown, with the tone and the per-section word target.</li>
+    <li><b>Polish.</b> A lower-temperature pass smooths transitions and adds the intro and conclusion; the post, outline and title options are saved and the run logged.</li>
+  </ol>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Length limits on one prompt</td><td>Section-by-section generation with a final polish pass.</td></tr>
+    <tr><td>Model lock-in</td><td>OpenRouter behind the OpenAI SDK; the model is one environment variable.</td></tr>
+    <tr><td>Runaway cost</td><td>A daily quota on the user row and a generations audit table with token usage.</td></tr>
+    <tr><td>Server-side document dependencies</td><td>DOCX built in the browser from the rendered HTML, loaded only on click.</td></tr>
+  </table>
+
+  <div class="stack">Next.js 15 · React 19 · TypeScript · Tailwind · Radix · react-markdown · FastAPI · PostgreSQL · SQLAlchemy (async) · Alembic · OpenRouter (Claude Sonnet) · html-docx-js · Docker</div>
+  <div class="links"><a href="https://www.loom.com/share/f48e3b41152c48ba9ee35f0943a7471c">Watch demo ↗</a></div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- DOMAIN 10 ============================================================ -->
+<div class="dom-sec" id="dom-infra"><h2>10 · AI Infrastructure</h2><span>1 case study</span></div>
+
+<!-- 10.1 OptiML -->
+<div class="sec" id="cs-optiml"><h2>10.1 · OptiML — LLM Compression &amp; Fine-Tuning Framework</h2><span>AI Infrastructure</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Organisation:</b> OptiML (Log Two LLC), Apache-2.0-licensed framework &nbsp;·&nbsp; <b>Role:</b> lead developer on the core framework; top contributor by commits &nbsp;·&nbsp; <b>Timeline:</b> Apr 2024 – Jan 2026</p>
+
+  <p class="lead">A framework that makes compression part of fine-tuning: pruning, quantization, LoRA and multi-head latent attention as composable pieces of one training loop, driven by one config. I redesigned the core from a monolithic tuner into an event-driven system of callbacks, typed events and pluggable metrics, so a new technique is a callback rather than a change to the loop.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>Each compression technique came with its own training script and duplicated statistics code.</li>
+      <li>Adding a method meant editing the training loop itself.</li>
+      <li>Configuration was scattered across code and scripts.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>Config as data: a layered YAML template, Pydantic validation and a fluent builder.</li>
+      <li>An event-driven Tuner with a dispatcher, 23–25 callbacks and 35 typed events.</li>
+      <li>Projection interfaces for pruning patterns and pluggable importance and Hessian metrics.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>Magnitude, Wanda and SparseGPT pruning in three sparsity patterns on one API.</li>
+      <li>LoRA, QLoRA, QAT, AWQ, MLA and regrowth built on feature branches.</li>
+      <li>Multi-GPU training via DDP and lm-eval benchmarking built in.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>430</b><span>commits, about 41% of the repository; top contributor</span></div>
+    <div class="kpi"><b>15</b><span>PRs authored, 5 merged to main</span></div>
+    <div class="kpi"><b>+18.4k / −12.5k</b><span>lines across the 5 open architecture PRs</span></div>
+    <div class="kpi"><b>23 → 25</b><span>lifecycle callbacks; 35 typed events</span></div>
+    <div class="kpi"><b>6</b><span>techniques added on branches: LoRA, QLoRA, QAT, AWQ, MLA, regrowth</span></div>
+    <div class="kpi"><b>3 × 3</b><span>pruning algorithms × sparsity patterns on main</span></div>
+    <div class="kpi"><b>1.42%</b><span>perplexity rise for SparseGPT at 50% sparsity on LLaMA-2-7B (team result)</span></div>
+    <div class="kpi"><b>9</b><span>feature branches of 50–85 commits each</span></div>
+  </div>
+
+  <h3>Architecture</h3>
+  <figure>
+    <svg class="dg" viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OptiML framework architecture">
+      <defs><marker id="aho" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker></defs>
+      <rect class="bx core" x="12" y="12" width="230" height="58"/><text class="tt" x="127" y="34" text-anchor="middle">OptiMLConfig</text><text class="st" x="127" y="50" text-anchor="middle">base.yaml + overrides · Pydantic</text><text class="st" x="127" y="63" text-anchor="middle">fluent ConfigurationBuilder</text>
+      <rect class="bx core" x="265" y="12" width="230" height="58"/><text class="tt" x="380" y="34" text-anchor="middle">Tuner + TunerContext</text><text class="st" x="380" y="50" text-anchor="middle">state changes fire events</text><text class="st" x="380" y="63" text-anchor="middle">DDP across GPUs · run_optiml.py</text>
+      <rect class="bx core" x="518" y="12" width="230" height="58"/><text class="tt" x="633" y="34" text-anchor="middle">EventDispatcher</text><text class="st" x="633" y="50" text-anchor="middle">35 typed events · recursion guard</text><text class="st" x="633" y="63" text-anchor="middle">static + dynamic listeners</text>
+      <rect class="bx core" x="12" y="118" width="356" height="58"/><text class="tt" x="190" y="140" text-anchor="middle">Callbacks (25)</text><text class="st" x="190" y="156" text-anchor="middle">registrants · setup · finetuning · evaluation · compression</text><text class="st" x="190" y="169" text-anchor="middle">calibration · data collection · regrowth · LoRA · state change</text>
+      <rect class="bx core" x="392" y="118" width="356" height="58"/><text class="tt" x="570" y="140" text-anchor="middle">Layers, metrics, projections</text><text class="st" x="570" y="156" text-anchor="middle">OptiMLLinear · OptiMLManager · masks (unstructured, N:M)</text><text class="st" x="570" y="169" text-anchor="middle">ImportanceMetric (Wanda) · HessianMetric (SparseGPT) · LowRank</text>
+      <path class="ln" marker-end="url(#aho)" d="M242 41 H263"/><path class="ln" marker-end="url(#aho)" d="M495 41 H516"/>
+      <path class="ln" marker-end="url(#aho)" d="M633 70 L300 116"/><text class="lb" x="470" y="100">dispatch</text>
+      <path class="ln" marker-end="url(#aho)" d="M368 147 H390"/>
+      <rect class="band" x="12" y="200" width="736" height="60" rx="6"/><text class="tt" x="24" y="218">Around the framework</text><text class="st" x="24" y="234">lm-eval benchmarking · Hugging Face models · CI (ruff, license-header check, CPU and CUDA test lanes) · Sphinx docs · devcontainer</text><text class="st" x="24" y="250">optiml-run (team): K3s controller + Vast.ai GPU workers over Tailscale, FastAPI job API, cost-capped autoscaler, per-user quotas, KubeRay, TGI serving</text>
+    </svg>
+    <figcaption>Config flows into a Tuner whose state changes fire typed events; callbacks subscribe and do the work, from calibration pruning to regrowth during training. Pruning patterns and metrics are looked up from config by name.</figcaption>
+  </figure>
+
+  <h3>How it works</h3>
+  <ol class="steps">
+    <li><b>Configure.</b> A YAML layered on a full default template, validated into one typed object; callbacks are built from the config.</li>
+    <li><b>Load and shard.</b> Models load across GPUs with DDP; linear layers are wrapped as prunable layers with mask projections.</li>
+    <li><b>Collect.</b> A data-collection callback gathers activations in continuous, sampling or calibration mode; metrics (Wanda's running average, SparseGPT's Hessian) accumulate.</li>
+    <li><b>Compress.</b> Calibration pruning runs one-shot: collect → mask → log sparsity → optional eval; regrowth and compression callbacks act during fine-tuning on logical and micro steps.</li>
+    <li><b>Adapt and merge.</b> LoRA as W + α/r·BA with a low-rank metric and weight merging; adapters saved and loaded by the manager.</li>
+    <li><b>Evaluate.</b> lm-eval runs through the framework's model wrapper; results feed the team's benchmarks.</li>
+  </ol>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Every technique editing the training loop</td><td>Event-driven Tuner: private state changes only through update(), which fires events; setup callbacks remove themselves after one use.</td></tr>
+    <tr><td>Pruning patterns as ad-hoc functions</td><td>Projection interfaces with a registry and aliases, so a new pattern is a class named in config.</td></tr>
+    <tr><td>Statistics duplicated per algorithm</td><td>Metrics separated from algorithms behind one interface, chosen by a discriminated union.</td></tr>
+    <tr><td>Compression tangled with data collection</td><td>Split into separate callbacks, which made regrowth during training possible.</td></tr>
+    <tr><td>Config scattered across scripts</td><td>One base template with overrides and Pydantic validation; the Tuner takes a single object.</td></tr>
+  </table>
+
+  <h3>Results</h3>
+  <ul>
+    <li>Five PRs merged to main: model loading, pruning-pattern refactor, combined compression and fine-tuning workflows, the config system, and the event-driven Tuner.</li>
+    <li>Five open stacked PRs carry the typed event system, pluggable metrics, the 22-callback Tuner split, dynamic sparse training, and LoRA.</li>
+    <li>Team benchmark on LLaMA-2-7B at 50% sparsity: SparseGPT +1.42% perplexity, Wanda +6.48%, magnitude +151%; task-specific calibration gave +30.99% exact match on one downstream set.</li>
+  </ul>
+
+  <div class="stack">Python · PyTorch · Hugging Face Transformers · Pydantic · DDP / NCCL · lm-eval · bitsandbytes · ruff · GitHub Actions · Sphinx · Docker · Kubernetes (K3s) · Ray · Text Generation Inference</div>
+  <div class="up"><a href="#index">↑ Back to index</a></div>
+</div>
+
+<!-- DOMAIN 11 ============================================================ -->
+<div class="dom-sec" id="dom-hr"><h2>11 · HR Operations / Agent Tooling (MCP)</h2><span>1 case study</span></div>
+
+<!-- 11.1 Onboarding Ops -->
+<div class="sec" id="cs-onboarding"><h2>11.1 · AI Onboarding Ops — Onboarding as an MCP Server <span class="badge live">LIVE</span></h2><span>HR Operations / Agent Tooling</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> Kognio AI product &nbsp;·&nbsp; <b>Role:</b> sole engineer &nbsp;·&nbsp; <b>Timeline:</b> Sep 2026 &nbsp;·&nbsp; <b>Live:</b> <a href="https://onboarding.kognio.ai">onboarding.kognio.ai ↗</a> &nbsp;·&nbsp; <b>Code:</b> <a href="https://github.com/mjehanzaib999/onboarding-ops">Case study on GitHub ↗</a></p>
+
+  <p class="lead">Employee and client onboarding delivered two ways from one codebase: a web console for people, and a Model Context Protocol server that Claude Desktop, Claude in Slack or any agent can call with a personal token. Twenty-five narrow tools sit behind a single guard, so a button, a chat message and an MCP call produce the same audit row.</p>
+
+  <div class="glance">
+    <div><b>The problem</b><ul>
+      <li>Onboarding is a checklist spread over HR, IT and managers, with no record of who did what.</li>
+      <li>Agents given direct database access change data with no trail.</li>
+      <li>Policy answers drift from the handbook.</li>
+    </ul></div>
+    <div><b>What I built</b><ul>
+      <li>One tool registry; three front doors (REST writes, chat agent, MCP) through one guard.</li>
+      <li>A state machine for employee, contractor and client onboarding with document gating.</li>
+      <li>Policy Q&amp;A over a versioned handbook with BM25 retrieval and citations.</li>
+    </ul></div>
+    <div><b>The outcome</b><ul>
+      <li>One instruction starts an onboarding; tasks stay closed until the document is accepted.</li>
+      <li>Every model call priced at write time from a versioned price table.</li>
+      <li>Restricted personal data behind a tool never exposed to chat or MCP.</li>
+    </ul></div>
+  </div>
+
+  <h3>By the numbers</h3>
+  <div class="kpis">
+    <div class="kpi"><b>25</b><span>tools registered, 24 exposed over MCP</span></div>
+    <div class="kpi"><b>3 → 1</b><span>front doors through one guard</span></div>
+    <div class="kpi"><b>6</b><span>guard steps, audited on every outcome</span></div>
+    <div class="kpi"><b>3 + 3</b><span>MCP resources and prompts</span></div>
+    <div class="kpi"><b>3</b><span>templates (employee 13 tasks, contractor 6, client 10) on one state machine</span></div>
+    <div class="kpi"><b>5</b><span>roles with row-level scoping</span></div>
+    <div class="kpi"><b>69</b><span>REST endpoints · 25 screens</span></div>
+    <div class="kpi"><b>34</b><span>tests, 13 of them on the guard</span></div>
+  </div>
+
+  <h3>Architecture</h3>
+  <figure>
+    <svg class="dg" viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Onboarding Ops architecture">
+      <defs><marker id="ahn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker></defs>
+      <rect class="bx core" x="12" y="12" width="230" height="48"/><text class="tt" x="127" y="33" text-anchor="middle">Console (React 18)</text><text class="st" x="127" y="49" text-anchor="middle">25 screens · reads direct, writes via guard</text>
+      <rect class="bx core" x="265" y="12" width="230" height="48"/><text class="tt" x="380" y="33" text-anchor="middle">In-app chat agent</text><text class="st" x="380" y="49" text-anchor="middle">tool loop ≤ 6 rounds · SSE</text>
+      <rect class="bx ext" x="518" y="12" width="230" height="48"/><text class="tt" x="633" y="33" text-anchor="middle">MCP clients</text><text class="st" x="633" y="49" text-anchor="middle">Claude Desktop · Slack · any agent</text>
+      <rect class="bx core" x="12" y="108" width="736" height="48"/><text class="tt" x="380" y="129" text-anchor="middle">Guard: resolve → validate → role check → idempotent replay → handler → audit row</text><text class="st" x="380" y="145" text-anchor="middle">audited as ok / failed / error / denied / replayed · /api/mcp is hand-rolled JSON-RPC 2.0 so each call runs as one Principal</text>
+      <rect class="bx core" x="12" y="190" width="356" height="48"/><text class="tt" x="190" y="211" text-anchor="middle">Tools (25)</text><text class="st" x="190" y="227" text-anchor="middle">onboarding 10 · documents 4 · provisioning 4 · people 4 · policy 2 · PII 1</text>
+      <rect class="bx core" x="392" y="190" width="356" height="48"/><text class="tt" x="570" y="211" text-anchor="middle">Services</text><text class="st" x="570" y="227" text-anchor="middle">state machine · document validation · BM25 policy · cost pricing</text>
+      <path class="ln" marker-end="url(#ahn)" d="M127 60 V106"/><path class="ln" marker-end="url(#ahn)" d="M380 60 V106"/><path class="ln" marker-end="url(#ahn)" d="M633 60 V106"/><text class="lb" x="639" y="88">oops_ token</text>
+      <path class="ln" marker-end="url(#ahn)" d="M190 156 V188"/><path class="ln" marker-end="url(#ahn)" d="M368 214 H390"/>
+      <rect class="band" x="12" y="252" width="736" height="30" rx="6"/><text class="st" x="24" y="271">PostgreSQL (23 tables: people, onboardings, tasks, documents, policy versions and chunks, llm_calls, model_prices, audit) · OpenRouter (Claude Sonnet 4.5) · Railway</text>
+    </svg>
+    <figcaption>Console reads bypass the guard so the audit log stays free of page-view noise; every write, from any door, goes through it.</figcaption>
+  </figure>
+
+  <h3>How it works</h3>
+  <h4>An employee onboarding</h4>
+  <ol class="steps">
+    <li><b>Start.</b> One tool call creates the person, the onboarding, the tasks from the template, and a document request per required document with its own upload link.</li>
+    <li><b>Gate.</b> Completing a task that needs paperwork is refused until the document's status is validated; validation moves the waiting task to in progress.</li>
+    <li><b>Validate.</b> Documents are checked deterministically: MIME allow-list, minimum size per type, a screenshot heuristic for signatures. No model decides.</li>
+    <li><b>Provision and notify.</b> Separate tools provision accounts, schedule a check-in, post to a channel or update the CRM stage; only Slack and Google Calendar have live paths, the rest record a fallback.</li>
+    <li><b>Finalize.</b> Status is recomputed from the tasks; finalize is refused while any task is open. The client flow (contract → workspace → billing → security review → kickoff → go-live) runs on the same machine.</li>
+  </ol>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Three ways to change data, one trail</td><td>One guard for console writes, the chat agent and MCP; narrow tools so the audit log reads as sentences.</td></tr>
+    <tr><td>Agents and personal data</td><td>The PII tool is registered but flagged off for chat and MCP; audit rows redact sensitive keys.</td></tr>
+    <tr><td>Policy answers from the wrong version</td><td>Handbook versions supersede rather than overwrite; BM25 (k1 1.5, b 0.75) over active chunks; refuse with a fixed sentence when silent; the verbatim excerpt is returned when no model is configured.</td></tr>
+    <tr><td>Embeddings for a few hundred sections</td><td>BM25 keeps the product free of a second paid service and OpenRouter has no embeddings endpoint.</td></tr>
+    <tr><td>Cost drifting with price changes</td><td>Prices in a table with effective dates; each call priced when written, failed calls included.</td></tr>
+    <tr><td>Seed data that lies</td><td>The seed drives the real tools, so the audit log and durations are genuine; onboardings are backdated so time-to-productive means something.</td></tr>
+  </table>
+
+  <div class="stack">Python · FastAPI · SQLAlchemy 2.0 (async) · Alembic · PostgreSQL · MCP (JSON-RPC 2.0) · BM25 · OpenRouter (Claude Sonnet 4.5) · React 18 · TypeScript · Vite · TanStack Router · Tailwind · Docker · Railway</div>
+  <div class="links"><a href="https://onboarding.kognio.ai">Open the live app ↗</a> · <a href="https://github.com/mjehanzaib999/onboarding-ops">Case study on GitHub ↗</a></div>
   <div class="up"><a href="#index">↑ Back to index</a></div>
 </div>
 
