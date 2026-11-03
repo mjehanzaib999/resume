@@ -75,6 +75,7 @@
   <h2>Case studies</h2>
   <table>
     <tr><td class="n">01</td><td>Omvi William — Multi-Tenant Agentic AI SaaS with Real-Time Voice</td><td class="c">Conversational AI / Telecom</td></tr>
+    <tr><td class="n">02</td><td>Ventive — AI R&amp;D Tax Credit Platform (Contracts, Documents, Calculation, Delivery)</td><td class="c">FinTech / TaxTech</td></tr>
   </table>
 </div>
 
@@ -231,6 +232,153 @@
 
   <div class="stack">Python · LangGraph · LangChain · FastAPI · LiveKit Agents · Deepgram · Cartesia · Silero · PostgreSQL + pgvector · Redis · SQLite · OpenRouter (Gemini 2.5 Flash Lite, GPT-4.1 mini, GPT-4o mini) · SSE · WebSockets · Next.js 16 · TypeScript · Prisma · Clerk · Docker · Railway · GCP · GitHub Actions · Playwright</div>
   <div class="links"><a href="https://www.youtube.com/watch?v=gWZj9BjP2rE">Watch demo ↗</a></div>
+</div>
+
+<!-- 02 ================================================================== -->
+<div class="sec"><h2>02 · Ventive — AI R&amp;D Tax Credit Platform <span class="badge flagship">FLAGSHIP</span><span class="badge demo">DEMO</span></h2><span>FinTech / TaxTech</span></div>
+
+<div class="cs">
+  <p class="meta"><b>Client:</b> a US R&amp;D tax-credit advisory firm, delivered through Ventive &nbsp;·&nbsp; <b>Role:</b> lead AI engineer across six services, from architecture and PRDs to code, review and rollout &nbsp;·&nbsp; <b>Timeline:</b> 2026, multi-release and ongoing &nbsp;·&nbsp; <b>Demo:</b> <a href="https://share.descript.com/view/hN6BO7puRfK">Contract analysis walkthrough ↗</a></p>
+
+  <p class="lead">An end-to-end platform that takes a tax firm's engagement from raw client documents to a signed, client-ready credit letter. A multi-agent pipeline reads every contract and decides whether the research it covers qualifies under IRC §41. A form-aware extraction engine reads W-2s, 1099s, K-1s, general ledgers and census files. A rules-driven engine computes the federal and state credit, fills the firm's workpapers and government forms, and generates the letter. Analysts review at each gate, and the system learns from their corrections.</p>
+
+  <div class="kpis">
+    <div class="kpi"><b>6</b><span>services behind one admin app and one shared schema</span></div>
+    <div class="kpi"><b>13</b><span>nodes in the contract-analysis agent graph</span></div>
+    <div class="kpi"><b>−35%</b><span>cost per analysis from prompt caching, verified like-for-like</span></div>
+    <div class="kpi"><b>51 → 7.4 min</b><span>906-employee census extraction, full coverage (was 676 rows)</span></div>
+    <div class="kpi"><b>~86%</b><span>agreement with the firm's ground truth on a 38-contract replay</span></div>
+    <div class="kpi"><b>to the cent</b><span>workpaper fills tie out to the source ledger</span></div>
+    <div class="kpi"><b>26</b><span>lifecycle events on the automation bus</span></div>
+    <div class="kpi"><b>9,000+</b><span>automated tests across the repos</span></div>
+  </div>
+
+  <h3>The problem</h3>
+  <p>An R&amp;D tax credit study is mostly reading and arithmetic done by expensive people. Every client contract has to be read to decide whether the research was "funded" by the customer, which removes it from the credit. Payroll, ledgers and prior returns arrive as scans, spreadsheets and PDFs and are keyed into Excel workpapers by hand. The credit is then computed under several methods, filled into Form 6765 and state forms, and written up as a letter. Each step took hours per client and depended on which analyst did it. The firm wanted the whole chain automated, with a human approving at the points where judgement or liability sits.</p>
+
+  <h3>Requirements I derived and built against</h3>
+  <table class="t" style="page-break-inside:auto">
+    <tr><th style="width:34%">Requirement</th><th>How the system meets it</th></tr>
+    <tr><td>Decide "funded research" per contract, with evidence</td><td>A 13-node LangGraph pipeline: document check, triage, web search, a rights test and a payment-risk test run in parallel, an adversarial self-review, an IRS counter-argument step, and a merge that derives the verdict, confidence and tax position from the two prongs.</td></tr>
+    <tr><td>Never guess when the contract is silent</td><td>Triage questions pause the run in an <code>awaiting_answers</code> state; the analyst answers in chat and the run resumes from a cached first pass instead of re-paying the whole pipeline.</td></tr>
+    <tr><td>Ground decisions in law</td><td>A case-law and state-conformity knowledge base in Postgres with pgvector; mandatory cases are always injected, the rest retrieved by similarity per node.</td></tr>
+    <tr><td>Handle hundreds of contracts at once</td><td>Batch upload, deterministic bundling of related files (MSA + change orders, master PDF + SOW) with an LLM fallback, an analyst bundle-review step, fan-out with rate-limit pacing, and cancel-on-leave that propagates to every worker.</td></tr>
+    <tr><td>Read every tax document the firm receives</td><td>A per-form handler registry (W-2/W-3, 1099, K-1, 2553, 6765, 1120/1065, census, general ledger) with an AWS Textract path for scans and an LLM path for text; dual-model consensus and a verify pass; W-2 ↔ W-3 reconciliation per EIN and year.</td></tr>
+    <tr><td>Read any ERP's general ledger</td><td>An LLM head-verdict detects a ledger, a layout-inference step maps columns, and seeded dialects (QuickBooks, SAP B1) parse postings with a running-balance walk as a check.</td></tr>
+    <tr><td>Compute the credit correctly and explainably</td><td>A pure calculation engine: a 4-scenario matrix (ASC / regular × with and without §280C), controlled-group allocation, Decimal-28 money, a full audit trail, and a rule-driven recommendation. Rules live in the knowledge base as versioned data per jurisdiction and year.</td></tr>
+    <tr><td>Fill the firm's own Excel workpapers</td><td>Header-aware sheet mapping plus an AI merge agent whose every written value must be traceable to the source extraction; one invented value fails the whole fill. Deficits are completed from the ledger itself, so totals tie by construction.</td></tr>
+    <tr><td>Produce the deliverable</td><td>Government forms filled from the same data (LLM-proposed field maps, pypdf writer, tie-out check), a branded Credit Release Letter with draft/final lifecycle and Drive archival, email delivery, and DocuSign behind a kill-switch.</td></tr>
+    <tr><td>Run itself as documents arrive</td><td>A transactional outbox and dispatcher turn 26 engagement, study and interview transitions into events; admin-authored workflows bind events to actions (extract, analyze, calculate, create folders) with dedupe, cascade-depth guards and a run audit dashboard.</td></tr>
+    <tr><td>Learn from analysts</td><td>Correction memory: an accepted correction is distilled into a lesson, the analyst approves or edits it, and later runs retrieve approved lessons per node by vector similarity and show which ones they used.</td></tr>
+    <tr><td>Show cost and progress</td><td>Per-run token and dollar cost per node, live per-stage progress in the UI, re-run records stamped at dispatch, and a stall watchdog that fails wedged runs closed.</td></tr>
+  </table>
+
+  <h3>Architecture</h3>
+  <p>One admin API owns the shared Postgres schema and every integration; the three AI engines are separate services that never write each other's tables. They talk over HTTP for requests and a Redis event channel for completions, so the gateway can fan out, wait, reconcile and re-drive without any engine knowing about the others.</p>
+  <figure>
+    <svg viewBox="0 0 760 392" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Inter, Arial, sans-serif" role="img" aria-label="Ventive platform architecture: analyst browser, admin UI, Google Drive, admin API gateway, contract analysis engine, tax-form extraction, calculation engine, document text extraction, and the shared data layer">
+      <defs>
+        <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+      </defs>
+      <style>
+        .bx2 { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.2; rx: 6; }
+        .core2 { fill: #eff6ff; stroke: #1d4ed8; }
+        .ext2 { fill: #f8fafc; stroke: #cbd5e1; stroke-dasharray: 4 3; }
+        .tt2 { font-size: 12px; font-weight: 700; fill: #0f172a; }
+        .st2 { font-size: 9.6px; fill: #475569; }
+        .ln2 { stroke: #64748b; stroke-width: 1.3; fill: none; marker-end: url(#ah2); }
+        .lb2 { font-size: 9px; fill: #334155; }
+        .band2 { fill: #f1f5f9; stroke: #cbd5e1; }
+      </style>
+      <!-- Row A -->
+      <rect class="bx2 ext2" x="12" y="12" width="150" height="48"/><text class="tt2" x="87" y="33" text-anchor="middle">Analyst</text><text class="st2" x="87" y="49" text-anchor="middle">browser · chat</text>
+      <rect class="bx2 core2" x="226" y="12" width="300" height="48"/><text class="tt2" x="376" y="33" text-anchor="middle">Admin UI</text><text class="st2" x="376" y="49" text-anchor="middle">React 19 · TanStack Router/Query · Zustand · Shadcn</text>
+      <rect class="bx2 ext2" x="598" y="12" width="150" height="48"/><text class="tt2" x="673" y="33" text-anchor="middle">Google Drive</text><text class="st2" x="673" y="49" text-anchor="middle">client folders · webhooks</text>
+      <!-- Row B -->
+      <rect class="bx2 core2" x="12" y="118" width="736" height="58"/><text class="tt2" x="380" y="140" text-anchor="middle">Admin API gateway</text><text class="st2" x="380" y="156" text-anchor="middle">FastAPI · SQLAlchemy 2.0 async · owns the shared schema (250+ migrations) · Celery · SSE relay · JWT + service keys</text><text class="st2" x="380" y="169" text-anchor="middle">automation bus: outbox → dispatcher → workflows → actions · Drive / Gmail / DocuSign / S3 · workpaper and form fill · letters · cost tracking</text>
+      <!-- Row C -->
+      <rect class="bx2 core2" x="12" y="232" width="172" height="58"/><text class="tt2" x="98" y="254" text-anchor="middle">Contract analysis</text><text class="st2" x="98" y="270" text-anchor="middle">LangGraph · 13 nodes</text><text class="st2" x="98" y="283" text-anchor="middle">case law · memory · chat</text>
+      <rect class="bx2 core2" x="200" y="232" width="172" height="58"/><text class="tt2" x="286" y="254" text-anchor="middle">Tax-form extraction</text><text class="st2" x="286" y="270" text-anchor="middle">per-form handlers · Textract</text><text class="st2" x="286" y="283" text-anchor="middle">GL lanes · W-2/W-3 recon</text>
+      <rect class="bx2 core2" x="388" y="232" width="172" height="58"/><text class="tt2" x="474" y="254" text-anchor="middle">Calculation engine</text><text class="st2" x="474" y="270" text-anchor="middle">pure §41 engine · 4 scenarios</text><text class="st2" x="474" y="283" text-anchor="middle">states · workpaper AI merge</text>
+      <rect class="bx2 core2" x="576" y="232" width="172" height="58"/><text class="tt2" x="662" y="254" text-anchor="middle">Text extraction</text><text class="st2" x="662" y="270" text-anchor="middle">PyMuPDF text layer</text><text class="st2" x="662" y="283" text-anchor="middle">vision OCR fallback</text>
+      <!-- Arrows -->
+      <path class="ln2" d="M162 36 H224"/><text class="lb2" x="193" y="30" text-anchor="middle">HTTPS</text>
+      <path class="ln2" d="M376 60 V116"/><text class="lb2" x="382" y="92">JWT · SSE</text>
+      <path class="ln2" d="M673 60 V116"/><text class="lb2" x="679" y="92">arrivals</text>
+      <path class="ln2" d="M98 176 V230"/><text class="lb2" x="104" y="206">HTTP</text>
+      <path class="ln2" d="M286 176 V230"/><text class="lb2" x="292" y="206">HTTP</text>
+      <path class="ln2" d="M474 176 V230"/><text class="lb2" x="480" y="206">HTTP</text>
+      <path class="ln2" d="M662 176 V230"/><text class="lb2" x="668" y="206">bytes</text>
+      <!-- Data band -->
+      <rect class="band2" x="12" y="316" width="736" height="66" rx="6"/>
+      <text class="tt2" x="24" y="334">Shared data and model layer</text>
+      <text class="st2" x="24" y="352">PostgreSQL + pgvector (one schema: engagements, analyses, extractions, calculations, case law, memories, rules) · Redis (events channel, progress, chat, cancel flags)</text>
+      <text class="st2" x="24" y="368">Neo4j (extracted entities) · S3 + Google Drive (documents, workpapers, letters) · OpenRouter (Claude, GPT, Gemini) · AWS Textract · OpenAI embeddings</text>
+    </svg>
+    <figcaption>Blue boxes are services I built or led; dashed boxes are external. Completions flow back on one Redis channel; the gateway correlates them to workflow runs, reconciles misses on a timer, and relays them to the browser as live progress.</figcaption>
+  </figure>
+  <ul>
+    <li><b>Admin UI</b> (React 19, TypeScript, Vite): engagement timeline with live stage progress, batch upload and bundle review, analysis dashboard and full report, an agentic chat that drives correction re-runs, knowledge-base editors for rules, prompts and memories, workflow authoring, run audit, and the letter and form cards.</li>
+    <li><b>Admin API gateway</b> (FastAPI): the only writer of the shared schema. Orchestrates batches, waits on completion events, hosts the automation bus, fills workpapers and forms, renders letters, and fronts Drive, Gmail, DocuSign and S3.</li>
+    <li><b>Contract analysis engine</b> (FastAPI, LangGraph, Celery): the agent graph, per-node case-law and memory retrieval, triage pause and resume, streaming chat with tools, correction distiller, stall watchdog, per-node cost events.</li>
+    <li><b>Tax-form extraction</b> (Python, Textract, LLM): classifier, per-form handlers, general-ledger and census lanes, reconciliation, Neo4j structuring.</li>
+    <li><b>Calculation engine</b> (Python, FastAPI, Celery): pure compute with a thin IO shell, readiness checks and claims so a fill runs once per input fingerprint, AI merge agents with source guards.</li>
+    <li><b>Text extraction</b> (FastAPI): classifies each PDF as text, image or hybrid and routes to native text or vision OCR, with warnings that gate low-quality input downstream.</li>
+  </ul>
+
+  <h3>Agent design</h3>
+  <p>The contract graph runs <b>assemble prompt → document check → triage → auto-answer → web search → (rights gate ∥ jurisdiction) → adversarial review or no-rights → retained qualified research → contingency calculation → IRS counter-argument → prong merge → finalize</b>. Document check extracts eight verbatim clause families (IP, payment, termination, governing law, incorporated clauses and more), folding in clauses incorporated by reference so later nodes argue from the actual text. The rights and risk prongs run in parallel; a derived-verdict step is the sole author of the determination so no node can leave a stale verdict behind.</p>
+  <ul>
+    <li><b>Schema-constrained outputs:</b> every node returns strict JSON against a wire schema, with a parse backstop, so a malformed answer is retried once per failure kind and never silently accepted.</li>
+    <li><b>Selective re-runs:</b> node outputs are captured at completion; a correction marks the nodes it touches dirty and re-runs only those and their consumers, derived from what each node reads rather than from graph edges.</li>
+    <li><b>Prompt caching:</b> the contract is sent once as a cached block and reused by the six nodes that read it; moving response schemas off the wire kept the cache key stable. Verified on the same contract: $3.31 → $2.16 per run.</li>
+    <li><b>Reasoning tiers:</b> mechanical nodes run at low effort, analytical nodes at medium; output tokens fell 22% and wall-clock 21% with an identical verdict.</li>
+    <li><b>Safety rails:</b> abort probes between nodes with heartbeats, a 10-minute stall sweep that fails closed on Redis outage, publish-after-commit so no completion event can arrive before its data, and scrubbing of model-written text that could forge a prompt frame.</li>
+  </ul>
+
+  <h3>Document extraction</h3>
+  <p>Every file that lands in a client's Drive folder emits an arrival event. The gateway dedupes by content hash, plans what the engagement still needs (which forms, which prior years, which states) from the rule bundle, and submits only those. The extraction service classifies each chunk, routes it to the right form handler, merges multi-page and multi-copy forms, and writes a versioned payload. Reconciliation checks employee count and Box 1 and Box 16 wages per EIN and year against the W-3 with cents-level tolerance. Ledgers go through a dedicated lane that infers the layout from the data, parses postings per account and verifies them with a running-balance walk; a 150-row SAP B1 export that scored 1/2 on the old keyword sniff now parses with zero unclassified rows.</p>
+
+  <h3>Calculation, workpapers and delivery</h3>
+  <ul>
+    <li><b>Engine:</b> <code>compute(payload, rule_bundle)</code> returns four scenarios with audit trails and a recommendation chosen by rules the firm can edit; state credits (AZ, CA, MA, TX) share a generic engine with per-state rate tiers and refundability metadata; goldens tie to the cent.</li>
+    <li><b>Workpaper fill:</b> the 4100 (wages), 4200 (expenses) and 5500 (contract review) sheets are filled by an AI merge agent that returns the full reconciled row set; a source index verifies every name, entity and amount against the extraction, formulas are protected, and overwrites are audited old → new in the sheet. A 105-row expense fill tied its ledger exactly.</li>
+    <li><b>Forms and letter:</b> Form 6765 and state forms are filled from line-keyed sections; the Credit Release Letter is rendered natively (TOC, bookmarks, draft watermark, scenarios considered, filing instructions) and finalized to Drive with a hash; the package goes out by email or DocuSign with webhook reconciliation.</li>
+  </ul>
+
+  <h3>Human in the loop</h3>
+  <p>The system pauses where judgement sits: triage questions before analysis; bundle review before dispatch; a pending-review state for low-confidence verdicts; approval of workpapers before calculation; accept-or-override with a required reason on the recommended scenario; a five-minute chat card to approve, edit or reject each distilled correction memory; and a reviewed-narrative gate before a letter can be finalized. Every gate leaves an audit row.</p>
+
+  <h3>Key engineering decisions</h3>
+  <table class="t">
+    <tr><th style="width:30%">Problem</th><th>Decision</th></tr>
+    <tr><td>Three AI services sharing one database</td><td>The gateway owns all migrations; engines declare foreign-owned tables and only write their own. Fresh-DB replay of the full chain is a release gate.</td></tr>
+    <tr><td>Verdicts written by four different nodes</td><td>Remove the fork so both prongs always run, and make one derived-verdict step the only author of determination and confidence.</td></tr>
+    <tr><td>Completion events lost or duplicated</td><td>Redis pub/sub for speed plus a timer reconcile and a dispatch marker; one unified writer delivers the result whether it arrived live, on reconnect or on sweep.</td></tr>
+    <tr><td>A crashed re-run that looked like a 10-hour "Analyzing"</td><td>Re-run records stamped at dispatch, heartbeats per node, a stall sweep with compare-and-set, and progress stored as a Redis hash so parallel branches cannot clobber each other.</td></tr>
+    <tr><td>LLM filling a spreadsheet invents or collapses rows</td><td>Every written value must be traceable to the source; recurring identical postings are kept distinct by count; any deficit is completed from the ledger deterministically.</td></tr>
+    <tr><td>Retries multiplying across layers</td><td>One retry ticket per failure kind threaded through every layer; worst case went from 18 billable generations to 4.</td></tr>
+    <tr><td>Tax rules changing every year</td><td>Rules, prompts and templates are versioned data in a knowledge base with an editor and a sign-off gate, not code.</td></tr>
+    <tr><td>Learning without retraining</td><td>Distill corrections into short lessons, gate them on human approval, retrieve by similarity per node, and stamp each run with the lessons it used.</td></tr>
+  </table>
+
+  <h3>Results</h3>
+  <table class="t">
+    <tr><th style="width:38%">Measure</th><th>Result</th></tr>
+    <tr><td>Sandbox replay of a real client year (38 contracts)</td><td><b>31 completed, 7 for review, 0 failed</b>; 38 of 38 workpaper rows bound; ~86% agreement with the firm's ground truth</td></tr>
+    <tr><td>Cost per contract analysis (same contract, same model)</td><td><b>$3.31 → $2.16</b> with prompt caching (−35%); output tokens −22% with reasoning tiers</td></tr>
+    <tr><td>906-employee census extraction</td><td><b>51 min → 7.4 min</b>, 906 of 906 rows (was 676)</td></tr>
+    <tr><td>Expense workpaper from a general ledger</td><td><b>105 rows</b>, contract-research total tied to the cent</td></tr>
+    <tr><td>Arrival-driven pipeline, end to end</td><td>file arrival → extraction → readiness → calculation → workpaper in Drive, <b>unattended</b></td></tr>
+  </table>
+  <ul>
+    <li>The extraction-to-workpaper chain ran unattended on a second client's 24 documents, including 9 stranded runs auto-redriven by the sweep.</li>
+    <li>The correction-memory loop was closed live: an approved lesson was applied by three nodes on the next analysis of a similar contract and flipped the verdict correctly.</li>
+    <li>Delivered as stacked, reviewed pull requests across six repositories with CI on each: lint, type-check, migration replay and full test suites.</li>
+  </ul>
+
+  <div class="stack">Python · FastAPI · LangGraph · Celery · Redis · PostgreSQL + pgvector · SQLAlchemy 2.0 async · Alembic · Neo4j · AWS Textract · PyMuPDF · pypdf · openpyxl · OpenRouter (Claude Opus / Sonnet, GPT, Gemini) · OpenAI embeddings · React 19 · TypeScript · Vite · TanStack Router/Query · Zustand · Shadcn UI · Google Drive &amp; Gmail APIs · DocuSign · S3 · Docker · GitHub Actions</div>
+  <div class="links">Watch demos: <a href="https://share.descript.com/view/hN6BO7puRfK">Contract analysis</a> · <a href="https://share.descript.com/view/Nju5rPW9SN0">Tax-form extraction</a> · <a href="https://www.youtube.com/watch?v=_9UoeXc9Ffc">1</a> | <a href="https://www.youtube.com/watch?v=Fe46Ztav1Cw">2</a> | <a href="https://www.youtube.com/watch?v=AqVfHLxIQaY">3</a> | <a href="https://www.youtube.com/watch?v=xfeyjV_GRw8">4</a></div>
 </div>
 
 <div class="foot"><span>mjehanzaib99@gmail.com · <a href="https://linkedin.com/in/muhammad-jehanzaib-4036b5195">linkedin.com/in/muhammad-jehanzaib-4036b5195</a> · <a href="https://github.com/mjehanzaib999">github.com/mjehanzaib999</a></span><span>Muhammad Jehanzaib · AI Case Studies</span></div>
